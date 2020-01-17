@@ -17,7 +17,9 @@ You may also add the switch *-AcceptSelfSignedCertifcate* if you use a self-sign
 
 ## Author
 Alexander Haugk
+
 baramundi software AG
+
 https://www.baramundi.com
 
 ## Contributing
