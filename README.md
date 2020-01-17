@@ -1,4 +1,4 @@
-## PS-bConnect
+# PS-bConnect
 Powershell module for **[bConnect](https://www.baramundi.com/en/management-suite/interfaces/)**, the REST-API of the **[baramundi Management Suite](https://www.baramundi.com/en/)**.
 
 ## Installation
