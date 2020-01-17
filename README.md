@@ -22,8 +22,10 @@ https://www.baramundi.com
 
 ## Contributing
 Contributions, feature requests and issues are welcome.
+
 Please post your request in the [issue tracker](https://github.com/baramundisoftware/PS-bConnect/issues).
 
 ## License
 Copyright (c)2020 baramundi software AG.
+
 This project ist licensed under the [MIT License](https://github.com/baramundisoftware/PS-bConnect/blob/master/LICENSE).
