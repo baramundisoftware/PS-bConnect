@@ -12,6 +12,7 @@ To use the functions of PS-bConnect you need to import the module into your curr
     Import-Module -Name bConnect
     $apiCred = Get-Credential -Message "bConnect" -UserName "user@domain.local"
     Initialize-bConnect -Server "SRV-BARAMUNDI" -Credentials $apiCred
+    
 You may also add the switch *-AcceptSelfSignedCertifcate* if you use a self-signed certificate at the bConnect port.
 
 ## Author
@@ -24,5 +25,5 @@ Contributions, feature requests and issues are welcome.
 Please post your request in the [issue tracker](https://github.com/baramundisoftware/PS-bConnect/issues).
 
 ## License
-Copyright (c)2020 baramundi software AG
+Copyright (c)2020 baramundi software AG.
 This project ist licensed under the [MIT License](https://github.com/baramundisoftware/PS-bConnect/blob/master/LICENSE).
