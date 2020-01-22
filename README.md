@@ -15,6 +15,8 @@ To use the functions of PS-bConnect you need to import the module into your curr
     
 You may also add the switch *-AcceptSelfSignedCertifcate* if you use a self-signed certificate at the bConnect port.
 
+For more details please visit the [Wiki](https://github.com/baramundisoftware/PS-bConnect/wiki).
+
 ## Author
 Alexander Haugk
 
