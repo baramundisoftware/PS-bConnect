@@ -10,6 +10,8 @@ Function Remove-bConnectEndpoint() {
             Bool
     #>
 
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
+    [OutputType("System.Boolean")]
     Param (
         [string]$EndpointGuid,
         [PSCustomObject]$Endpoint
@@ -29,7 +31,11 @@ Function Remove-bConnectEndpoint() {
             return $false
         }
 
-        return Invoke-bConnectDelete -Controller "Endpoints" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Id, "Remove endpoint and all associated data from the database.")){
+            return Invoke-bConnectDelete -Controller "Endpoints" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

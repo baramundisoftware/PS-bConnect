@@ -14,7 +14,8 @@ Function New-bConnectEndpoint() {
             NewEndpoint (see bConnect documentation for more details).
     #>
 
-
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'low')]
+    [OutputType("System.Management.Automations.PSObject","System.Boolean")]
     Param (
         [Parameter(Mandatory=$true)][bConnectEndpointType]$Type,
         [Parameter(Mandatory=$true)][string]$DisplayName,
@@ -73,7 +74,11 @@ Function New-bConnectEndpoint() {
 			}
 		}
 
-        return Invoke-bConnectPost -Controller "Endpoints" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.DisplayName, "Create new endpoint.")){
+            return Invoke-bConnectPost -Controller "Endpoints" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

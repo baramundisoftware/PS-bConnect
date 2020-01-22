@@ -14,7 +14,8 @@ Function New-bConnectOrgUnit() {
             NewOrgUnit (see bConnect documentation for more details).
     #>
 
-
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'low')]
+    [OutputType("System.Management.Automations.PSObject","System.Boolean")]
     Param (
         [Parameter(Mandatory=$true)][string]$Name,
         [string]$ParentGuid = "C1A25EC3-4207-4538-B372-8D250C5D7908", #guid of "Logical Group" as fallback
@@ -37,7 +38,11 @@ Function New-bConnectOrgUnit() {
             $_body += @{ Extension = $Extension }
         }
 
-        return Invoke-bConnectPost -Controller "OrgUnits" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Name, "Create new org unit.")){
+            return Invoke-bConnectPost -Controller "OrgUnits" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

@@ -12,6 +12,7 @@ Function New-bConnectApplicationLicense() {
             ApplicationLicense (see bConnect documentation for more details)
     #>
 
+    [OutputType("System.Management.Automations.PSObject")]
     Param(
         [Parameter(Mandatory=$true)][string]$LicenseKey,
         [int]$Count = 0,

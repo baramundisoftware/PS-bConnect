@@ -19,6 +19,7 @@ Function New-bConnectApplicationInstallationData() {
             InstallationData (see bConnect documentation for more details)
     #>
 
+    [OutputType("System.Management.Automations.PSObject")]
     Param(
         [string]$Command,
         [string]$Parameter,

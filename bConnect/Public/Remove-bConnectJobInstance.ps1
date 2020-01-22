@@ -8,6 +8,8 @@
             Bool
     #>
 
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'low')]
+    [OutputType("System.Boolean")]
     Param (
         [Parameter(Mandatory=$true)][string]$JobInstanceGuid
     )
@@ -18,7 +20,11 @@
             Id = $JobInstanceGuid
         }
 
-        return Invoke-bConnectDelete -Controller "JobInstances" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Id, "Remove job instance from the database.")){
+            return Invoke-bConnectDelete -Controller "JobInstances" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

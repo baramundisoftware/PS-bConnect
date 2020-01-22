@@ -8,6 +8,8 @@ Function Remove-bConnectDynamicGroup() {
             Bool
     #>
 
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
+    [OutputType("System.Boolean")]
     Param (
         [Parameter(Mandatory=$true)][string]$DynamicGroupGuid
     )
@@ -18,7 +20,11 @@ Function Remove-bConnectDynamicGroup() {
             Id = $DynamicGroupGuid
         }
 
-        return Invoke-bConnectDelete -Controller "DynamicGroups" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Id, "Remove dynamic group from the database.")){
+            return Invoke-bConnectDelete -Controller "DynamicGroups" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

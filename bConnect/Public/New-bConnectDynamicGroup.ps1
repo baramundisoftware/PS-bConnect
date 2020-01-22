@@ -14,7 +14,8 @@ Function New-bConnectDynamicGroup() {
             DynamicGroup (see bConnect documentation for more details).
     #>
 
-
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'low')]
+    [OutputType("System.Management.Automations.PSObject","System.Boolean")]
     Param (
         [Parameter(Mandatory=$true)][string]$Name,
         [string]$ParentGuid = "BDE918DC-89C0-458A-92F7-0BB9147A2706", #guid of "Dynamic Groups" as fallback
@@ -39,7 +40,11 @@ Function New-bConnectDynamicGroup() {
 			$_body += @{ Comment = $Comment }
 		}
 
-        return Invoke-bConnectPost -Controller "DynamicGroups" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Name, "Create new dynamic group.")){
+            return Invoke-bConnectPost -Controller "DynamicGroups" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

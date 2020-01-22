@@ -6,7 +6,8 @@ Function New-bConnectApplication() {
             NewEndpoint (see bConnect documentation for more details).
     #>
 
-
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'low')]
+    [OutputType("System.Management.Automations.PSObject","System.Boolean")]
     Param (
         [Parameter(Mandatory=$true)][string]$Name,
         [Parameter(Mandatory=$true)][string]$Vendor,
@@ -74,7 +75,11 @@ Function New-bConnectApplication() {
             $_body += @{ EnableAUT = $true; AUT = $AUT }
         }
 
-        return Invoke-bConnectPost -Controller "Applications" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Name, "Create new application.")){
+            return Invoke-bConnectPost -Controller "Applications" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

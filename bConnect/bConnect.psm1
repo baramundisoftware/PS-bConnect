@@ -7,7 +7,7 @@
 # This script is provided "as is" just for educational purpose and without
 # warranty of any kind.
 #
-# Please place your comments, questions, improvements, etc 
+# Please place your comments, questions, improvements, etc
 # on Github: https://github.com/baramundisoftware/PS-bConnect
 
 # fallback bConnect version
@@ -31,4 +31,11 @@ public class ignoreCertificatePolicy : ICertificatePolicy {
 $script:_connectInitialized = $false
 
 # Load all scripts of the module
-Get-ChildItem *.ps1 -Path "$PSScriptRoot\Private","$PSScriptRoot\Public","$PSScriptRoot\Types" | ForEach-Object -Process { . $PSItem.FullName }
+foreach($modfile in (Get-ChildItem *.ps1 -Path "$PSScriptRoot\Private")){
+    . $modfile.FullName
+}
+
+foreach($modfile in (Get-ChildItem *.ps1 -Path "$PSScriptRoot\Public","$PSScriptRoot\Types")){
+    . $modfile.FullName
+    Export-ModuleMember $modfile.BaseName
+}

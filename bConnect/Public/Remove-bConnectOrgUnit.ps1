@@ -8,6 +8,8 @@ Function Remove-bConnectOrgUnit() {
             Bool
     #>
 
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
+    [OutputType("System.Boolean")]
     Param (
         [Parameter(Mandatory=$true)][string]$OrgUnitGuid
     )
@@ -18,7 +20,11 @@ Function Remove-bConnectOrgUnit() {
             Id = $OrgUnitGuid
         }
 
-        return Invoke-bConnectDelete -Controller "OrgUnits" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Id, "Remove org unit and all associated data from the database.")){
+            return Invoke-bConnectDelete -Controller "OrgUnits" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

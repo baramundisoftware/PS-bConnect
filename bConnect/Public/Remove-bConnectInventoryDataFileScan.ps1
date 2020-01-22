@@ -8,6 +8,8 @@ Function Remove-bConnectInventoryDataFileScan() {
             Bool
     #>
 
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'low')]
+    [OutputType("System.Boolean")]
     Param (
         [Parameter(Mandatory=$true)][string]$EndpointGuid
     )
@@ -17,7 +19,12 @@ Function Remove-bConnectInventoryDataFileScan() {
         $_body = @{
             EndpointId = $EndpointGuid;
         }
-        return Invoke-bConnectDelete -Controller "InventoryDataFileScans" -Version $_connectVersion -Data $_body
+
+        if($PSCmdlet.ShouldProcess($_body.EndpointId, "Remove file scan for endpoint from the database.")){
+            return Invoke-bConnectDelete -Controller "InventoryDataFileScans" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

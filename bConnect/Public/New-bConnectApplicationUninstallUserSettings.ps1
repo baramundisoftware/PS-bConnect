@@ -14,6 +14,7 @@ Function New-bConnectApplicationUninstallUserSettings() {
             UninstallUserSettings (see bConnect documentation for more details)
     #>
 
+    [OutputType("System.Management.Automations.PSObject")]
     Param(
         [string]$baramundiDeployScript,
         [switch]$ValidForInstallUser,
@@ -27,7 +28,6 @@ Function New-bConnectApplicationUninstallUserSettings() {
         RunbDSVisible = $RunbDSVisible;
         CopyScriptToClient = $CopyScriptToClient;
     }
-
 
     return $_new_uninstallUserSettings
 }

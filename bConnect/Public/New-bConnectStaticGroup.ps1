@@ -14,7 +14,8 @@ Function New-bConnectStaticGroup() {
             StaticGroup (see bConnect documentation for more details).
     #>
 
-
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'low')]
+    [OutputType("System.Management.Automations.PSObject","System.Boolean")]
     Param (
         [Parameter(Mandatory=$true)][string]$Name,
         [string]$ParentGuid = "5020494B-04D3-4654-A256-80731E953746", #guid of "Static Groups" as fallback
@@ -37,7 +38,11 @@ Function New-bConnectStaticGroup() {
 			$_body += @{ Comment = $Comment }
 		}
 
-        return Invoke-bConnectPost -Controller "StaticGroups" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Name, "Create new static group.")){
+            return Invoke-bConnectPost -Controller "StaticGroups" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

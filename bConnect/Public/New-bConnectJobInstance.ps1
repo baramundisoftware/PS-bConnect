@@ -14,6 +14,8 @@ Function New-bConnectJobInstance() {
             JobInstance (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'low')]
+    [OutputType("System.Management.Automations.PSObject","System.Boolean")]
     Param (
         [Parameter(Mandatory=$true)][string]$EndpointGuid,
         [Parameter(Mandatory=$true)][string]$JobGuid,
@@ -35,7 +37,11 @@ Function New-bConnectJobInstance() {
             }
         }
 
-        return Invoke-bConnectGet -Controller "JobInstances" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.EndpointId, "Create new job instance.")){
+            return Invoke-bConnectGet -Controller "JobInstances" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

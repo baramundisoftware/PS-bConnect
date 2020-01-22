@@ -16,6 +16,7 @@ Function New-bConnectApplicationInstallUserSettings() {
             InstallUserSettings (see bConnect documentation for more details)
     #>
 
+    [OutputType("System.Management.Automations.PSObject")]
     Param(
         [string]$baramundiDeployScript,
         [switch]$ValidForInstallUser,

@@ -32,6 +32,7 @@ Function New-bConnectApplicationAUTFileRule() {
             AUTFileRule (see bConnect documentation for more details)
     #>
 
+    [OutputType("System.Management.Automations.PSObject")]
     Param(
         [string]$FileName,
         [uint64]$FileSize,

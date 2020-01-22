@@ -8,6 +8,8 @@ Function Resume-bConnectJobInstance() {
             Bool
     #>
 
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
+    [OutputType("System.Boolean")]
     Param (
         [string]$JobInstanceGuid
     )
@@ -19,7 +21,11 @@ Function Resume-bConnectJobInstance() {
             Cmd = "resume"
         }
 
-        return Invoke-bConnectGet -Controller "JobInstances" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Id, "Resume job instance.")){
+            return Invoke-bConnectGet -Controller "JobInstances" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

@@ -8,6 +8,8 @@ Function Stop-bConnectJobInstance() {
             Bool
     #>
 
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
+    [OutputType("System.Boolean")]
     Param (
         [string]$JobInstanceGuid
     )
@@ -19,7 +21,11 @@ Function Stop-bConnectJobInstance() {
             Cmd = "stop"
         }
 
-        return Invoke-bConnectGet -Controller "JobInstances" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Id, "Stop job instance.")){
+            return Invoke-bConnectGet -Controller "JobInstances" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

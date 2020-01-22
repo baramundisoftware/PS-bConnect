@@ -19,6 +19,7 @@ Function New-bConnectApplicationUninstallOptions() {
             InstallApplicationOption (see bConnect documentation for more details)
     #>
 
+    [OutputType("System.Management.Automations.PSObject")]
     Param(
         [ValidateSet("NoReboot","Reboot","AppReboot","DeferrableReboot",ignoreCase=$true)][string]$RebootBehaviour = "NoReboot",
         [switch]$RemoveUnknownSoftware,

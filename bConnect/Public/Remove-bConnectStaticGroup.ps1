@@ -8,6 +8,8 @@ Function Remove-bConnectStaticGroup() {
             Bool
     #>
 
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
+    [OutputType("System.Boolean")]
     Param (
         [Parameter(Mandatory=$true)][string]$StaticGroupGuid
     )
@@ -18,7 +20,11 @@ Function Remove-bConnectStaticGroup() {
             Id = $StaticGroupGuid
         }
 
-        return Invoke-bConnectDelete -Controller "StaticGroups" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Id, "Remove static group from the database.")){
+            return Invoke-bConnectDelete -Controller "StaticGroups" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

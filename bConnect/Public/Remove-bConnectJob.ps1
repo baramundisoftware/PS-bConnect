@@ -8,6 +8,8 @@
             Bool
     #>
 
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
+    [OutputType("System.Boolean")]
     Param (
         [string]$JobGuid,
         [PSCustomObject]$Job
@@ -27,7 +29,11 @@
             return $false
         }
 
-        return Invoke-bConnectDelete -Controller "Jobs" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Id, "Remove job and all associated data from the database.")){
+            return Invoke-bConnectDelete -Controller "Jobs" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }

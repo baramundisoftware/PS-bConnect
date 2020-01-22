@@ -14,6 +14,8 @@ Function New-bConnectVariableDefinition() {
             New VariableDefinition (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'low')]
+    [OutputType("System.Management.Automations.PSObject","System.Boolean")]
     Param (
         [Parameter(Mandatory=$true)][bConnectVariableScope]$Scope,
         [Parameter(Mandatory=$true)][string]$Category,
@@ -30,7 +32,11 @@ Function New-bConnectVariableDefinition() {
             Type = [string]$Type
         }
 
-        return Invoke-bConnectPost -Controller "VariableDefinitions" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Name, "Create new variable definition.")){
+            return Invoke-bConnectPost -Controller "VariableDefinitions" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }
