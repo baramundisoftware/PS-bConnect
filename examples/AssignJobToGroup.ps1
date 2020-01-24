@@ -4,7 +4,7 @@ Import-Module -Name bConnect
 $apiCred = Get-Credential -Message "bConnect" -UserName "user@domain.local"
 # Initialize bConnect Module
 Initialize-bConnect -Server "SRV-BARAMUNDI" -Credentials $apiCred
-# Search for an static Group
+# Search for a static Group
 $staticGroup = Search-bConnectGroup -Term "NO: Office 2019"
 # Get Endpoints
 $endpoints = Get-bConnectEndpoint -StaticGroupGuid $staticGroup.Id
