@@ -10,6 +10,8 @@ Function Set-bConnectEndpointSecret() {
             Boolean.
     #>
 
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'high')]
+    [OutputType("System.Boolean")]
     Param (
         [Parameter(Mandatory=$true)][string]$EndpointGuid,
         [Parameter(Mandatory=$true)][string]$Pin
@@ -22,7 +24,11 @@ Function Set-bConnectEndpointSecret() {
             Pin = $Pin
         }
 
-        return Invoke-bConnectPatch -Controller "EndpointSecrets" -Version $_connectVersion -Data $_body
+        if($PSCmdlet.ShouldProcess($_body.Name, "Set unlock PIN for endpoint.")){
+            return Invoke-bConnectPatch -Controller "EndpointSecrets" -Version $_connectVersion -Data $_body
+        } else {
+            return $false
+        }
     } else {
         return $false
     }
