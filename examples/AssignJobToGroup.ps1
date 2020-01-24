@@ -8,12 +8,11 @@ Initialize-bConnect -Server "SRV-BARAMUNDI" -Credentials $apiCred
 $staticGroup = Search-bConnectGroup -Term "NO: Office 2019"
 # Get Endpoints
 $endpoints = Get-bConnectEndpoint -StaticGroupGuid $staticGroup.Id
-
-foreach($endpoint in $endpoints){
-    $endpoint.Id
-}
-
 # Search for a job
 $job = Search-bConnectJob -Term "Inst: Office 2019"
-# Assign the job to the endpoint by creating a new job instance
-New-bConnectJobInstance -EndpointGuid $endpoint.Id -JobGuid $job.Id -Initiator "PS-bConnect" -StartIfExists
+foreach($endpoint in $endpoints){
+    # Assign the job to the endpoint by creating a new job instance
+    New-bConnectJobInstance -EndpointGuid $endpoint.Id -JobGuid $job.Id -Initiator "PS-bConnect"
+}
+
+
