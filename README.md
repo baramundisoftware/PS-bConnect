@@ -1,5 +1,5 @@
 # PS-bConnect
-Powershell module for **[bConnect](https://www.baramundi.com/en/management-suite/interfaces/)**, the REST-API of the **[baramundi Management Suite](https://www.baramundi.com/en/)**.
+Powershell module for **[baramundi Connect](https://www.baramundi.com/en/management-suite/interfaces/) (bConnect)**, the REST-API of the **[baramundi Management Suite](https://www.baramundi.com/en/)**.
 
 ## Installation
 You can install the module from the Powershell Gallery Repository directly by using the Install-Module CMDlet:
@@ -14,6 +14,8 @@ To use the functions of PS-bConnect you need to import the module into your curr
     Initialize-bConnect -Server "SRV-BARAMUNDI" -Credentials $apiCred
     
 You may also add the switch *-AcceptSelfSignedCertifcate* if you use a self-signed certificate at the bConnect port.
+
+For more details please visit the [Wiki](https://github.com/baramundisoftware/PS-bConnect/wiki).
 
 ## Author
 Alexander Haugk
