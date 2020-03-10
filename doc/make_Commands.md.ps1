@@ -1,10 +1,10 @@
-Import-Module ./bConnect.psd1 -Force
+Import-Module ../bConnect/bConnect.psd1 -Force
 
 
 function syntax ($cmd,$header=4) {
     $help=Get-Help($cmd)
     '#'*$header+" "+$cmd
-    $help.Synopsis.trim()
+    "> {0}" -F $help.Synopsis.trim()
     '```'
     $help.Syntax
     '```'
@@ -18,7 +18,8 @@ function params ($help) {
     #$replace=[regex]'^-'
     $help.Parameters.parameter|Sort-Object Position,Required,Name |% {
         $param=$_
-        "* {0}" -F $param.Name
+        '* {0} &lt;`{1}`&gt;' -F $param.Name,$param.Type.Name
+        "  > {0}" -F $param.Description.Text
         '  ```'
         'Position Required PipelineInput Aliases ParameterValue' -split ' '|% {
             "  {0} : {1}" -F $_,$param.$_
