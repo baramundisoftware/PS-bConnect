@@ -88,7 +88,6 @@ Initialize-bConnect [-Server] <String> [[-Port] <String>] [-Credentials] <PSCred
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Port `<String>`
   > Port of bConnect (default: 443).
@@ -97,7 +96,6 @@ Initialize-bConnect [-Server] <String> [[-Port] <String>] [-Credentials] <PSCred
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Credentials `<PSCredential>`
   > PSCredential-object with permissions in the bMS.
@@ -106,7 +104,6 @@ Initialize-bConnect [-Server] <String> [[-Port] <String>] [-Credentials] <PSCred
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSCredential
   ```
 * AcceptSelfSignedCertifcate `<SwitchParameter>`
   > 
@@ -115,7 +112,6 @@ Initialize-bConnect [-Server] <String> [[-Port] <String>] [-Credentials] <PSCred
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Reset-bConnect
 > Resets PS-bConnect to not initialized.
@@ -130,7 +126,6 @@ Reset-bConnect [-WhatIf] [-Confirm] [<CommonParameters>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -139,7 +134,6 @@ Reset-bConnect [-WhatIf] [-Confirm] [<CommonParameters>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ## Commands by Controller
 ### Controller App
@@ -156,7 +150,6 @@ Get-bConnectApp [[-AppGuid] <String>] [[-OrgUnitGuid] <String>] [[-EndpointGuid]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * OrgUnitGuid `<String>`
   > Valid GUID of a Orgunit.
@@ -165,7 +158,6 @@ Get-bConnectApp [[-AppGuid] <String>] [[-OrgUnitGuid] <String>] [[-EndpointGuid]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * EndpointGuid `<String>`
   > Valid GUID of an endpoint.
@@ -174,7 +166,6 @@ Get-bConnectApp [[-AppGuid] <String>] [[-OrgUnitGuid] <String>] [[-EndpointGuid]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 ### Controller AppIcon
 #### Get-bConnectAppIcon
@@ -190,7 +181,6 @@ Get-bConnectAppIcon [[-AppGuid] <String>] [[-Scope] {App | Inventory}] [<CommonP
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Scope `<bConnectIconScope>`
   > Valid scope (App/Inventory).
@@ -199,7 +189,6 @@ Get-bConnectAppIcon [[-AppGuid] <String>] [[-Scope] {App | Inventory}] [<CommonP
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : 
   ```
 ### Controller Application
 #### Edit-bConnectApplication
@@ -215,7 +204,6 @@ Edit-bConnectApplication [-Application] <PSObject> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 #### Get-bConnectApplication
 > Get specified application, all applications in given OrgUnit or all applications on an specific endpoint.
@@ -230,7 +218,6 @@ Get-bConnectApplication [[-ApplicationGuid] <String>] [[-OrgUnitGuid] <String>] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * OrgUnitGuid `<String>`
   > Valid GUID of a Orgunit.
@@ -239,7 +226,6 @@ Get-bConnectApplication [[-ApplicationGuid] <String>] [[-OrgUnitGuid] <String>] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * EndpointGuid `<String>`
   > Valid GUID of an endpoint.
@@ -248,7 +234,6 @@ Get-bConnectApplication [[-ApplicationGuid] <String>] [[-OrgUnitGuid] <String>] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### New-bConnectApplication
 > Create a new application.
@@ -263,7 +248,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ConsistencyChecks `<String>`
   > 
@@ -272,7 +256,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ApplicationFile `<PSObject[]>`
   > 
@@ -281,7 +264,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject[]
   ```
 * Cost `<Single>`
   > 
@@ -290,7 +272,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : Single
   ```
 * SecurityContext `<String>`
   > 
@@ -299,7 +280,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Licenses `<PSObject[]>`
   > 
@@ -308,7 +288,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject[]
   ```
 * AUT `<PSObject[]>`
   > 
@@ -317,7 +296,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject[]
   ```
 * Vendor `<String>`
   > 
@@ -326,7 +304,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ValidForOS `<String[]>`
   > 
@@ -335,7 +312,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String[]
   ```
 * Comment `<String>`
   > 
@@ -344,7 +320,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ParentGuid `<String>`
   > 
@@ -353,7 +328,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Version `<String>`
   > guid of "Applications" as fallback
@@ -362,7 +336,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Category `<String>`
   > 
@@ -371,7 +344,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * InstallationData `<PSObject>`
   > 
@@ -380,7 +352,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 * UninstallationData `<PSObject>`
   > 
@@ -389,7 +360,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -398,7 +368,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -407,7 +376,6 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 #### Remove-bConnectApplication
 > Remove specified application.
@@ -422,7 +390,6 @@ Remove-bConnectApplication [[-ApplicationGuid] <String>] [[-Application] <PSObje
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Application `<PSObject>`
   > Valid Application object
@@ -431,7 +398,6 @@ Remove-bConnectApplication [[-ApplicationGuid] <String>] [[-Application] <PSObje
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -440,7 +406,6 @@ Remove-bConnectApplication [[-ApplicationGuid] <String>] [[-Application] <PSObje
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -449,7 +414,6 @@ Remove-bConnectApplication [[-ApplicationGuid] <String>] [[-Application] <PSObje
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller ApplicationAUTFileRule
 #### New-bConnectApplicationAUTFileRule
@@ -465,7 +429,6 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ProductVersion `<String>`
   > Product version of the file
@@ -474,7 +437,6 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * FileDescription `<String>`
   > File description of the file
@@ -483,7 +445,6 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * FileVersionNumeric `<String>`
   > Numerical file version
@@ -492,7 +453,6 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * CommandLine `<String>`
   > Command line parameters
@@ -501,7 +461,6 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * FileSize `<UInt64>`
   > Size of the file
@@ -510,7 +469,6 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : UInt64
   ```
 * Date `<String>`
   > Timestamp as Date of the file
@@ -519,7 +477,6 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * CRC `<UInt64>`
   > Checksum of the file
@@ -528,7 +485,6 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : UInt64
   ```
 * Version `<String>`
   > Version of the file
@@ -537,7 +493,6 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Company `<String>`
   > Company of the file
@@ -546,7 +501,6 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ProductName `<String>`
   > Product name of the file
@@ -555,7 +509,6 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * InternalName `<String>`
   > Internal name of the file
@@ -564,7 +517,6 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Language `<String>`
   > Language of the file
@@ -573,7 +525,6 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 ### Controller ApplicationFile
 #### New-bConnectApplicationFile
@@ -589,7 +540,6 @@ New-bConnectApplicationFile [-Source] <String> [-Type] <String> [<CommonParamete
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Type `<String>`
   > Type of the source
@@ -598,7 +548,6 @@ New-bConnectApplicationFile [-Source] <String> [-Type] <String> [<CommonParamete
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 ### Controller ApplicationInstallationData
 #### New-bConnectApplicationInstallationData
@@ -615,7 +564,6 @@ New-bConnectApplicationInstallationData [[-Command] <String>] [[-Parameter] <Str
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Parameter `<String>`
   > Parameter for installation command
@@ -624,7 +572,6 @@ New-bConnectApplicationInstallationData [[-Command] <String>] [[-Parameter] <Str
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ResponseFile `<String>`
   > ResponseFile for the installation
@@ -633,7 +580,6 @@ New-bConnectApplicationInstallationData [[-Command] <String>] [[-Parameter] <Str
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * EngineFile `<String>`
   > File for installation engine (Engine will be set automatically based on EngineFile; only bDS supported in this PS module)
@@ -642,7 +588,6 @@ New-bConnectApplicationInstallationData [[-Command] <String>] [[-Parameter] <Str
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Options `<PSObject>`
   > InstallApplicationOption object
@@ -651,7 +596,6 @@ New-bConnectApplicationInstallationData [[-Command] <String>] [[-Parameter] <Str
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 * UserSettings `<PSObject>`
   > InstallUserSettings object
@@ -660,7 +604,6 @@ New-bConnectApplicationInstallationData [[-Command] <String>] [[-Parameter] <Str
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 ### Controller ApplicationInstallOptions
 #### New-bConnectApplicationInstallOptions
@@ -677,7 +620,6 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * VisibleExecution `<String>`
   > Shows in which cases the execution of this software is visible
@@ -686,7 +628,6 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Target `<String>`
   > Target path variable
@@ -695,7 +636,6 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * AllowReinstall `<SwitchParameter>`
   > If set, reinstallation is allowed
@@ -704,7 +644,6 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * CopyLocally `<SwitchParameter>`
   > If set, installation files should be copied to local filesystem
@@ -713,7 +652,6 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * DisableInputDevices `<SwitchParameter>`
   > If set, no input devices will be available during installation
@@ -722,7 +660,6 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * DontSetAsInstalled `<SwitchParameter>`
   > If set, this application shouldn’t be shown as installed, after installation
@@ -731,7 +668,6 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * UsebBT `<SwitchParameter>`
   > If set, bBT is supported
@@ -740,7 +676,6 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller ApplicationInstallUserSettings
 #### New-bConnectApplicationInstallUserSettings
@@ -756,7 +691,6 @@ New-bConnectApplicationInstallUserSettings [[-baramundiDeployScript] <String>] [
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * CopyScriptToClient `<SwitchParameter>`
   > If set, script will be copied to client
@@ -765,7 +699,6 @@ New-bConnectApplicationInstallUserSettings [[-baramundiDeployScript] <String>] [
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * ExecuteAtEveryLogin `<SwitchParameter>`
   > If set, script will run on every login
@@ -774,7 +707,6 @@ New-bConnectApplicationInstallUserSettings [[-baramundiDeployScript] <String>] [
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * RunbDSVisible `<SwitchParameter>`
   > If set, bDS will run visible
@@ -783,7 +715,6 @@ New-bConnectApplicationInstallUserSettings [[-baramundiDeployScript] <String>] [
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * ValidForInstallUser `<SwitchParameter>`
   > If set, script will also run for the install user
@@ -792,7 +723,6 @@ New-bConnectApplicationInstallUserSettings [[-baramundiDeployScript] <String>] [
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller ApplicationLicense
 #### New-bConnectApplicationLicense
@@ -808,7 +738,6 @@ New-bConnectApplicationLicense [-LicenseKey] <String> [[-Count] <Int32>] [[-Offl
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Count `<Int32>`
   > License count
@@ -817,7 +746,6 @@ New-bConnectApplicationLicense [-LicenseKey] <String> [[-Count] <Int32>] [[-Offl
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : Int32
   ```
 * Offline `<Int32>`
   > Amount of offline licenses
@@ -826,7 +754,6 @@ New-bConnectApplicationLicense [-LicenseKey] <String> [[-Count] <Int32>] [[-Offl
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : Int32
   ```
 ### Controller ApplicationUninstallOptions
 #### New-bConnectApplicationUninstallOptions
@@ -843,7 +770,6 @@ New-bConnectApplicationUninstallOptions [[-RebootBehaviour] <String>] [-RemoveUn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * VisibleExecution `<String>`
   > Shows in which cases the execution of this software is visible
@@ -852,7 +778,6 @@ New-bConnectApplicationUninstallOptions [[-RebootBehaviour] <String>] [-RemoveUn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * CopyLocally `<SwitchParameter>`
   > If set, installation files should be copied to local filesystem
@@ -861,7 +786,6 @@ New-bConnectApplicationUninstallOptions [[-RebootBehaviour] <String>] [-RemoveUn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * DisableInputDevices `<SwitchParameter>`
   > If set, no input devices will be available during installation
@@ -870,7 +794,6 @@ New-bConnectApplicationUninstallOptions [[-RebootBehaviour] <String>] [-RemoveUn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * RemoveUnknownSoftware `<SwitchParameter>`
   > If set, removal of not installed software will be started
@@ -879,7 +802,6 @@ New-bConnectApplicationUninstallOptions [[-RebootBehaviour] <String>] [-RemoveUn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * UsebBT `<SwitchParameter>`
   > If set, bBT is supported
@@ -888,7 +810,6 @@ New-bConnectApplicationUninstallOptions [[-RebootBehaviour] <String>] [-RemoveUn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller ApplicationUninstallUserSettings
 #### New-bConnectApplicationUninstallUserSettings
@@ -904,7 +825,6 @@ New-bConnectApplicationUninstallUserSettings [[-baramundiDeployScript] <String>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * CopyScriptToClient `<SwitchParameter>`
   > If set, script will be copied to client
@@ -913,7 +833,6 @@ New-bConnectApplicationUninstallUserSettings [[-baramundiDeployScript] <String>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * RunbDSVisible `<SwitchParameter>`
   > If set, bDS will run visible
@@ -922,7 +841,6 @@ New-bConnectApplicationUninstallUserSettings [[-baramundiDeployScript] <String>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * ValidForInstallUser `<SwitchParameter>`
   > If set, script will also run for the install user
@@ -931,7 +849,6 @@ New-bConnectApplicationUninstallUserSettings [[-baramundiDeployScript] <String>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller BootEnv
 #### Get-bConnectBootEnv
@@ -947,7 +864,6 @@ Get-bConnectBootEnv [[-BootEnvironmentGuid] <String>] [<CommonParameters>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 ### Controller DynamicGroup
 #### Edit-bConnectDynamicGroup
@@ -963,7 +879,6 @@ Edit-bConnectDynamicGroup [-DynamicGroup] <PSObject> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 #### Get-bConnectDynamicGroup
 > Get specified Dynamic Group.
@@ -978,7 +893,6 @@ Get-bConnectDynamicGroup [[-DynamicGroup] <String>] [[-OrgUnit] <String>] [<Comm
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * OrgUnit `<String>`
   > Valid GUID of a OrgUnit with Dynamic Groups
@@ -987,7 +901,6 @@ Get-bConnectDynamicGroup [[-DynamicGroup] <String>] [[-OrgUnit] <String>] [<Comm
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### New-bConnectDynamicGroup
 > Create a new DynamicGroup.
@@ -1002,7 +915,6 @@ New-bConnectDynamicGroup [-Name] <String> [[-ParentGuid] <String>] [-Statement] 
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ParentGuid `<String>`
   > Valid GUID of the parent OrgUnit in hierarchy (default: "Dynamic Groups").
@@ -1011,7 +923,6 @@ New-bConnectDynamicGroup [-Name] <String> [[-ParentGuid] <String>] [-Statement] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Statement `<String>`
   > Valid SQL Statement ("SELECT * FROM machine " will be automatically added).
@@ -1020,7 +931,6 @@ New-bConnectDynamicGroup [-Name] <String> [[-ParentGuid] <String>] [-Statement] 
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Comment `<String>`
   > Comment for the DynamicGroup.
@@ -1029,7 +939,6 @@ New-bConnectDynamicGroup [-Name] <String> [[-ParentGuid] <String>] [-Statement] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -1038,7 +947,6 @@ New-bConnectDynamicGroup [-Name] <String> [[-ParentGuid] <String>] [-Statement] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -1047,7 +955,6 @@ New-bConnectDynamicGroup [-Name] <String> [[-ParentGuid] <String>] [-Statement] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 #### Remove-bConnectDynamicGroup
 > Remove specified DynamicGroup.
@@ -1062,7 +969,6 @@ Remove-bConnectDynamicGroup [-DynamicGroupGuid] <String> [-WhatIf] [-Confirm] [<
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -1071,7 +977,6 @@ Remove-bConnectDynamicGroup [-DynamicGroupGuid] <String> [-WhatIf] [-Confirm] [<
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -1080,7 +985,6 @@ Remove-bConnectDynamicGroup [-DynamicGroupGuid] <String> [-WhatIf] [-Confirm] [<
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller Endpoint
 #### Edit-bConnectEndpoint
@@ -1096,7 +1000,6 @@ Edit-bConnectEndpoint [-Endpoint] <PSObject> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 #### Get-bConnectEndpoint
 > Get specified endpoint or all endpoints in given OrgUnit
@@ -1111,7 +1014,6 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * OrgUnitGuid `<String>`
   > Valid GUID of an Orgunit
@@ -1120,7 +1022,6 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * DynamicGroupGuid `<String>`
   > 
@@ -1129,7 +1030,6 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * StaticGroupGuid `<String>`
   > 
@@ -1138,7 +1038,6 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Username `<String>`
   > Valid Username
@@ -1147,7 +1046,6 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * InstalledSoftware `<SwitchParameter>`
   > If set, the result contains the installed software.
@@ -1156,7 +1054,6 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * PublicKey `<SwitchParameter>`
   > If set, the result contains the associated public keys.
@@ -1165,7 +1062,6 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * SnmpData `<SwitchParameter>`
   > If set, the result contains the associated snmp data.
@@ -1174,7 +1070,6 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 #### New-bConnectEndpoint
 > Create a new endpoint.
@@ -1189,7 +1084,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : 
   ```
 * GuidHardwareProfile `<String>`
   > 
@@ -1198,7 +1092,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * PrimaryUser `<String>`
   > Primary user of this endpoint. Mandatory for WindowsPhone-Endpoints.
@@ -1207,7 +1100,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Comments `<String>`
   > 
@@ -1216,7 +1108,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Owner `<bConnectEndpointOwner>`
   > 
@@ -1225,7 +1116,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : 
   ```
 * ComplianceCheckCategory `<bConnectEndpointComplianceCheckCategory>`
   > 
@@ -1234,7 +1124,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : 
   ```
 * Mode `<String>`
   > 
@@ -1243,7 +1132,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * DisplayName `<String>`
   > DisplayName of the new endpoint. This is also used as hostname for Windows-Endpoints.
@@ -1252,7 +1140,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * GroupGuid `<String>`
   > Valid GUID of the target OU (default: "Logical Group").
@@ -1261,7 +1148,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * PrimaryMac `<String>`
   > guid of "Logical Group" as fallback
@@ -1270,7 +1156,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * PrimaryIp `<String>`
   > 
@@ -1279,7 +1164,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * HostName `<String>`
   > 
@@ -1288,7 +1172,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Domain `<String>`
   > 
@@ -1297,7 +1180,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Options `<String>`
   > 
@@ -1306,7 +1188,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * GuidBootEnvironment `<String>`
   > 
@@ -1315,7 +1196,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -1324,7 +1204,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * ExtendedInternetMode `<SwitchParameter>`
   > 
@@ -1333,7 +1212,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -1342,7 +1220,6 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 #### Remove-bConnectEndpoint
 > Remove specified endpoint.
@@ -1357,7 +1234,6 @@ Remove-bConnectEndpoint [[-EndpointGuid] <String>] [[-Endpoint] <PSObject>] [-Wh
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Endpoint `<PSObject>`
   > Valid Endpoint object.
@@ -1366,7 +1242,6 @@ Remove-bConnectEndpoint [[-EndpointGuid] <String>] [[-Endpoint] <PSObject>] [-Wh
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -1375,7 +1250,6 @@ Remove-bConnectEndpoint [[-EndpointGuid] <String>] [[-Endpoint] <PSObject>] [-Wh
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -1384,7 +1258,6 @@ Remove-bConnectEndpoint [[-EndpointGuid] <String>] [[-Endpoint] <PSObject>] [-Wh
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller EndpointInvSoftware
 #### Get-bConnectEndpointInvSoftware
@@ -1407,7 +1280,6 @@ Get-bConnectEndpointSecret [-EndpointGuid] <String> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### Set-bConnectEndpointSecret
 > Set disk encryption information for specified endpoint.
@@ -1422,7 +1294,6 @@ Set-bConnectEndpointSecret [-EndpointGuid] <String> [-Pin] <String> [-WhatIf] [-
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Pin `<String>`
   > Current unlock pin for endpoint.
@@ -1431,7 +1302,6 @@ Set-bConnectEndpointSecret [-EndpointGuid] <String> [-Pin] <String> [-WhatIf] [-
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -1440,7 +1310,6 @@ Set-bConnectEndpointSecret [-EndpointGuid] <String> [-Pin] <String> [-WhatIf] [-
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -1449,7 +1318,6 @@ Set-bConnectEndpointSecret [-EndpointGuid] <String> [-Pin] <String> [-WhatIf] [-
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller HardwareProfile
 #### Get-bConnectHardwareProfile
@@ -1465,7 +1333,6 @@ Get-bConnectHardwareProfile [[-HardwareProfileGuid] <String>] [<CommonParameters
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 ### Controller Image
 #### Get-bConnectImage
@@ -1481,7 +1348,6 @@ Get-bConnectImage [-Id] <String> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 ### Controller Info
 #### Get-bConnectInfo
@@ -1504,7 +1370,6 @@ Get-bConnectInventoryAppScan [[-EndpointGuid] <String>] [<CommonParameters>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 ### Controller InventoryDataCustomScan
 #### Get-bConnectInventoryDataCustomScan
@@ -1520,7 +1385,6 @@ Get-bConnectInventoryDataCustomScan [[-EndpointGuid] <String>] [[-TemplateName] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * TemplateName `<String>`
   > Valid name of a inventory template
@@ -1529,7 +1393,6 @@ Get-bConnectInventoryDataCustomScan [[-EndpointGuid] <String>] [[-TemplateName] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ScanTerm `<String>`
   > "latest" or specified as UTC time in the format “yyyy-MM-ddThh:mm:ssZ” (y=year, M=month, d=day, h=hours, m=minutes, s=seconds).
@@ -1538,7 +1401,6 @@ Get-bConnectInventoryDataCustomScan [[-EndpointGuid] <String>] [[-TemplateName] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 ### Controller InventoryDataFileScan
 #### Get-bConnectInventoryDataFileScan
@@ -1554,7 +1416,6 @@ Get-bConnectInventoryDataFileScan [[-EndpointGuid] <String>] [<CommonParameters>
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### Remove-bConnectInventoryDataFileScan
 > Remove all file scans from specified endpoint.
@@ -1569,7 +1430,6 @@ Remove-bConnectInventoryDataFileScan [-EndpointGuid] <String> [-WhatIf] [-Confir
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -1578,7 +1438,6 @@ Remove-bConnectInventoryDataFileScan [-EndpointGuid] <String> [-WhatIf] [-Confir
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -1587,7 +1446,6 @@ Remove-bConnectInventoryDataFileScan [-EndpointGuid] <String> [-WhatIf] [-Confir
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller InventoryDataHardwareScan
 #### Get-bConnectInventoryDataHardwareScan
@@ -1603,7 +1461,6 @@ Get-bConnectInventoryDataHardwareScan [[-EndpointGuid] <String>] [[-TemplateName
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * TemplateName `<String>`
   > Valid name of a inventory template
@@ -1612,7 +1469,6 @@ Get-bConnectInventoryDataHardwareScan [[-EndpointGuid] <String>] [[-TemplateName
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ScanTerm `<String>`
   > "latest" or specified as UTC time in the format “yyyy-MM-ddThh:mm:ssZ” (y=year, M=month, d=day, h=hours, m=minutes, s=seconds).
@@ -1621,7 +1477,6 @@ Get-bConnectInventoryDataHardwareScan [[-EndpointGuid] <String>] [[-TemplateName
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 ### Controller InventoryDataRegistryScan
 #### Get-bConnectInventoryDataRegistryScan
@@ -1637,7 +1492,6 @@ Get-bConnectInventoryDataRegistryScan [[-EndpointGuid] <String>] [<CommonParamet
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### Remove-bConnectInventoryDataRegistryScan
 > Remove all registry scans from specified endpoint.
@@ -1652,7 +1506,6 @@ Remove-bConnectInventoryDataRegistryScan [-EndpointGuid] <String> [-WhatIf] [-Co
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -1661,7 +1514,6 @@ Remove-bConnectInventoryDataRegistryScan [-EndpointGuid] <String> [-WhatIf] [-Co
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -1670,7 +1522,6 @@ Remove-bConnectInventoryDataRegistryScan [-EndpointGuid] <String> [-WhatIf] [-Co
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller InventoryDataSnmpScan
 #### Get-bConnectInventoryDataSnmpScan
@@ -1686,7 +1537,6 @@ Get-bConnectInventoryDataSnmpScan [[-EndpointGuid] <String>] [<CommonParameters>
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 ### Controller InventoryDataWmiScan
 #### Get-bConnectInventoryDataWmiScan
@@ -1702,7 +1552,6 @@ Get-bConnectInventoryDataWmiScan [[-EndpointGuid] <String>] [[-TemplateName] <St
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * TemplateName `<String>`
   > Valid name of a inventory template
@@ -1711,7 +1560,6 @@ Get-bConnectInventoryDataWmiScan [[-EndpointGuid] <String>] [[-TemplateName] <St
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ScanTerm `<String>`
   > "latest" or specified as UTC time in the format “yyyy-MM-ddThh:mm:ssZ” (y=year, M=month, d=day, h=hours, m=minutes, s=seconds).
@@ -1720,7 +1568,6 @@ Get-bConnectInventoryDataWmiScan [[-EndpointGuid] <String>] [[-TemplateName] <St
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 ### Controller InventoryOverview
 #### Get-bConnectInventoryOverview
@@ -1736,7 +1583,6 @@ Get-bConnectInventoryOverview [[-EndpointGuid] <String>] [<CommonParameters>]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 ### Controller Job
 #### Get-bConnectJob
@@ -1752,7 +1598,6 @@ Get-bConnectJob [[-JobGuid] <String>] [[-OrgUnitGuid] <String>] [[-Username] <St
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * OrgUnitGuid `<String>`
   > Valid GUID of a Orgunit.
@@ -1761,7 +1606,6 @@ Get-bConnectJob [[-JobGuid] <String>] [[-OrgUnitGuid] <String>] [[-Username] <St
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Username `<String>`
   > Valid Username.
@@ -1770,7 +1614,6 @@ Get-bConnectJob [[-JobGuid] <String>] [[-OrgUnitGuid] <String>] [[-Username] <St
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Steps `<SwitchParameter>`
   > 
@@ -1779,7 +1622,6 @@ Get-bConnectJob [[-JobGuid] <String>] [[-OrgUnitGuid] <String>] [[-Username] <St
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 #### Remove-bConnectJob
 > Remove specified job.
@@ -1794,7 +1636,6 @@ Remove-bConnectJob [[-JobGuid] <String>] [[-Job] <PSObject>] [-WhatIf] [-Confirm
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Job `<PSObject>`
   > 
@@ -1803,7 +1644,6 @@ Remove-bConnectJob [[-JobGuid] <String>] [[-Job] <PSObject>] [-WhatIf] [-Confirm
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -1812,7 +1652,6 @@ Remove-bConnectJob [[-JobGuid] <String>] [[-Job] <PSObject>] [-WhatIf] [-Confirm
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -1821,7 +1660,6 @@ Remove-bConnectJob [[-JobGuid] <String>] [[-Job] <PSObject>] [-WhatIf] [-Confirm
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller JobInstance
 #### Get-bConnectJobInstance
@@ -1837,7 +1675,6 @@ Get-bConnectJobInstance [[-JobInstanceGuid] <String>] [[-JobGuid] <String>] [[-E
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * JobGuid `<String>`
   > Valid GUID of a job.
@@ -1846,7 +1683,6 @@ Get-bConnectJobInstance [[-JobInstanceGuid] <String>] [[-JobGuid] <String>] [[-E
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * EndpointGuid `<String>`
   > Valid GUID of a endpoint
@@ -1855,7 +1691,6 @@ Get-bConnectJobInstance [[-JobInstanceGuid] <String>] [[-JobGuid] <String>] [[-E
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Username `<String>`
   > Valid Username (in combination with EndpointGuid)
@@ -1864,7 +1699,6 @@ Get-bConnectJobInstance [[-JobInstanceGuid] <String>] [[-JobGuid] <String>] [[-E
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### New-bConnectJobInstance
 > Assign the specified job to a endpoint.
@@ -1879,7 +1713,6 @@ New-bConnectJobInstance [-EndpointGuid] <String> [-JobGuid] <String> [[-Initiato
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * JobGuid `<String>`
   > Valid GUID of a job.
@@ -1888,7 +1721,6 @@ New-bConnectJobInstance [-EndpointGuid] <String> [-JobGuid] <String> [[-Initiato
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Initiator `<String>`
   > Set the Initiator of the new job instance.
@@ -1897,7 +1729,6 @@ New-bConnectJobInstance [-EndpointGuid] <String> [-JobGuid] <String> [[-Initiato
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -1906,7 +1737,6 @@ New-bConnectJobInstance [-EndpointGuid] <String> [-JobGuid] <String> [[-Initiato
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * StartIfExists `<SwitchParameter>`
   > Restart the existing jobinstance if there is one.
@@ -1915,7 +1745,6 @@ New-bConnectJobInstance [-EndpointGuid] <String> [-JobGuid] <String> [[-Initiato
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -1924,7 +1753,6 @@ New-bConnectJobInstance [-EndpointGuid] <String> [-JobGuid] <String> [[-Initiato
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 #### Remove-bConnectJobInstance
 > Remove specified jobinstance.
@@ -1939,7 +1767,6 @@ Remove-bConnectJobInstance [-JobInstanceGuid] <String> [-WhatIf] [-Confirm] [<Co
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -1948,7 +1775,6 @@ Remove-bConnectJobInstance [-JobInstanceGuid] <String> [-WhatIf] [-Confirm] [<Co
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -1957,7 +1783,6 @@ Remove-bConnectJobInstance [-JobInstanceGuid] <String> [-WhatIf] [-Confirm] [<Co
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 #### Resume-bConnectJobInstance
 > Resume the specified jobinstance.
@@ -1972,7 +1797,6 @@ Resume-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -1981,7 +1805,6 @@ Resume-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -1990,7 +1813,6 @@ Resume-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 #### Start-bConnectJobInstance
 > Start the specified jobinstance.
@@ -2005,7 +1827,6 @@ Start-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<C
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -2014,7 +1835,6 @@ Start-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<C
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -2023,7 +1843,6 @@ Start-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<C
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 #### Stop-bConnectJobInstance
 > Stop the specified jobinstance.
@@ -2038,7 +1857,6 @@ Stop-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<Co
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -2047,7 +1865,6 @@ Stop-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<Co
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -2056,7 +1873,6 @@ Stop-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<Co
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller KioskJob
 #### Get-bConnectKioskJob
@@ -2072,7 +1888,6 @@ Get-bConnectKioskJob [[-Username] <String>] [[-EndpointId] <String>] [[-GroupId]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * EndpointId `<String>`
   > 
@@ -2081,7 +1896,6 @@ Get-bConnectKioskJob [[-Username] <String>] [[-EndpointId] <String>] [[-GroupId]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * GroupId `<String>`
   > Valid GUID of a Orgunit.
@@ -2090,7 +1904,6 @@ Get-bConnectKioskJob [[-Username] <String>] [[-EndpointId] <String>] [[-GroupId]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * JobDefinitionId `<String>`
   > Valid GUID of an job.
@@ -2099,7 +1912,6 @@ Get-bConnectKioskJob [[-Username] <String>] [[-EndpointId] <String>] [[-GroupId]
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### New-bConnectKioskJob
 > Release an job for an endpoint, group or user.
@@ -2114,7 +1926,6 @@ New-bConnectKioskJob [-JobDefinitionId] <String> [[-TargetId] <String>] [[-Usern
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * TargetId `<String>`
   > Valid GUID of an endpoint, group or user.
@@ -2123,7 +1934,6 @@ New-bConnectKioskJob [-JobDefinitionId] <String> [[-TargetId] <String>] [[-Usern
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Username `<String>`
   > Valid Username (Principal Name).
@@ -2133,7 +1943,6 @@ If set, Username replaces TargetId.
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -2142,7 +1951,6 @@ If set, Username replaces TargetId.
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -2151,7 +1959,6 @@ If set, Username replaces TargetId.
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 #### Remove-bConnectKioskJob
 > Remove specified kiosk job.
@@ -2166,7 +1973,6 @@ Remove-bConnectKioskJob [[-KioskJobId] <String>] [[-KioskJob] <PSObject>] [-What
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * KioskJob `<PSObject>`
   > 
@@ -2175,7 +1981,6 @@ Remove-bConnectKioskJob [[-KioskJobId] <String>] [[-KioskJob] <PSObject>] [-What
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -2184,7 +1989,6 @@ Remove-bConnectKioskJob [[-KioskJobId] <String>] [[-KioskJob] <PSObject>] [-What
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -2193,7 +1997,6 @@ Remove-bConnectKioskJob [[-KioskJobId] <String>] [[-KioskJob] <PSObject>] [-What
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller OrgUnit
 #### Edit-bConnectOrgUnit
@@ -2209,7 +2012,6 @@ Edit-bConnectOrgUnit [-OrgUnit] <PSObject> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 #### Get-bConnectOrgUnit
 > Get specified OrgUnit.
@@ -2224,7 +2026,6 @@ Get-bConnectOrgUnit [-OrgUnit] <String> [-SubGroups] [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * SubGroups `<SwitchParameter>`
   > List subgroups of given OrgUnit.
@@ -2234,7 +2035,6 @@ Only used if parameter "name" is a valid GUID.
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 #### New-bConnectOrgUnit
 > Create a new OrgUnit.
@@ -2249,7 +2049,6 @@ New-bConnectOrgUnit [-Name] <String> [[-ParentGuid] <String>] [[-Comment] <Strin
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ParentGuid `<String>`
   > Valid GUID of the parent OrgUnit in hierarchy (default: "Logical Group").
@@ -2258,7 +2057,6 @@ New-bConnectOrgUnit [-Name] <String> [[-ParentGuid] <String>] [[-Comment] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Comment `<String>`
   > Comment for the OrgUnit.
@@ -2267,7 +2065,6 @@ New-bConnectOrgUnit [-Name] <String> [[-ParentGuid] <String>] [[-Comment] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Extension `<PSObject>`
   > Hashtable Extension (see bConnect documentation for more details).
@@ -2276,7 +2073,6 @@ New-bConnectOrgUnit [-Name] <String> [[-ParentGuid] <String>] [[-Comment] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -2285,7 +2081,6 @@ New-bConnectOrgUnit [-Name] <String> [[-ParentGuid] <String>] [[-Comment] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -2294,7 +2089,6 @@ New-bConnectOrgUnit [-Name] <String> [[-ParentGuid] <String>] [[-Comment] <Strin
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 #### Remove-bConnectOrgUnit
 > Remove specified OrgUnit.
@@ -2309,7 +2103,6 @@ Remove-bConnectOrgUnit [-OrgUnitGuid] <String> [-WhatIf] [-Confirm] [<CommonPara
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -2318,7 +2111,6 @@ Remove-bConnectOrgUnit [-OrgUnitGuid] <String> [-WhatIf] [-Confirm] [<CommonPara
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -2327,7 +2119,6 @@ Remove-bConnectOrgUnit [-OrgUnitGuid] <String> [-WhatIf] [-Confirm] [<CommonPara
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller OrgUnitExtension
 #### New-bConnectOrgUnitExtension
@@ -2344,7 +2135,6 @@ New-bConnectOrgUnitExtension [[-DIP] <String>] [[-Domain] <String>] [[-LocalAdmi
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * WinsServer2 `<String>`
   > 
@@ -2353,7 +2143,6 @@ New-bConnectOrgUnitExtension [[-DIP] <String>] [[-Domain] <String>] [[-LocalAdmi
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * AutoInstallJobs `<String[]>`
   > Array of valid Job-GUIDs
@@ -2362,7 +2151,6 @@ New-bConnectOrgUnitExtension [[-DIP] <String>] [[-Domain] <String>] [[-LocalAdmi
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String[]
   ```
 * HardwareProfiles `<String[]>`
   > Array of valid HardwareProfile-GUIDs
@@ -2371,7 +2159,6 @@ New-bConnectOrgUnitExtension [[-DIP] <String>] [[-Domain] <String>] [[-LocalAdmi
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String[]
   ```
 * RequestableJobs `<String[]>`
   > Array of valid Job-GUIDs
@@ -2380,7 +2167,6 @@ New-bConnectOrgUnitExtension [[-DIP] <String>] [[-Domain] <String>] [[-LocalAdmi
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String[]
   ```
 * Domain `<String>`
   > Valid Windows Domain Name.
@@ -2389,7 +2175,6 @@ New-bConnectOrgUnitExtension [[-DIP] <String>] [[-Domain] <String>] [[-LocalAdmi
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * LocalAdminPassword `<SecureString>`
   > Local admin password for OU (set during OS-Install)
@@ -2399,7 +2184,6 @@ Must be encrypted with baramundi Cryptor
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SecureString
   ```
 * SubnetMask `<String>`
   > 
@@ -2408,7 +2192,6 @@ Must be encrypted with baramundi Cryptor
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * DefaultGateway `<String>`
   > 
@@ -2417,7 +2200,6 @@ Must be encrypted with baramundi Cryptor
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * DnsServer `<String>`
   > 
@@ -2426,7 +2208,6 @@ Must be encrypted with baramundi Cryptor
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * DnsServer2 `<String>`
   > 
@@ -2435,7 +2216,6 @@ Must be encrypted with baramundi Cryptor
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * DnsDomain `<String>`
   > 
@@ -2444,7 +2224,6 @@ Must be encrypted with baramundi Cryptor
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * WinsServer `<String>`
   > 
@@ -2453,7 +2232,6 @@ Must be encrypted with baramundi Cryptor
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * EnableDHCP `<SwitchParameter>`
   > 
@@ -2462,7 +2240,6 @@ Must be encrypted with baramundi Cryptor
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * InheritAutoInstallJobs `<SwitchParameter>`
   > Array of valid inherited Job-GUIDs
@@ -2471,7 +2248,6 @@ Must be encrypted with baramundi Cryptor
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller SoftwareScanRule
 #### Get-bConnectSoftwareScanRule
@@ -2501,7 +2277,6 @@ Edit-bConnectStaticGroup [-StaticGroup] <PSObject> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 #### Get-bConnectStaticGroup
 > Get specified Static Group.
@@ -2516,7 +2291,6 @@ Get-bConnectStaticGroup [[-StaticGroup] <String>] [[-OrgUnit] <String>] [<Common
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * OrgUnit `<String>`
   > Valid GUID of a OrgUnit with Static Groups
@@ -2525,7 +2299,6 @@ Get-bConnectStaticGroup [[-StaticGroup] <String>] [[-OrgUnit] <String>] [<Common
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### New-bConnectStaticGroup
 > Create a new StaticGroup.
@@ -2540,7 +2313,6 @@ New-bConnectStaticGroup [-Name] <String> [[-ParentGuid] <String>] [[-Statement] 
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ParentGuid `<String>`
   > Valid GUID of the parent OrgUnit in hierarchy (default: "Static Groups").
@@ -2549,7 +2321,6 @@ New-bConnectStaticGroup [-Name] <String> [[-ParentGuid] <String>] [[-Statement] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Statement `<PSObject[]>`
   > guid of "Static Groups" as fallback
@@ -2558,7 +2329,6 @@ New-bConnectStaticGroup [-Name] <String> [[-ParentGuid] <String>] [[-Statement] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject[]
   ```
 * Comment `<String>`
   > Comment for the StaticGroup.
@@ -2567,7 +2337,6 @@ New-bConnectStaticGroup [-Name] <String> [[-ParentGuid] <String>] [[-Statement] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -2576,7 +2345,6 @@ New-bConnectStaticGroup [-Name] <String> [[-ParentGuid] <String>] [[-Statement] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -2585,7 +2353,6 @@ New-bConnectStaticGroup [-Name] <String> [[-ParentGuid] <String>] [[-Statement] 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 #### Remove-bConnectStaticGroup
 > Remove specified StaticGroup.
@@ -2600,7 +2367,6 @@ Remove-bConnectStaticGroup [-StaticGroupGuid] <String> [-WhatIf] [-Confirm] [<Co
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -2609,7 +2375,6 @@ Remove-bConnectStaticGroup [-StaticGroupGuid] <String> [-WhatIf] [-Confirm] [<Co
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -2618,7 +2383,6 @@ Remove-bConnectStaticGroup [-StaticGroupGuid] <String> [-WhatIf] [-Confirm] [<Co
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller Variable
 #### Get-bConnectVariable
@@ -2634,7 +2398,6 @@ Get-bConnectVariable [-Scope] {Device | MobileDevice | OrgUnit | Job | Software 
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : 
   ```
 * Category `<String>`
   > Valid variable category.
@@ -2643,7 +2406,6 @@ Get-bConnectVariable [-Scope] {Device | MobileDevice | OrgUnit | Job | Software 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Name `<String>`
   > Valid variable name.
@@ -2652,7 +2414,6 @@ Get-bConnectVariable [-Scope] {Device | MobileDevice | OrgUnit | Job | Software 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * ObjectGuid `<String>`
   > Valid GUID of an object.
@@ -2661,7 +2422,6 @@ Get-bConnectVariable [-Scope] {Device | MobileDevice | OrgUnit | Job | Software 
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### Set-bConnectVariable
 > Set variable for a object.
@@ -2676,7 +2436,6 @@ Set-bConnectVariable [-ObjectGuid] <String> [-Scope] {Device | MobileDevice | Or
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Scope `<bConnectVariableScope>`
   > enum bConnectVariableScope.
@@ -2685,7 +2444,6 @@ Set-bConnectVariable [-ObjectGuid] <String> [-Scope] {Device | MobileDevice | Or
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : 
   ```
 * Category `<String>`
   > Valid variable category.
@@ -2694,7 +2452,6 @@ Set-bConnectVariable [-ObjectGuid] <String> [-Scope] {Device | MobileDevice | Or
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Name `<String>`
   > Valid variable name.
@@ -2703,7 +2460,6 @@ Set-bConnectVariable [-ObjectGuid] <String> [-Scope] {Device | MobileDevice | Or
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Value `<String>`
   > New value.
@@ -2712,7 +2468,6 @@ Set-bConnectVariable [-ObjectGuid] <String> [-Scope] {Device | MobileDevice | Or
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * UseDefault `<SwitchParameter>`
   > 
@@ -2721,7 +2476,6 @@ Set-bConnectVariable [-ObjectGuid] <String> [-Scope] {Device | MobileDevice | Or
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller VariableDefinition
 #### Edit-bConnectVariableDefinition
@@ -2738,7 +2492,6 @@ Updating the Category or Name will change the ID of the correspondig VariableDef
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : PSObject
   ```
 #### Get-bConnectVariableDefinition
 > Get variable definition.
@@ -2753,7 +2506,6 @@ Get-bConnectVariableDefinition [[-Id] <String>] [[-Scope] {Device | MobileDevice
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Scope `<bConnectVariableScope>`
   > enum bConnectVariableScope.
@@ -2762,7 +2514,6 @@ Get-bConnectVariableDefinition [[-Id] <String>] [[-Scope] {Device | MobileDevice
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : 
   ```
 * Category `<String>`
   > Valid variable category.
@@ -2771,7 +2522,6 @@ Get-bConnectVariableDefinition [[-Id] <String>] [[-Scope] {Device | MobileDevice
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Name `<String>`
   > Valid variable name.
@@ -2780,7 +2530,6 @@ Get-bConnectVariableDefinition [[-Id] <String>] [[-Scope] {Device | MobileDevice
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### New-bConnectVariableDefinition
 > New VariableDefinition.
@@ -2795,7 +2544,6 @@ New-bConnectVariableDefinition [-Scope] {Device | MobileDevice | OrgUnit | Job |
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : 
   ```
 * Category `<String>`
   > Valid variable category.
@@ -2804,7 +2552,6 @@ New-bConnectVariableDefinition [-Scope] {Device | MobileDevice | OrgUnit | Job |
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Name `<String>`
   > Valid variable name.
@@ -2813,7 +2560,6 @@ New-bConnectVariableDefinition [-Scope] {Device | MobileDevice | OrgUnit | Job |
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 * Type `<bConnectVariableType>`
   > enum bConnectVariableType.
@@ -2822,7 +2568,6 @@ New-bConnectVariableDefinition [-Scope] {Device | MobileDevice | OrgUnit | Job |
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : 
   ```
 * Confirm `<SwitchParameter>`
   > 
@@ -2831,7 +2576,6 @@ New-bConnectVariableDefinition [-Scope] {Device | MobileDevice | OrgUnit | Job |
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 * WhatIf `<SwitchParameter>`
   > 
@@ -2840,7 +2584,6 @@ New-bConnectVariableDefinition [-Scope] {Device | MobileDevice | OrgUnit | Job |
   Required : false
   PipelineInput : false
   Aliases : 
-  ParameterValue : SwitchParameter
   ```
 ### Controller Search
 #### Search-bConnectApplication
@@ -2856,7 +2599,6 @@ Search-bConnectApplication [-Term] <String> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### Search-bConnectDynamicGroup
 > Search for specified static group.
@@ -2871,7 +2613,6 @@ Search-bConnectDynamicGroup [-Term] <String> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### Search-bConnectEndpoint
 > Search for specified endpoints.
@@ -2886,7 +2627,6 @@ Search-bConnectEndpoint [-Term] <String> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### Search-bConnectGroup
 > Search for specified group.
@@ -2901,7 +2641,6 @@ Search-bConnectGroup [-Term] <String> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### Search-bConnectJob
 > Search for specified jobs.
@@ -2916,7 +2655,6 @@ Search-bConnectJob [-Term] <String> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### Search-bConnectOrgUnit
 > Search for specified OrgUnit.
@@ -2931,7 +2669,6 @@ Search-bConnectOrgUnit [-Term] <String> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 #### Search-bConnectStaticGroup
 > Search for specified static group.
@@ -2946,6 +2683,5 @@ Search-bConnectStaticGroup [-Term] <String> [<CommonParameters>]
   Required : true
   PipelineInput : false
   Aliases : 
-  ParameterValue : String
   ```
 

@@ -21,7 +21,7 @@ function params ($help) {
         '* {0} `<{1}>`' -F $param.Name,$param.Type.Name
         "  > {0}" -F $param.Description.Text
         '  ```'
-        'Position Required PipelineInput Aliases ParameterValue' -split ' '|% {
+        'Position Required PipelineInput Aliases' -split ' '|% {
             "  {0} : {1}" -F $_,$param.$_
         }
         '  ```'
