@@ -18,7 +18,7 @@ function params ($help) {
     #$replace=[regex]'^-'
     $help.Parameters.parameter|Sort-Object Position,Required,Name |% {
         $param=$_
-        '* {0} &lt;`{1}`&gt;' -F $param.Name,$param.Type.Name
+        '* {0} `<{1}>`' -F $param.Name,$param.Type.Name
         "  > {0}" -F $param.Description.Text
         '  ```'
         'Position Required PipelineInput Aliases ParameterValue' -split ' '|% {

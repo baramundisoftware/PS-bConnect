@@ -81,7 +81,7 @@
 Initialize-bConnect [-Server] <String> [[-Port] <String>] [-Credentials] <PSCredential> [-AcceptSelfSignedCertifcate] [<CommonParameters>]
 ```
 #### Parameters
-* Server &lt;`String`&gt;
+* Server `<String>`
   > Hostname/FQDN/IP of the baramundi Management Server.
   ```
   Position : 1
@@ -90,7 +90,7 @@ Initialize-bConnect [-Server] <String> [[-Port] <String>] [-Credentials] <PSCred
   Aliases : 
   ParameterValue : String
   ```
-* Port &lt;`String`&gt;
+* Port `<String>`
   > Port of bConnect (default: 443).
   ```
   Position : 2
@@ -99,7 +99,7 @@ Initialize-bConnect [-Server] <String> [[-Port] <String>] [-Credentials] <PSCred
   Aliases : 
   ParameterValue : String
   ```
-* Credentials &lt;`PSCredential`&gt;
+* Credentials `<PSCredential>`
   > PSCredential-object with permissions in the bMS.
   ```
   Position : 3
@@ -108,7 +108,7 @@ Initialize-bConnect [-Server] <String> [[-Port] <String>] [-Credentials] <PSCred
   Aliases : 
   ParameterValue : PSCredential
   ```
-* AcceptSelfSignedCertifcate &lt;`SwitchParameter`&gt;
+* AcceptSelfSignedCertifcate `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -123,7 +123,7 @@ Initialize-bConnect [-Server] <String> [[-Port] <String>] [-Credentials] <PSCred
 Reset-bConnect [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 #### Parameters
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -132,7 +132,7 @@ Reset-bConnect [-WhatIf] [-Confirm] [<CommonParameters>]
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -149,7 +149,7 @@ Reset-bConnect [-WhatIf] [-Confirm] [<CommonParameters>]
 Get-bConnectApp [[-AppGuid] <String>] [[-OrgUnitGuid] <String>] [[-EndpointGuid] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* AppGuid &lt;`String`&gt;
+* AppGuid `<String>`
   > Valid GUID of a app.
   ```
   Position : 1
@@ -158,7 +158,7 @@ Get-bConnectApp [[-AppGuid] <String>] [[-OrgUnitGuid] <String>] [[-EndpointGuid]
   Aliases : 
   ParameterValue : String
   ```
-* OrgUnitGuid &lt;`String`&gt;
+* OrgUnitGuid `<String>`
   > Valid GUID of a Orgunit.
   ```
   Position : 2
@@ -167,7 +167,7 @@ Get-bConnectApp [[-AppGuid] <String>] [[-OrgUnitGuid] <String>] [[-EndpointGuid]
   Aliases : 
   ParameterValue : String
   ```
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of an endpoint.
   ```
   Position : 3
@@ -183,7 +183,7 @@ Get-bConnectApp [[-AppGuid] <String>] [[-OrgUnitGuid] <String>] [[-EndpointGuid]
 Get-bConnectAppIcon [[-AppGuid] <String>] [[-Scope] {App | Inventory}] [<CommonParameters>]
 ```
 ##### Parameters
-* AppGuid &lt;`String`&gt;
+* AppGuid `<String>`
   > Valid GUID of a app.
   ```
   Position : 1
@@ -192,7 +192,7 @@ Get-bConnectAppIcon [[-AppGuid] <String>] [[-Scope] {App | Inventory}] [<CommonP
   Aliases : 
   ParameterValue : String
   ```
-* Scope &lt;`bConnectIconScope`&gt;
+* Scope `<bConnectIconScope>`
   > Valid scope (App/Inventory).
   ```
   Position : 2
@@ -208,7 +208,7 @@ Get-bConnectAppIcon [[-AppGuid] <String>] [[-Scope] {App | Inventory}] [<CommonP
 Edit-bConnectApplication [-Application] <PSObject> [<CommonParameters>]
 ```
 ##### Parameters
-* Application &lt;`PSObject`&gt;
+* Application `<PSObject>`
   > Application object (hashtable).
   ```
   Position : 1
@@ -223,7 +223,7 @@ Edit-bConnectApplication [-Application] <PSObject> [<CommonParameters>]
 Get-bConnectApplication [[-ApplicationGuid] <String>] [[-OrgUnitGuid] <String>] [[-EndpointGuid] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* ApplicationGuid &lt;`String`&gt;
+* ApplicationGuid `<String>`
   > Valid GUID of a application.
   ```
   Position : 1
@@ -232,7 +232,7 @@ Get-bConnectApplication [[-ApplicationGuid] <String>] [[-OrgUnitGuid] <String>] 
   Aliases : 
   ParameterValue : String
   ```
-* OrgUnitGuid &lt;`String`&gt;
+* OrgUnitGuid `<String>`
   > Valid GUID of a Orgunit.
   ```
   Position : 2
@@ -241,7 +241,7 @@ Get-bConnectApplication [[-ApplicationGuid] <String>] [[-OrgUnitGuid] <String>] 
   Aliases : 
   ParameterValue : String
   ```
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of an endpoint.
   ```
   Position : 3
@@ -256,7 +256,7 @@ Get-bConnectApplication [[-ApplicationGuid] <String>] [[-OrgUnitGuid] <String>] 
 New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <String[]> [[-Comment] <String>] [[-ParentGuid] <String>] [[-Version] <String>] [[-Category] <String>] [[-InstallationData] <PSObject>] [[-UninstallationData] <PSObject>] [[-ConsistencyChecks] <String>] [[-ApplicationFile] <PSObject[]>] [[-Cost] <Single>] [[-SecurityContext] <String>] [[-Licenses] <PSObject[]>] [[-AUT] <PSObject[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* Name &lt;`String`&gt;
+* Name `<String>`
   > 
   ```
   Position : 1
@@ -265,7 +265,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : String
   ```
-* ConsistencyChecks &lt;`String`&gt;
+* ConsistencyChecks `<String>`
   > 
   ```
   Position : 10
@@ -274,7 +274,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : String
   ```
-* ApplicationFile &lt;`PSObject[]`&gt;
+* ApplicationFile `<PSObject[]>`
   > 
   ```
   Position : 11
@@ -283,7 +283,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : PSObject[]
   ```
-* Cost &lt;`Single`&gt;
+* Cost `<Single>`
   > 
   ```
   Position : 12
@@ -292,7 +292,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : Single
   ```
-* SecurityContext &lt;`String`&gt;
+* SecurityContext `<String>`
   > 
   ```
   Position : 13
@@ -301,7 +301,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : String
   ```
-* Licenses &lt;`PSObject[]`&gt;
+* Licenses `<PSObject[]>`
   > 
   ```
   Position : 14
@@ -310,7 +310,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : PSObject[]
   ```
-* AUT &lt;`PSObject[]`&gt;
+* AUT `<PSObject[]>`
   > 
   ```
   Position : 15
@@ -319,7 +319,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : PSObject[]
   ```
-* Vendor &lt;`String`&gt;
+* Vendor `<String>`
   > 
   ```
   Position : 2
@@ -328,7 +328,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : String
   ```
-* ValidForOS &lt;`String[]`&gt;
+* ValidForOS `<String[]>`
   > 
   ```
   Position : 3
@@ -337,7 +337,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : String[]
   ```
-* Comment &lt;`String`&gt;
+* Comment `<String>`
   > 
   ```
   Position : 4
@@ -346,7 +346,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : String
   ```
-* ParentGuid &lt;`String`&gt;
+* ParentGuid `<String>`
   > 
   ```
   Position : 5
@@ -355,7 +355,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : String
   ```
-* Version &lt;`String`&gt;
+* Version `<String>`
   > guid of "Applications" as fallback
   ```
   Position : 6
@@ -364,7 +364,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : String
   ```
-* Category &lt;`String`&gt;
+* Category `<String>`
   > 
   ```
   Position : 7
@@ -373,7 +373,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : String
   ```
-* InstallationData &lt;`PSObject`&gt;
+* InstallationData `<PSObject>`
   > 
   ```
   Position : 8
@@ -382,7 +382,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : PSObject
   ```
-* UninstallationData &lt;`PSObject`&gt;
+* UninstallationData `<PSObject>`
   > 
   ```
   Position : 9
@@ -391,7 +391,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : PSObject
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -400,7 +400,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -415,7 +415,7 @@ New-bConnectApplication [-Name] <String> [-Vendor] <String> [-ValidForOS] <Strin
 Remove-bConnectApplication [[-ApplicationGuid] <String>] [[-Application] <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* ApplicationGuid &lt;`String`&gt;
+* ApplicationGuid `<String>`
   > Valid GUID of a application.
   ```
   Position : 1
@@ -424,7 +424,7 @@ Remove-bConnectApplication [[-ApplicationGuid] <String>] [[-Application] <PSObje
   Aliases : 
   ParameterValue : String
   ```
-* Application &lt;`PSObject`&gt;
+* Application `<PSObject>`
   > Valid Application object
   ```
   Position : 2
@@ -433,7 +433,7 @@ Remove-bConnectApplication [[-ApplicationGuid] <String>] [[-Application] <PSObje
   Aliases : 
   ParameterValue : PSObject
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -442,7 +442,7 @@ Remove-bConnectApplication [[-ApplicationGuid] <String>] [[-Application] <PSObje
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -458,7 +458,7 @@ Remove-bConnectApplication [[-ApplicationGuid] <String>] [[-Application] <PSObje
 New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>] [[-Date] <String>] [[-CRC] <UInt64>] [[-Version] <String>] [[-Company] <String>] [[-ProductName] <String>] [[-InternalName] <String>] [[-Language] <String>] [[-ProductVersion] <String>] [[-FileDescription] <String>] [[-FileVersionNumeric] <String>] [[-CommandLine] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* FileName &lt;`String`&gt;
+* FileName `<String>`
   > Name of the file
   ```
   Position : 1
@@ -467,7 +467,7 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Aliases : 
   ParameterValue : String
   ```
-* ProductVersion &lt;`String`&gt;
+* ProductVersion `<String>`
   > Product version of the file
   ```
   Position : 10
@@ -476,7 +476,7 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Aliases : 
   ParameterValue : String
   ```
-* FileDescription &lt;`String`&gt;
+* FileDescription `<String>`
   > File description of the file
   ```
   Position : 11
@@ -485,7 +485,7 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Aliases : 
   ParameterValue : String
   ```
-* FileVersionNumeric &lt;`String`&gt;
+* FileVersionNumeric `<String>`
   > Numerical file version
   ```
   Position : 12
@@ -494,7 +494,7 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Aliases : 
   ParameterValue : String
   ```
-* CommandLine &lt;`String`&gt;
+* CommandLine `<String>`
   > Command line parameters
   ```
   Position : 13
@@ -503,7 +503,7 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Aliases : 
   ParameterValue : String
   ```
-* FileSize &lt;`UInt64`&gt;
+* FileSize `<UInt64>`
   > Size of the file
   ```
   Position : 2
@@ -512,7 +512,7 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Aliases : 
   ParameterValue : UInt64
   ```
-* Date &lt;`String`&gt;
+* Date `<String>`
   > Timestamp as Date of the file
   ```
   Position : 3
@@ -521,7 +521,7 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Aliases : 
   ParameterValue : String
   ```
-* CRC &lt;`UInt64`&gt;
+* CRC `<UInt64>`
   > Checksum of the file
   ```
   Position : 4
@@ -530,7 +530,7 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Aliases : 
   ParameterValue : UInt64
   ```
-* Version &lt;`String`&gt;
+* Version `<String>`
   > Version of the file
   ```
   Position : 5
@@ -539,7 +539,7 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Aliases : 
   ParameterValue : String
   ```
-* Company &lt;`String`&gt;
+* Company `<String>`
   > Company of the file
   ```
   Position : 6
@@ -548,7 +548,7 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Aliases : 
   ParameterValue : String
   ```
-* ProductName &lt;`String`&gt;
+* ProductName `<String>`
   > Product name of the file
   ```
   Position : 7
@@ -557,7 +557,7 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Aliases : 
   ParameterValue : String
   ```
-* InternalName &lt;`String`&gt;
+* InternalName `<String>`
   > Internal name of the file
   ```
   Position : 8
@@ -566,7 +566,7 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
   Aliases : 
   ParameterValue : String
   ```
-* Language &lt;`String`&gt;
+* Language `<String>`
   > Language of the file
   ```
   Position : 9
@@ -582,7 +582,7 @@ New-bConnectApplicationAUTFileRule [[-FileName] <String>] [[-FileSize] <UInt64>]
 New-bConnectApplicationFile [-Source] <String> [-Type] <String> [<CommonParameters>]
 ```
 ##### Parameters
-* Source &lt;`String`&gt;
+* Source `<String>`
   > Path or file
   ```
   Position : 1
@@ -591,7 +591,7 @@ New-bConnectApplicationFile [-Source] <String> [-Type] <String> [<CommonParamete
   Aliases : 
   ParameterValue : String
   ```
-* Type &lt;`String`&gt;
+* Type `<String>`
   > Type of the source
   ```
   Position : 2
@@ -608,7 +608,7 @@ Empty or filled with given information.
 New-bConnectApplicationInstallationData [[-Command] <String>] [[-Parameter] <String>] [[-ResponseFile] <String>] [[-EngineFile] <String>] [[-Options] <PSObject>] [[-UserSettings] <PSObject>] [<CommonParameters>]
 ```
 ##### Parameters
-* Command &lt;`String`&gt;
+* Command `<String>`
   > Installation command
   ```
   Position : 1
@@ -617,7 +617,7 @@ New-bConnectApplicationInstallationData [[-Command] <String>] [[-Parameter] <Str
   Aliases : 
   ParameterValue : String
   ```
-* Parameter &lt;`String`&gt;
+* Parameter `<String>`
   > Parameter for installation command
   ```
   Position : 2
@@ -626,7 +626,7 @@ New-bConnectApplicationInstallationData [[-Command] <String>] [[-Parameter] <Str
   Aliases : 
   ParameterValue : String
   ```
-* ResponseFile &lt;`String`&gt;
+* ResponseFile `<String>`
   > ResponseFile for the installation
   ```
   Position : 3
@@ -635,7 +635,7 @@ New-bConnectApplicationInstallationData [[-Command] <String>] [[-Parameter] <Str
   Aliases : 
   ParameterValue : String
   ```
-* EngineFile &lt;`String`&gt;
+* EngineFile `<String>`
   > File for installation engine (Engine will be set automatically based on EngineFile; only bDS supported in this PS module)
   ```
   Position : 4
@@ -644,7 +644,7 @@ New-bConnectApplicationInstallationData [[-Command] <String>] [[-Parameter] <Str
   Aliases : 
   ParameterValue : String
   ```
-* Options &lt;`PSObject`&gt;
+* Options `<PSObject>`
   > InstallApplicationOption object
   ```
   Position : 5
@@ -653,7 +653,7 @@ New-bConnectApplicationInstallationData [[-Command] <String>] [[-Parameter] <Str
   Aliases : 
   ParameterValue : PSObject
   ```
-* UserSettings &lt;`PSObject`&gt;
+* UserSettings `<PSObject>`
   > InstallUserSettings object
   ```
   Position : 6
@@ -670,7 +670,7 @@ Empty or filled with given information.
 New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReinstall] [-UsebBT] [[-VisibleExecution] <String>] [-CopyLocally] [-DisableInputDevices] [-DontSetAsInstalled] [[-Target] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* RebootBehaviour &lt;`String`&gt;
+* RebootBehaviour `<String>`
   > Reboot behaviour after installation
   ```
   Position : 1
@@ -679,7 +679,7 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Aliases : 
   ParameterValue : String
   ```
-* VisibleExecution &lt;`String`&gt;
+* VisibleExecution `<String>`
   > Shows in which cases the execution of this software is visible
   ```
   Position : 2
@@ -688,7 +688,7 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Aliases : 
   ParameterValue : String
   ```
-* Target &lt;`String`&gt;
+* Target `<String>`
   > Target path variable
   ```
   Position : 3
@@ -697,7 +697,7 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Aliases : 
   ParameterValue : String
   ```
-* AllowReinstall &lt;`SwitchParameter`&gt;
+* AllowReinstall `<SwitchParameter>`
   > If set, reinstallation is allowed
   ```
   Position : named
@@ -706,7 +706,7 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* CopyLocally &lt;`SwitchParameter`&gt;
+* CopyLocally `<SwitchParameter>`
   > If set, installation files should be copied to local filesystem
   ```
   Position : named
@@ -715,7 +715,7 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* DisableInputDevices &lt;`SwitchParameter`&gt;
+* DisableInputDevices `<SwitchParameter>`
   > If set, no input devices will be available during installation
   ```
   Position : named
@@ -724,7 +724,7 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* DontSetAsInstalled &lt;`SwitchParameter`&gt;
+* DontSetAsInstalled `<SwitchParameter>`
   > If set, this application shouldn’t be shown as installed, after installation
   ```
   Position : named
@@ -733,7 +733,7 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* UsebBT &lt;`SwitchParameter`&gt;
+* UsebBT `<SwitchParameter>`
   > If set, bBT is supported
   ```
   Position : named
@@ -749,7 +749,7 @@ New-bConnectApplicationInstallOptions [[-RebootBehaviour] <String>] [-AllowReins
 New-bConnectApplicationInstallUserSettings [[-baramundiDeployScript] <String>] [-ValidForInstallUser] [-RunbDSVisible] [-CopyScriptToClient] [-ExecuteAtEveryLogin] [<CommonParameters>]
 ```
 ##### Parameters
-* baramundiDeployScript &lt;`String`&gt;
+* baramundiDeployScript `<String>`
   > Path to the deploy script that needs to be executed during installation
   ```
   Position : 1
@@ -758,7 +758,7 @@ New-bConnectApplicationInstallUserSettings [[-baramundiDeployScript] <String>] [
   Aliases : 
   ParameterValue : String
   ```
-* CopyScriptToClient &lt;`SwitchParameter`&gt;
+* CopyScriptToClient `<SwitchParameter>`
   > If set, script will be copied to client
   ```
   Position : named
@@ -767,7 +767,7 @@ New-bConnectApplicationInstallUserSettings [[-baramundiDeployScript] <String>] [
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* ExecuteAtEveryLogin &lt;`SwitchParameter`&gt;
+* ExecuteAtEveryLogin `<SwitchParameter>`
   > If set, script will run on every login
   ```
   Position : named
@@ -776,7 +776,7 @@ New-bConnectApplicationInstallUserSettings [[-baramundiDeployScript] <String>] [
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* RunbDSVisible &lt;`SwitchParameter`&gt;
+* RunbDSVisible `<SwitchParameter>`
   > If set, bDS will run visible
   ```
   Position : named
@@ -785,7 +785,7 @@ New-bConnectApplicationInstallUserSettings [[-baramundiDeployScript] <String>] [
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* ValidForInstallUser &lt;`SwitchParameter`&gt;
+* ValidForInstallUser `<SwitchParameter>`
   > If set, script will also run for the install user
   ```
   Position : named
@@ -801,7 +801,7 @@ New-bConnectApplicationInstallUserSettings [[-baramundiDeployScript] <String>] [
 New-bConnectApplicationLicense [-LicenseKey] <String> [[-Count] <Int32>] [[-Offline] <Int32>] [<CommonParameters>]
 ```
 ##### Parameters
-* LicenseKey &lt;`String`&gt;
+* LicenseKey `<String>`
   > License key
   ```
   Position : 1
@@ -810,7 +810,7 @@ New-bConnectApplicationLicense [-LicenseKey] <String> [[-Count] <Int32>] [[-Offl
   Aliases : 
   ParameterValue : String
   ```
-* Count &lt;`Int32`&gt;
+* Count `<Int32>`
   > License count
   ```
   Position : 2
@@ -819,7 +819,7 @@ New-bConnectApplicationLicense [-LicenseKey] <String> [[-Count] <Int32>] [[-Offl
   Aliases : 
   ParameterValue : Int32
   ```
-* Offline &lt;`Int32`&gt;
+* Offline `<Int32>`
   > Amount of offline licenses
   ```
   Position : 3
@@ -836,7 +836,7 @@ Empty or filled with given information.
 New-bConnectApplicationUninstallOptions [[-RebootBehaviour] <String>] [-RemoveUnknownSoftware] [-UsebBT] [[-VisibleExecution] <String>] [-CopyLocally] [-DisableInputDevices] [<CommonParameters>]
 ```
 ##### Parameters
-* RebootBehaviour &lt;`String`&gt;
+* RebootBehaviour `<String>`
   > Reboot behaviour after installation
   ```
   Position : 1
@@ -845,7 +845,7 @@ New-bConnectApplicationUninstallOptions [[-RebootBehaviour] <String>] [-RemoveUn
   Aliases : 
   ParameterValue : String
   ```
-* VisibleExecution &lt;`String`&gt;
+* VisibleExecution `<String>`
   > Shows in which cases the execution of this software is visible
   ```
   Position : 2
@@ -854,7 +854,7 @@ New-bConnectApplicationUninstallOptions [[-RebootBehaviour] <String>] [-RemoveUn
   Aliases : 
   ParameterValue : String
   ```
-* CopyLocally &lt;`SwitchParameter`&gt;
+* CopyLocally `<SwitchParameter>`
   > If set, installation files should be copied to local filesystem
   ```
   Position : named
@@ -863,7 +863,7 @@ New-bConnectApplicationUninstallOptions [[-RebootBehaviour] <String>] [-RemoveUn
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* DisableInputDevices &lt;`SwitchParameter`&gt;
+* DisableInputDevices `<SwitchParameter>`
   > If set, no input devices will be available during installation
   ```
   Position : named
@@ -872,7 +872,7 @@ New-bConnectApplicationUninstallOptions [[-RebootBehaviour] <String>] [-RemoveUn
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* RemoveUnknownSoftware &lt;`SwitchParameter`&gt;
+* RemoveUnknownSoftware `<SwitchParameter>`
   > If set, removal of not installed software will be started
   ```
   Position : named
@@ -881,7 +881,7 @@ New-bConnectApplicationUninstallOptions [[-RebootBehaviour] <String>] [-RemoveUn
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* UsebBT &lt;`SwitchParameter`&gt;
+* UsebBT `<SwitchParameter>`
   > If set, bBT is supported
   ```
   Position : named
@@ -897,7 +897,7 @@ New-bConnectApplicationUninstallOptions [[-RebootBehaviour] <String>] [-RemoveUn
 New-bConnectApplicationUninstallUserSettings [[-baramundiDeployScript] <String>] [-ValidForInstallUser] [-RunbDSVisible] [-CopyScriptToClient] [<CommonParameters>]
 ```
 ##### Parameters
-* baramundiDeployScript &lt;`String`&gt;
+* baramundiDeployScript `<String>`
   > Path to the deploy script that needs to be executed during uninstallation
   ```
   Position : 1
@@ -906,7 +906,7 @@ New-bConnectApplicationUninstallUserSettings [[-baramundiDeployScript] <String>]
   Aliases : 
   ParameterValue : String
   ```
-* CopyScriptToClient &lt;`SwitchParameter`&gt;
+* CopyScriptToClient `<SwitchParameter>`
   > If set, script will be copied to client
   ```
   Position : named
@@ -915,7 +915,7 @@ New-bConnectApplicationUninstallUserSettings [[-baramundiDeployScript] <String>]
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* RunbDSVisible &lt;`SwitchParameter`&gt;
+* RunbDSVisible `<SwitchParameter>`
   > If set, bDS will run visible
   ```
   Position : named
@@ -924,7 +924,7 @@ New-bConnectApplicationUninstallUserSettings [[-baramundiDeployScript] <String>]
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* ValidForInstallUser &lt;`SwitchParameter`&gt;
+* ValidForInstallUser `<SwitchParameter>`
   > If set, script will also run for the install user
   ```
   Position : named
@@ -940,7 +940,7 @@ New-bConnectApplicationUninstallUserSettings [[-baramundiDeployScript] <String>]
 Get-bConnectBootEnv [[-BootEnvironmentGuid] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* BootEnvironmentGuid &lt;`String`&gt;
+* BootEnvironmentGuid `<String>`
   > Valid GUID of a boot environment
   ```
   Position : 1
@@ -956,7 +956,7 @@ Get-bConnectBootEnv [[-BootEnvironmentGuid] <String>] [<CommonParameters>]
 Edit-bConnectDynamicGroup [-DynamicGroup] <PSObject> [<CommonParameters>]
 ```
 ##### Parameters
-* DynamicGroup &lt;`PSObject`&gt;
+* DynamicGroup `<PSObject>`
   > Valid modified DynamicGroup
   ```
   Position : 1
@@ -971,7 +971,7 @@ Edit-bConnectDynamicGroup [-DynamicGroup] <PSObject> [<CommonParameters>]
 Get-bConnectDynamicGroup [[-DynamicGroup] <String>] [[-OrgUnit] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* DynamicGroup &lt;`String`&gt;
+* DynamicGroup `<String>`
   > Name (wildcards supported) or GUID of the Dynamic Group.
   ```
   Position : 1
@@ -980,7 +980,7 @@ Get-bConnectDynamicGroup [[-DynamicGroup] <String>] [[-OrgUnit] <String>] [<Comm
   Aliases : 
   ParameterValue : String
   ```
-* OrgUnit &lt;`String`&gt;
+* OrgUnit `<String>`
   > Valid GUID of a OrgUnit with Dynamic Groups
   ```
   Position : 2
@@ -995,7 +995,7 @@ Get-bConnectDynamicGroup [[-DynamicGroup] <String>] [[-OrgUnit] <String>] [<Comm
 New-bConnectDynamicGroup [-Name] <String> [[-ParentGuid] <String>] [-Statement] <String> [[-Comment] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* Name &lt;`String`&gt;
+* Name `<String>`
   > Name of the DynamicGroup.
   ```
   Position : 1
@@ -1004,7 +1004,7 @@ New-bConnectDynamicGroup [-Name] <String> [[-ParentGuid] <String>] [-Statement] 
   Aliases : 
   ParameterValue : String
   ```
-* ParentGuid &lt;`String`&gt;
+* ParentGuid `<String>`
   > Valid GUID of the parent OrgUnit in hierarchy (default: "Dynamic Groups").
   ```
   Position : 2
@@ -1013,7 +1013,7 @@ New-bConnectDynamicGroup [-Name] <String> [[-ParentGuid] <String>] [-Statement] 
   Aliases : 
   ParameterValue : String
   ```
-* Statement &lt;`String`&gt;
+* Statement `<String>`
   > Valid SQL Statement ("SELECT * FROM machine " will be automatically added).
   ```
   Position : 3
@@ -1022,7 +1022,7 @@ New-bConnectDynamicGroup [-Name] <String> [[-ParentGuid] <String>] [-Statement] 
   Aliases : 
   ParameterValue : String
   ```
-* Comment &lt;`String`&gt;
+* Comment `<String>`
   > Comment for the DynamicGroup.
   ```
   Position : 4
@@ -1031,7 +1031,7 @@ New-bConnectDynamicGroup [-Name] <String> [[-ParentGuid] <String>] [-Statement] 
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1040,7 +1040,7 @@ New-bConnectDynamicGroup [-Name] <String> [[-ParentGuid] <String>] [-Statement] 
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1055,7 +1055,7 @@ New-bConnectDynamicGroup [-Name] <String> [[-ParentGuid] <String>] [-Statement] 
 Remove-bConnectDynamicGroup [-DynamicGroupGuid] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* DynamicGroupGuid &lt;`String`&gt;
+* DynamicGroupGuid `<String>`
   > Valid GUID of a DynamicGroup.
   ```
   Position : 1
@@ -1064,7 +1064,7 @@ Remove-bConnectDynamicGroup [-DynamicGroupGuid] <String> [-WhatIf] [-Confirm] [<
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1073,7 +1073,7 @@ Remove-bConnectDynamicGroup [-DynamicGroupGuid] <String> [-WhatIf] [-Confirm] [<
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1089,7 +1089,7 @@ Remove-bConnectDynamicGroup [-DynamicGroupGuid] <String> [-WhatIf] [-Confirm] [<
 Edit-bConnectEndpoint [-Endpoint] <PSObject> [<CommonParameters>]
 ```
 ##### Parameters
-* Endpoint &lt;`PSObject`&gt;
+* Endpoint `<PSObject>`
   > Valid modified endpoint
   ```
   Position : 1
@@ -1104,7 +1104,7 @@ Edit-bConnectEndpoint [-Endpoint] <PSObject> [<CommonParameters>]
 Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-DynamicGroupGuid] <String>] [[-StaticGroupGuid] <String>] [[-Username] <String>] [-PublicKey] [-InstalledSoftware] [-SnmpData] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of a endpoint
   ```
   Position : 1
@@ -1113,7 +1113,7 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Aliases : 
   ParameterValue : String
   ```
-* OrgUnitGuid &lt;`String`&gt;
+* OrgUnitGuid `<String>`
   > Valid GUID of an Orgunit
   ```
   Position : 2
@@ -1122,7 +1122,7 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Aliases : 
   ParameterValue : String
   ```
-* DynamicGroupGuid &lt;`String`&gt;
+* DynamicGroupGuid `<String>`
   > 
   ```
   Position : 3
@@ -1131,7 +1131,7 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Aliases : 
   ParameterValue : String
   ```
-* StaticGroupGuid &lt;`String`&gt;
+* StaticGroupGuid `<String>`
   > 
   ```
   Position : 4
@@ -1140,7 +1140,7 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Aliases : 
   ParameterValue : String
   ```
-* Username &lt;`String`&gt;
+* Username `<String>`
   > Valid Username
   ```
   Position : 5
@@ -1149,7 +1149,7 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Aliases : 
   ParameterValue : String
   ```
-* InstalledSoftware &lt;`SwitchParameter`&gt;
+* InstalledSoftware `<SwitchParameter>`
   > If set, the result contains the installed software.
   ```
   Position : named
@@ -1158,7 +1158,7 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* PublicKey &lt;`SwitchParameter`&gt;
+* PublicKey `<SwitchParameter>`
   > If set, the result contains the associated public keys.
   ```
   Position : named
@@ -1167,7 +1167,7 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* SnmpData &lt;`SwitchParameter`&gt;
+* SnmpData `<SwitchParameter>`
   > If set, the result contains the associated snmp data.
   ```
   Position : named
@@ -1182,7 +1182,7 @@ Get-bConnectEndpoint [[-EndpointGuid] <String>] [[-OrgUnitGuid] <String>] [[-Dyn
 New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSEndpoint | MacEndpoint | WindowsPhoneEndpoint | NetworkEndpoint} [-DisplayName] <String> [[-GroupGuid] <String>] [[-PrimaryMac] <String>] [[-PrimaryIp] <String>] [[-HostName] <String>] [[-Domain] <String>] [[-Options] <String>] [[-GuidBootEnvironment] <String>] [[-GuidHardwareProfile] <String>] [[-PrimaryUser] <String>] [[-Comments] <String>] [[-Owner] {Company | Private | Unknown}] [[-ComplianceCheckCategory] {Active | Inactive | TemporarilyInactive}] [[-Mode] <String>] [-ExtendedInternetMode] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* Type &lt;`bConnectEndpointType`&gt;
+* Type `<bConnectEndpointType>`
   > enum bConnectEndpointType.
   ```
   Position : 1
@@ -1191,7 +1191,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : 
   ```
-* GuidHardwareProfile &lt;`String`&gt;
+* GuidHardwareProfile `<String>`
   > 
   ```
   Position : 10
@@ -1200,7 +1200,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : String
   ```
-* PrimaryUser &lt;`String`&gt;
+* PrimaryUser `<String>`
   > Primary user of this endpoint. Mandatory for WindowsPhone-Endpoints.
   ```
   Position : 11
@@ -1209,7 +1209,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : String
   ```
-* Comments &lt;`String`&gt;
+* Comments `<String>`
   > 
   ```
   Position : 12
@@ -1218,7 +1218,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : String
   ```
-* Owner &lt;`bConnectEndpointOwner`&gt;
+* Owner `<bConnectEndpointOwner>`
   > 
   ```
   Position : 13
@@ -1227,7 +1227,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : 
   ```
-* ComplianceCheckCategory &lt;`bConnectEndpointComplianceCheckCategory`&gt;
+* ComplianceCheckCategory `<bConnectEndpointComplianceCheckCategory>`
   > 
   ```
   Position : 14
@@ -1236,7 +1236,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : 
   ```
-* Mode &lt;`String`&gt;
+* Mode `<String>`
   > 
   ```
   Position : 15
@@ -1245,7 +1245,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : String
   ```
-* DisplayName &lt;`String`&gt;
+* DisplayName `<String>`
   > DisplayName of the new endpoint. This is also used as hostname for Windows-Endpoints.
   ```
   Position : 2
@@ -1254,7 +1254,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : String
   ```
-* GroupGuid &lt;`String`&gt;
+* GroupGuid `<String>`
   > Valid GUID of the target OU (default: "Logical Group").
   ```
   Position : 3
@@ -1263,7 +1263,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : String
   ```
-* PrimaryMac &lt;`String`&gt;
+* PrimaryMac `<String>`
   > guid of "Logical Group" as fallback
   ```
   Position : 4
@@ -1272,7 +1272,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : String
   ```
-* PrimaryIp &lt;`String`&gt;
+* PrimaryIp `<String>`
   > 
   ```
   Position : 5
@@ -1281,7 +1281,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : String
   ```
-* HostName &lt;`String`&gt;
+* HostName `<String>`
   > 
   ```
   Position : 6
@@ -1290,7 +1290,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : String
   ```
-* Domain &lt;`String`&gt;
+* Domain `<String>`
   > 
   ```
   Position : 7
@@ -1299,7 +1299,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : String
   ```
-* Options &lt;`String`&gt;
+* Options `<String>`
   > 
   ```
   Position : 8
@@ -1308,7 +1308,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : String
   ```
-* GuidBootEnvironment &lt;`String`&gt;
+* GuidBootEnvironment `<String>`
   > 
   ```
   Position : 9
@@ -1317,7 +1317,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1326,7 +1326,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* ExtendedInternetMode &lt;`SwitchParameter`&gt;
+* ExtendedInternetMode `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1335,7 +1335,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1350,7 +1350,7 @@ New-bConnectEndpoint [-Type] {Unknown | WindowsEndpoint | AndroidEndpoint | iOSE
 Remove-bConnectEndpoint [[-EndpointGuid] <String>] [[-Endpoint] <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of an endpoint.
   ```
   Position : 1
@@ -1359,7 +1359,7 @@ Remove-bConnectEndpoint [[-EndpointGuid] <String>] [[-Endpoint] <PSObject>] [-Wh
   Aliases : 
   ParameterValue : String
   ```
-* Endpoint &lt;`PSObject`&gt;
+* Endpoint `<PSObject>`
   > Valid Endpoint object.
   ```
   Position : 2
@@ -1368,7 +1368,7 @@ Remove-bConnectEndpoint [[-EndpointGuid] <String>] [[-Endpoint] <PSObject>] [-Wh
   Aliases : 
   ParameterValue : PSObject
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1377,7 +1377,7 @@ Remove-bConnectEndpoint [[-EndpointGuid] <String>] [[-Endpoint] <PSObject>] [-Wh
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1400,7 +1400,7 @@ Get-bConnectEndpointInvSoftware [<CommonParameters>]
 Get-bConnectEndpointSecret [-EndpointGuid] <String> [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > 
   ```
   Position : 1
@@ -1415,7 +1415,7 @@ Get-bConnectEndpointSecret [-EndpointGuid] <String> [<CommonParameters>]
 Set-bConnectEndpointSecret [-EndpointGuid] <String> [-Pin] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > 
   ```
   Position : 1
@@ -1424,7 +1424,7 @@ Set-bConnectEndpointSecret [-EndpointGuid] <String> [-Pin] <String> [-WhatIf] [-
   Aliases : 
   ParameterValue : String
   ```
-* Pin &lt;`String`&gt;
+* Pin `<String>`
   > Current unlock pin for endpoint.
   ```
   Position : 2
@@ -1433,7 +1433,7 @@ Set-bConnectEndpointSecret [-EndpointGuid] <String> [-Pin] <String> [-WhatIf] [-
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1442,7 +1442,7 @@ Set-bConnectEndpointSecret [-EndpointGuid] <String> [-Pin] <String> [-WhatIf] [-
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1458,7 +1458,7 @@ Set-bConnectEndpointSecret [-EndpointGuid] <String> [-Pin] <String> [-WhatIf] [-
 Get-bConnectHardwareProfile [[-HardwareProfileGuid] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* HardwareProfileGuid &lt;`String`&gt;
+* HardwareProfileGuid `<String>`
   > Valid GUID of a hardware profile
   ```
   Position : 1
@@ -1474,7 +1474,7 @@ Get-bConnectHardwareProfile [[-HardwareProfileGuid] <String>] [<CommonParameters
 Get-bConnectImage [-Id] <String> [<CommonParameters>]
 ```
 ##### Parameters
-* Id &lt;`String`&gt;
+* Id `<String>`
   > Valid GUID of an image.
   ```
   Position : 1
@@ -1497,7 +1497,7 @@ Get-bConnectInfo [<CommonParameters>]
 Get-bConnectInventoryAppScan [[-EndpointGuid] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of a endpoint.
   ```
   Position : 1
@@ -1513,7 +1513,7 @@ Get-bConnectInventoryAppScan [[-EndpointGuid] <String>] [<CommonParameters>]
 Get-bConnectInventoryDataCustomScan [[-EndpointGuid] <String>] [[-TemplateName] <String>] [[-ScanTerm] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of a endpoint.
   ```
   Position : 1
@@ -1522,7 +1522,7 @@ Get-bConnectInventoryDataCustomScan [[-EndpointGuid] <String>] [[-TemplateName] 
   Aliases : 
   ParameterValue : String
   ```
-* TemplateName &lt;`String`&gt;
+* TemplateName `<String>`
   > Valid name of a inventory template
   ```
   Position : 2
@@ -1531,7 +1531,7 @@ Get-bConnectInventoryDataCustomScan [[-EndpointGuid] <String>] [[-TemplateName] 
   Aliases : 
   ParameterValue : String
   ```
-* ScanTerm &lt;`String`&gt;
+* ScanTerm `<String>`
   > "latest" or specified as UTC time in the format “yyyy-MM-ddThh:mm:ssZ” (y=year, M=month, d=day, h=hours, m=minutes, s=seconds).
   ```
   Position : 3
@@ -1547,7 +1547,7 @@ Get-bConnectInventoryDataCustomScan [[-EndpointGuid] <String>] [[-TemplateName] 
 Get-bConnectInventoryDataFileScan [[-EndpointGuid] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of a endpoint.
   ```
   Position : 1
@@ -1562,7 +1562,7 @@ Get-bConnectInventoryDataFileScan [[-EndpointGuid] <String>] [<CommonParameters>
 Remove-bConnectInventoryDataFileScan [-EndpointGuid] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of a endpoint.
   ```
   Position : 1
@@ -1571,7 +1571,7 @@ Remove-bConnectInventoryDataFileScan [-EndpointGuid] <String> [-WhatIf] [-Confir
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1580,7 +1580,7 @@ Remove-bConnectInventoryDataFileScan [-EndpointGuid] <String> [-WhatIf] [-Confir
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1596,7 +1596,7 @@ Remove-bConnectInventoryDataFileScan [-EndpointGuid] <String> [-WhatIf] [-Confir
 Get-bConnectInventoryDataHardwareScan [[-EndpointGuid] <String>] [[-TemplateName] <String>] [[-ScanTerm] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of a endpoint.
   ```
   Position : 1
@@ -1605,7 +1605,7 @@ Get-bConnectInventoryDataHardwareScan [[-EndpointGuid] <String>] [[-TemplateName
   Aliases : 
   ParameterValue : String
   ```
-* TemplateName &lt;`String`&gt;
+* TemplateName `<String>`
   > Valid name of a inventory template
   ```
   Position : 2
@@ -1614,7 +1614,7 @@ Get-bConnectInventoryDataHardwareScan [[-EndpointGuid] <String>] [[-TemplateName
   Aliases : 
   ParameterValue : String
   ```
-* ScanTerm &lt;`String`&gt;
+* ScanTerm `<String>`
   > "latest" or specified as UTC time in the format “yyyy-MM-ddThh:mm:ssZ” (y=year, M=month, d=day, h=hours, m=minutes, s=seconds).
   ```
   Position : 3
@@ -1630,7 +1630,7 @@ Get-bConnectInventoryDataHardwareScan [[-EndpointGuid] <String>] [[-TemplateName
 Get-bConnectInventoryDataRegistryScan [[-EndpointGuid] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of a endpoint.
   ```
   Position : 1
@@ -1645,7 +1645,7 @@ Get-bConnectInventoryDataRegistryScan [[-EndpointGuid] <String>] [<CommonParamet
 Remove-bConnectInventoryDataRegistryScan [-EndpointGuid] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of a endpoint.
   ```
   Position : 1
@@ -1654,7 +1654,7 @@ Remove-bConnectInventoryDataRegistryScan [-EndpointGuid] <String> [-WhatIf] [-Co
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1663,7 +1663,7 @@ Remove-bConnectInventoryDataRegistryScan [-EndpointGuid] <String> [-WhatIf] [-Co
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1679,7 +1679,7 @@ Remove-bConnectInventoryDataRegistryScan [-EndpointGuid] <String> [-WhatIf] [-Co
 Get-bConnectInventoryDataSnmpScan [[-EndpointGuid] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of a endpoint.
   ```
   Position : 1
@@ -1695,7 +1695,7 @@ Get-bConnectInventoryDataSnmpScan [[-EndpointGuid] <String>] [<CommonParameters>
 Get-bConnectInventoryDataWmiScan [[-EndpointGuid] <String>] [[-TemplateName] <String>] [[-ScanTerm] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of a endpoint.
   ```
   Position : 1
@@ -1704,7 +1704,7 @@ Get-bConnectInventoryDataWmiScan [[-EndpointGuid] <String>] [[-TemplateName] <St
   Aliases : 
   ParameterValue : String
   ```
-* TemplateName &lt;`String`&gt;
+* TemplateName `<String>`
   > Valid name of a inventory template
   ```
   Position : 2
@@ -1713,7 +1713,7 @@ Get-bConnectInventoryDataWmiScan [[-EndpointGuid] <String>] [[-TemplateName] <St
   Aliases : 
   ParameterValue : String
   ```
-* ScanTerm &lt;`String`&gt;
+* ScanTerm `<String>`
   > "latest" or specified as UTC time in the format “yyyy-MM-ddThh:mm:ssZ” (y=year, M=month, d=day, h=hours, m=minutes, s=seconds).
   ```
   Position : 3
@@ -1729,7 +1729,7 @@ Get-bConnectInventoryDataWmiScan [[-EndpointGuid] <String>] [[-TemplateName] <St
 Get-bConnectInventoryOverview [[-EndpointGuid] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of a endpoint.
   ```
   Position : 1
@@ -1745,7 +1745,7 @@ Get-bConnectInventoryOverview [[-EndpointGuid] <String>] [<CommonParameters>]
 Get-bConnectJob [[-JobGuid] <String>] [[-OrgUnitGuid] <String>] [[-Username] <String>] [-Steps] [<CommonParameters>]
 ```
 ##### Parameters
-* JobGuid &lt;`String`&gt;
+* JobGuid `<String>`
   > Valid GUID of a job.
   ```
   Position : 1
@@ -1754,7 +1754,7 @@ Get-bConnectJob [[-JobGuid] <String>] [[-OrgUnitGuid] <String>] [[-Username] <St
   Aliases : 
   ParameterValue : String
   ```
-* OrgUnitGuid &lt;`String`&gt;
+* OrgUnitGuid `<String>`
   > Valid GUID of a Orgunit.
   ```
   Position : 2
@@ -1763,7 +1763,7 @@ Get-bConnectJob [[-JobGuid] <String>] [[-OrgUnitGuid] <String>] [[-Username] <St
   Aliases : 
   ParameterValue : String
   ```
-* Username &lt;`String`&gt;
+* Username `<String>`
   > Valid Username.
   ```
   Position : 3
@@ -1772,7 +1772,7 @@ Get-bConnectJob [[-JobGuid] <String>] [[-OrgUnitGuid] <String>] [[-Username] <St
   Aliases : 
   ParameterValue : String
   ```
-* Steps &lt;`SwitchParameter`&gt;
+* Steps `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1787,7 +1787,7 @@ Get-bConnectJob [[-JobGuid] <String>] [[-OrgUnitGuid] <String>] [[-Username] <St
 Remove-bConnectJob [[-JobGuid] <String>] [[-Job] <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* JobGuid &lt;`String`&gt;
+* JobGuid `<String>`
   > 
   ```
   Position : 1
@@ -1796,7 +1796,7 @@ Remove-bConnectJob [[-JobGuid] <String>] [[-Job] <PSObject>] [-WhatIf] [-Confirm
   Aliases : 
   ParameterValue : String
   ```
-* Job &lt;`PSObject`&gt;
+* Job `<PSObject>`
   > 
   ```
   Position : 2
@@ -1805,7 +1805,7 @@ Remove-bConnectJob [[-JobGuid] <String>] [[-Job] <PSObject>] [-WhatIf] [-Confirm
   Aliases : 
   ParameterValue : PSObject
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1814,7 +1814,7 @@ Remove-bConnectJob [[-JobGuid] <String>] [[-Job] <PSObject>] [-WhatIf] [-Confirm
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1830,7 +1830,7 @@ Remove-bConnectJob [[-JobGuid] <String>] [[-Job] <PSObject>] [-WhatIf] [-Confirm
 Get-bConnectJobInstance [[-JobInstanceGuid] <String>] [[-JobGuid] <String>] [[-EndpointGuid] <String>] [[-Username] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* JobInstanceGuid &lt;`String`&gt;
+* JobInstanceGuid `<String>`
   > Valid GUID of a jobinstance.
   ```
   Position : 1
@@ -1839,7 +1839,7 @@ Get-bConnectJobInstance [[-JobInstanceGuid] <String>] [[-JobGuid] <String>] [[-E
   Aliases : 
   ParameterValue : String
   ```
-* JobGuid &lt;`String`&gt;
+* JobGuid `<String>`
   > Valid GUID of a job.
   ```
   Position : 2
@@ -1848,7 +1848,7 @@ Get-bConnectJobInstance [[-JobInstanceGuid] <String>] [[-JobGuid] <String>] [[-E
   Aliases : 
   ParameterValue : String
   ```
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of a endpoint
   ```
   Position : 3
@@ -1857,7 +1857,7 @@ Get-bConnectJobInstance [[-JobInstanceGuid] <String>] [[-JobGuid] <String>] [[-E
   Aliases : 
   ParameterValue : String
   ```
-* Username &lt;`String`&gt;
+* Username `<String>`
   > Valid Username (in combination with EndpointGuid)
   ```
   Position : 4
@@ -1872,7 +1872,7 @@ Get-bConnectJobInstance [[-JobInstanceGuid] <String>] [[-JobGuid] <String>] [[-E
 New-bConnectJobInstance [-EndpointGuid] <String> [-JobGuid] <String> [[-Initiator] <String>] [-StartIfExists] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* EndpointGuid &lt;`String`&gt;
+* EndpointGuid `<String>`
   > Valid GUID of a endpoint.
   ```
   Position : 1
@@ -1881,7 +1881,7 @@ New-bConnectJobInstance [-EndpointGuid] <String> [-JobGuid] <String> [[-Initiato
   Aliases : 
   ParameterValue : String
   ```
-* JobGuid &lt;`String`&gt;
+* JobGuid `<String>`
   > Valid GUID of a job.
   ```
   Position : 2
@@ -1890,7 +1890,7 @@ New-bConnectJobInstance [-EndpointGuid] <String> [-JobGuid] <String> [[-Initiato
   Aliases : 
   ParameterValue : String
   ```
-* Initiator &lt;`String`&gt;
+* Initiator `<String>`
   > Set the Initiator of the new job instance.
   ```
   Position : 3
@@ -1899,7 +1899,7 @@ New-bConnectJobInstance [-EndpointGuid] <String> [-JobGuid] <String> [[-Initiato
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1908,7 +1908,7 @@ New-bConnectJobInstance [-EndpointGuid] <String> [-JobGuid] <String> [[-Initiato
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* StartIfExists &lt;`SwitchParameter`&gt;
+* StartIfExists `<SwitchParameter>`
   > Restart the existing jobinstance if there is one.
   ```
   Position : named
@@ -1917,7 +1917,7 @@ New-bConnectJobInstance [-EndpointGuid] <String> [-JobGuid] <String> [[-Initiato
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1932,7 +1932,7 @@ New-bConnectJobInstance [-EndpointGuid] <String> [-JobGuid] <String> [[-Initiato
 Remove-bConnectJobInstance [-JobInstanceGuid] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* JobInstanceGuid &lt;`String`&gt;
+* JobInstanceGuid `<String>`
   > Valid GUID of a jobinstance.
   ```
   Position : 1
@@ -1941,7 +1941,7 @@ Remove-bConnectJobInstance [-JobInstanceGuid] <String> [-WhatIf] [-Confirm] [<Co
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1950,7 +1950,7 @@ Remove-bConnectJobInstance [-JobInstanceGuid] <String> [-WhatIf] [-Confirm] [<Co
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1965,7 +1965,7 @@ Remove-bConnectJobInstance [-JobInstanceGuid] <String> [-WhatIf] [-Confirm] [<Co
 Resume-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* JobInstanceGuid &lt;`String`&gt;
+* JobInstanceGuid `<String>`
   > Valid GUID of a jobinstance.
   ```
   Position : 1
@@ -1974,7 +1974,7 @@ Resume-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1983,7 +1983,7 @@ Resume-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -1998,7 +1998,7 @@ Resume-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<
 Start-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* JobInstanceGuid &lt;`String`&gt;
+* JobInstanceGuid `<String>`
   > Valid GUID of a jobinstance.
   ```
   Position : 1
@@ -2007,7 +2007,7 @@ Start-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<C
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2016,7 +2016,7 @@ Start-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<C
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2031,7 +2031,7 @@ Start-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<C
 Stop-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* JobInstanceGuid &lt;`String`&gt;
+* JobInstanceGuid `<String>`
   > Valid GUID of a jobinstance.
   ```
   Position : 1
@@ -2040,7 +2040,7 @@ Stop-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<Co
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2049,7 +2049,7 @@ Stop-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<Co
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2065,7 +2065,7 @@ Stop-bConnectJobInstance [[-JobInstanceGuid] <String>] [-WhatIf] [-Confirm] [<Co
 Get-bConnectKioskJob [[-Username] <String>] [[-EndpointId] <String>] [[-GroupId] <String>] [[-JobDefinitionId] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* Username &lt;`String`&gt;
+* Username `<String>`
   > 
   ```
   Position : 1
@@ -2074,7 +2074,7 @@ Get-bConnectKioskJob [[-Username] <String>] [[-EndpointId] <String>] [[-GroupId]
   Aliases : 
   ParameterValue : String
   ```
-* EndpointId &lt;`String`&gt;
+* EndpointId `<String>`
   > 
   ```
   Position : 2
@@ -2083,7 +2083,7 @@ Get-bConnectKioskJob [[-Username] <String>] [[-EndpointId] <String>] [[-GroupId]
   Aliases : 
   ParameterValue : String
   ```
-* GroupId &lt;`String`&gt;
+* GroupId `<String>`
   > Valid GUID of a Orgunit.
   ```
   Position : 3
@@ -2092,7 +2092,7 @@ Get-bConnectKioskJob [[-Username] <String>] [[-EndpointId] <String>] [[-GroupId]
   Aliases : 
   ParameterValue : String
   ```
-* JobDefinitionId &lt;`String`&gt;
+* JobDefinitionId `<String>`
   > Valid GUID of an job.
   ```
   Position : 4
@@ -2107,7 +2107,7 @@ Get-bConnectKioskJob [[-Username] <String>] [[-EndpointId] <String>] [[-GroupId]
 New-bConnectKioskJob [-JobDefinitionId] <String> [[-TargetId] <String>] [[-Username] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* JobDefinitionId &lt;`String`&gt;
+* JobDefinitionId `<String>`
   > Valid GUID of an job.
   ```
   Position : 1
@@ -2116,7 +2116,7 @@ New-bConnectKioskJob [-JobDefinitionId] <String> [[-TargetId] <String>] [[-Usern
   Aliases : 
   ParameterValue : String
   ```
-* TargetId &lt;`String`&gt;
+* TargetId `<String>`
   > Valid GUID of an endpoint, group or user.
   ```
   Position : 2
@@ -2125,7 +2125,7 @@ New-bConnectKioskJob [-JobDefinitionId] <String> [[-TargetId] <String>] [[-Usern
   Aliases : 
   ParameterValue : String
   ```
-* Username &lt;`String`&gt;
+* Username `<String>`
   > Valid Username (Principal Name).
 If set, Username replaces TargetId.
   ```
@@ -2135,7 +2135,7 @@ If set, Username replaces TargetId.
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2144,7 +2144,7 @@ If set, Username replaces TargetId.
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2159,7 +2159,7 @@ If set, Username replaces TargetId.
 Remove-bConnectKioskJob [[-KioskJobId] <String>] [[-KioskJob] <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* KioskJobId &lt;`String`&gt;
+* KioskJobId `<String>`
   > 
   ```
   Position : 1
@@ -2168,7 +2168,7 @@ Remove-bConnectKioskJob [[-KioskJobId] <String>] [[-KioskJob] <PSObject>] [-What
   Aliases : 
   ParameterValue : String
   ```
-* KioskJob &lt;`PSObject`&gt;
+* KioskJob `<PSObject>`
   > 
   ```
   Position : 2
@@ -2177,7 +2177,7 @@ Remove-bConnectKioskJob [[-KioskJobId] <String>] [[-KioskJob] <PSObject>] [-What
   Aliases : 
   ParameterValue : PSObject
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2186,7 +2186,7 @@ Remove-bConnectKioskJob [[-KioskJobId] <String>] [[-KioskJob] <PSObject>] [-What
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2202,7 +2202,7 @@ Remove-bConnectKioskJob [[-KioskJobId] <String>] [[-KioskJob] <PSObject>] [-What
 Edit-bConnectOrgUnit [-OrgUnit] <PSObject> [<CommonParameters>]
 ```
 ##### Parameters
-* OrgUnit &lt;`PSObject`&gt;
+* OrgUnit `<PSObject>`
   > Valid modified OrgUnit
   ```
   Position : 1
@@ -2217,7 +2217,7 @@ Edit-bConnectOrgUnit [-OrgUnit] <PSObject> [<CommonParameters>]
 Get-bConnectOrgUnit [-OrgUnit] <String> [-SubGroups] [<CommonParameters>]
 ```
 ##### Parameters
-* OrgUnit &lt;`String`&gt;
+* OrgUnit `<String>`
   > Name (wildcards supported) or GUID of the OrgUnit.
   ```
   Position : 1
@@ -2226,7 +2226,7 @@ Get-bConnectOrgUnit [-OrgUnit] <String> [-SubGroups] [<CommonParameters>]
   Aliases : 
   ParameterValue : String
   ```
-* SubGroups &lt;`SwitchParameter`&gt;
+* SubGroups `<SwitchParameter>`
   > List subgroups of given OrgUnit.
 Only used if parameter "name" is a valid GUID.
   ```
@@ -2242,7 +2242,7 @@ Only used if parameter "name" is a valid GUID.
 New-bConnectOrgUnit [-Name] <String> [[-ParentGuid] <String>] [[-Comment] <String>] [[-Extension] <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* Name &lt;`String`&gt;
+* Name `<String>`
   > Name of the OrgUnit.
   ```
   Position : 1
@@ -2251,7 +2251,7 @@ New-bConnectOrgUnit [-Name] <String> [[-ParentGuid] <String>] [[-Comment] <Strin
   Aliases : 
   ParameterValue : String
   ```
-* ParentGuid &lt;`String`&gt;
+* ParentGuid `<String>`
   > Valid GUID of the parent OrgUnit in hierarchy (default: "Logical Group").
   ```
   Position : 2
@@ -2260,7 +2260,7 @@ New-bConnectOrgUnit [-Name] <String> [[-ParentGuid] <String>] [[-Comment] <Strin
   Aliases : 
   ParameterValue : String
   ```
-* Comment &lt;`String`&gt;
+* Comment `<String>`
   > Comment for the OrgUnit.
   ```
   Position : 3
@@ -2269,7 +2269,7 @@ New-bConnectOrgUnit [-Name] <String> [[-ParentGuid] <String>] [[-Comment] <Strin
   Aliases : 
   ParameterValue : String
   ```
-* Extension &lt;`PSObject`&gt;
+* Extension `<PSObject>`
   > Hashtable Extension (see bConnect documentation for more details).
   ```
   Position : 4
@@ -2278,7 +2278,7 @@ New-bConnectOrgUnit [-Name] <String> [[-ParentGuid] <String>] [[-Comment] <Strin
   Aliases : 
   ParameterValue : PSObject
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2287,7 +2287,7 @@ New-bConnectOrgUnit [-Name] <String> [[-ParentGuid] <String>] [[-Comment] <Strin
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2302,7 +2302,7 @@ New-bConnectOrgUnit [-Name] <String> [[-ParentGuid] <String>] [[-Comment] <Strin
 Remove-bConnectOrgUnit [-OrgUnitGuid] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* OrgUnitGuid &lt;`String`&gt;
+* OrgUnitGuid `<String>`
   > Valid GUID of a OrgUnit.
   ```
   Position : 1
@@ -2311,7 +2311,7 @@ Remove-bConnectOrgUnit [-OrgUnitGuid] <String> [-WhatIf] [-Confirm] [<CommonPara
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2320,7 +2320,7 @@ Remove-bConnectOrgUnit [-OrgUnitGuid] <String> [-WhatIf] [-Confirm] [<CommonPara
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2337,7 +2337,7 @@ Empty or filled with given information.
 New-bConnectOrgUnitExtension [[-DIP] <String>] [[-Domain] <String>] [[-LocalAdminPassword] <SecureString>] [-EnableDHCP] [[-SubnetMask] <String>] [[-DefaultGateway] <String>] [[-DnsServer] <String>] [[-DnsServer2] <String>] [[-DnsDomain] <String>] [[-WinsServer] <String>] [[-WinsServer2] <String>] [[-AutoInstallJobs] <String[]>] [[-HardwareProfiles] <String[]>] [-InheritAutoInstallJobs] [[-RequestableJobs] <String[]>] [<CommonParameters>]
 ```
 ##### Parameters
-* DIP &lt;`String`&gt;
+* DIP `<String>`
   > Valid DIP or list of DIPs (separated by ";").
   ```
   Position : 1
@@ -2346,7 +2346,7 @@ New-bConnectOrgUnitExtension [[-DIP] <String>] [[-Domain] <String>] [[-LocalAdmi
   Aliases : 
   ParameterValue : String
   ```
-* WinsServer2 &lt;`String`&gt;
+* WinsServer2 `<String>`
   > 
   ```
   Position : 10
@@ -2355,7 +2355,7 @@ New-bConnectOrgUnitExtension [[-DIP] <String>] [[-Domain] <String>] [[-LocalAdmi
   Aliases : 
   ParameterValue : String
   ```
-* AutoInstallJobs &lt;`String[]`&gt;
+* AutoInstallJobs `<String[]>`
   > Array of valid Job-GUIDs
   ```
   Position : 11
@@ -2364,7 +2364,7 @@ New-bConnectOrgUnitExtension [[-DIP] <String>] [[-Domain] <String>] [[-LocalAdmi
   Aliases : 
   ParameterValue : String[]
   ```
-* HardwareProfiles &lt;`String[]`&gt;
+* HardwareProfiles `<String[]>`
   > Array of valid HardwareProfile-GUIDs
   ```
   Position : 12
@@ -2373,7 +2373,7 @@ New-bConnectOrgUnitExtension [[-DIP] <String>] [[-Domain] <String>] [[-LocalAdmi
   Aliases : 
   ParameterValue : String[]
   ```
-* RequestableJobs &lt;`String[]`&gt;
+* RequestableJobs `<String[]>`
   > Array of valid Job-GUIDs
   ```
   Position : 13
@@ -2382,7 +2382,7 @@ New-bConnectOrgUnitExtension [[-DIP] <String>] [[-Domain] <String>] [[-LocalAdmi
   Aliases : 
   ParameterValue : String[]
   ```
-* Domain &lt;`String`&gt;
+* Domain `<String>`
   > Valid Windows Domain Name.
   ```
   Position : 2
@@ -2391,7 +2391,7 @@ New-bConnectOrgUnitExtension [[-DIP] <String>] [[-Domain] <String>] [[-LocalAdmi
   Aliases : 
   ParameterValue : String
   ```
-* LocalAdminPassword &lt;`SecureString`&gt;
+* LocalAdminPassword `<SecureString>`
   > Local admin password for OU (set during OS-Install)
 Must be encrypted with baramundi Cryptor
   ```
@@ -2401,7 +2401,7 @@ Must be encrypted with baramundi Cryptor
   Aliases : 
   ParameterValue : SecureString
   ```
-* SubnetMask &lt;`String`&gt;
+* SubnetMask `<String>`
   > 
   ```
   Position : 4
@@ -2410,7 +2410,7 @@ Must be encrypted with baramundi Cryptor
   Aliases : 
   ParameterValue : String
   ```
-* DefaultGateway &lt;`String`&gt;
+* DefaultGateway `<String>`
   > 
   ```
   Position : 5
@@ -2419,7 +2419,7 @@ Must be encrypted with baramundi Cryptor
   Aliases : 
   ParameterValue : String
   ```
-* DnsServer &lt;`String`&gt;
+* DnsServer `<String>`
   > 
   ```
   Position : 6
@@ -2428,7 +2428,7 @@ Must be encrypted with baramundi Cryptor
   Aliases : 
   ParameterValue : String
   ```
-* DnsServer2 &lt;`String`&gt;
+* DnsServer2 `<String>`
   > 
   ```
   Position : 7
@@ -2437,7 +2437,7 @@ Must be encrypted with baramundi Cryptor
   Aliases : 
   ParameterValue : String
   ```
-* DnsDomain &lt;`String`&gt;
+* DnsDomain `<String>`
   > 
   ```
   Position : 8
@@ -2446,7 +2446,7 @@ Must be encrypted with baramundi Cryptor
   Aliases : 
   ParameterValue : String
   ```
-* WinsServer &lt;`String`&gt;
+* WinsServer `<String>`
   > 
   ```
   Position : 9
@@ -2455,7 +2455,7 @@ Must be encrypted with baramundi Cryptor
   Aliases : 
   ParameterValue : String
   ```
-* EnableDHCP &lt;`SwitchParameter`&gt;
+* EnableDHCP `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2464,7 +2464,7 @@ Must be encrypted with baramundi Cryptor
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* InheritAutoInstallJobs &lt;`SwitchParameter`&gt;
+* InheritAutoInstallJobs `<SwitchParameter>`
   > Array of valid inherited Job-GUIDs
   ```
   Position : named
@@ -2494,7 +2494,7 @@ Get-bConnectSoftwareScanRuleCounts [<CommonParameters>]
 Edit-bConnectStaticGroup [-StaticGroup] <PSObject> [<CommonParameters>]
 ```
 ##### Parameters
-* StaticGroup &lt;`PSObject`&gt;
+* StaticGroup `<PSObject>`
   > Valid modified StaticGroup
   ```
   Position : 1
@@ -2509,7 +2509,7 @@ Edit-bConnectStaticGroup [-StaticGroup] <PSObject> [<CommonParameters>]
 Get-bConnectStaticGroup [[-StaticGroup] <String>] [[-OrgUnit] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* StaticGroup &lt;`String`&gt;
+* StaticGroup `<String>`
   > Name (wildcards supported) or GUID of the Static Group.
   ```
   Position : 1
@@ -2518,7 +2518,7 @@ Get-bConnectStaticGroup [[-StaticGroup] <String>] [[-OrgUnit] <String>] [<Common
   Aliases : 
   ParameterValue : String
   ```
-* OrgUnit &lt;`String`&gt;
+* OrgUnit `<String>`
   > Valid GUID of a OrgUnit with Static Groups
   ```
   Position : 2
@@ -2533,7 +2533,7 @@ Get-bConnectStaticGroup [[-StaticGroup] <String>] [[-OrgUnit] <String>] [<Common
 New-bConnectStaticGroup [-Name] <String> [[-ParentGuid] <String>] [[-Statement] <PSObject[]>] [[-Comment] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* Name &lt;`String`&gt;
+* Name `<String>`
   > Name of the StaticGroup.
   ```
   Position : 1
@@ -2542,7 +2542,7 @@ New-bConnectStaticGroup [-Name] <String> [[-ParentGuid] <String>] [[-Statement] 
   Aliases : 
   ParameterValue : String
   ```
-* ParentGuid &lt;`String`&gt;
+* ParentGuid `<String>`
   > Valid GUID of the parent OrgUnit in hierarchy (default: "Static Groups").
   ```
   Position : 2
@@ -2551,7 +2551,7 @@ New-bConnectStaticGroup [-Name] <String> [[-ParentGuid] <String>] [[-Statement] 
   Aliases : 
   ParameterValue : String
   ```
-* Statement &lt;`PSObject[]`&gt;
+* Statement `<PSObject[]>`
   > guid of "Static Groups" as fallback
   ```
   Position : 3
@@ -2560,7 +2560,7 @@ New-bConnectStaticGroup [-Name] <String> [[-ParentGuid] <String>] [[-Statement] 
   Aliases : 
   ParameterValue : PSObject[]
   ```
-* Comment &lt;`String`&gt;
+* Comment `<String>`
   > Comment for the StaticGroup.
   ```
   Position : 4
@@ -2569,7 +2569,7 @@ New-bConnectStaticGroup [-Name] <String> [[-ParentGuid] <String>] [[-Statement] 
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2578,7 +2578,7 @@ New-bConnectStaticGroup [-Name] <String> [[-ParentGuid] <String>] [[-Statement] 
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2593,7 +2593,7 @@ New-bConnectStaticGroup [-Name] <String> [[-ParentGuid] <String>] [[-Statement] 
 Remove-bConnectStaticGroup [-StaticGroupGuid] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* StaticGroupGuid &lt;`String`&gt;
+* StaticGroupGuid `<String>`
   > Valid GUID of a StaticGroup.
   ```
   Position : 1
@@ -2602,7 +2602,7 @@ Remove-bConnectStaticGroup [-StaticGroupGuid] <String> [-WhatIf] [-Confirm] [<Co
   Aliases : 
   ParameterValue : String
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2611,7 +2611,7 @@ Remove-bConnectStaticGroup [-StaticGroupGuid] <String> [-WhatIf] [-Confirm] [<Co
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2627,7 +2627,7 @@ Remove-bConnectStaticGroup [-StaticGroupGuid] <String> [-WhatIf] [-Confirm] [<Co
 Get-bConnectVariable [-Scope] {Device | MobileDevice | OrgUnit | Job | Software | HardwareProfile} [[-Category] <String>] [[-Name] <String>] [[-ObjectGuid] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* Scope &lt;`bConnectVariableScope`&gt;
+* Scope `<bConnectVariableScope>`
   > enum bConnectVariableScope.
   ```
   Position : 1
@@ -2636,7 +2636,7 @@ Get-bConnectVariable [-Scope] {Device | MobileDevice | OrgUnit | Job | Software 
   Aliases : 
   ParameterValue : 
   ```
-* Category &lt;`String`&gt;
+* Category `<String>`
   > Valid variable category.
   ```
   Position : 2
@@ -2645,7 +2645,7 @@ Get-bConnectVariable [-Scope] {Device | MobileDevice | OrgUnit | Job | Software 
   Aliases : 
   ParameterValue : String
   ```
-* Name &lt;`String`&gt;
+* Name `<String>`
   > Valid variable name.
   ```
   Position : 3
@@ -2654,7 +2654,7 @@ Get-bConnectVariable [-Scope] {Device | MobileDevice | OrgUnit | Job | Software 
   Aliases : 
   ParameterValue : String
   ```
-* ObjectGuid &lt;`String`&gt;
+* ObjectGuid `<String>`
   > Valid GUID of an object.
   ```
   Position : 4
@@ -2669,7 +2669,7 @@ Get-bConnectVariable [-Scope] {Device | MobileDevice | OrgUnit | Job | Software 
 Set-bConnectVariable [-ObjectGuid] <String> [-Scope] {Device | MobileDevice | OrgUnit | Job | Software | HardwareProfile} [-Category] <String> [-Name] <String> [-Value] <String> [-UseDefault] [<CommonParameters>]
 ```
 ##### Parameters
-* ObjectGuid &lt;`String`&gt;
+* ObjectGuid `<String>`
   > Valid GUID of an object.
   ```
   Position : 1
@@ -2678,7 +2678,7 @@ Set-bConnectVariable [-ObjectGuid] <String> [-Scope] {Device | MobileDevice | Or
   Aliases : 
   ParameterValue : String
   ```
-* Scope &lt;`bConnectVariableScope`&gt;
+* Scope `<bConnectVariableScope>`
   > enum bConnectVariableScope.
   ```
   Position : 2
@@ -2687,7 +2687,7 @@ Set-bConnectVariable [-ObjectGuid] <String> [-Scope] {Device | MobileDevice | Or
   Aliases : 
   ParameterValue : 
   ```
-* Category &lt;`String`&gt;
+* Category `<String>`
   > Valid variable category.
   ```
   Position : 3
@@ -2696,7 +2696,7 @@ Set-bConnectVariable [-ObjectGuid] <String> [-Scope] {Device | MobileDevice | Or
   Aliases : 
   ParameterValue : String
   ```
-* Name &lt;`String`&gt;
+* Name `<String>`
   > Valid variable name.
   ```
   Position : 4
@@ -2705,7 +2705,7 @@ Set-bConnectVariable [-ObjectGuid] <String> [-Scope] {Device | MobileDevice | Or
   Aliases : 
   ParameterValue : String
   ```
-* Value &lt;`String`&gt;
+* Value `<String>`
   > New value.
   ```
   Position : 5
@@ -2714,7 +2714,7 @@ Set-bConnectVariable [-ObjectGuid] <String> [-Scope] {Device | MobileDevice | Or
   Aliases : 
   ParameterValue : String
   ```
-* UseDefault &lt;`SwitchParameter`&gt;
+* UseDefault `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2730,7 +2730,7 @@ Set-bConnectVariable [-ObjectGuid] <String> [-Scope] {Device | MobileDevice | Or
 Edit-bConnectVariableDefinition [-VariableDefinition] <PSObject> [<CommonParameters>]
 ```
 ##### Parameters
-* VariableDefinition &lt;`PSObject`&gt;
+* VariableDefinition `<PSObject>`
   > A valid VariableDefinition with changed values
 Updating the Category or Name will change the ID of the correspondig VariableDefinition object!
   ```
@@ -2746,7 +2746,7 @@ Updating the Category or Name will change the ID of the correspondig VariableDef
 Get-bConnectVariableDefinition [[-Id] <String>] [[-Scope] {Device | MobileDevice | OrgUnit | Job | Software | HardwareProfile}] [[-Category] <String>] [[-Name] <String>] [<CommonParameters>]
 ```
 ##### Parameters
-* Id &lt;`String`&gt;
+* Id `<String>`
   > Valid GUID of a VariableDefinition
   ```
   Position : 1
@@ -2755,7 +2755,7 @@ Get-bConnectVariableDefinition [[-Id] <String>] [[-Scope] {Device | MobileDevice
   Aliases : 
   ParameterValue : String
   ```
-* Scope &lt;`bConnectVariableScope`&gt;
+* Scope `<bConnectVariableScope>`
   > enum bConnectVariableScope.
   ```
   Position : 2
@@ -2764,7 +2764,7 @@ Get-bConnectVariableDefinition [[-Id] <String>] [[-Scope] {Device | MobileDevice
   Aliases : 
   ParameterValue : 
   ```
-* Category &lt;`String`&gt;
+* Category `<String>`
   > Valid variable category.
   ```
   Position : 3
@@ -2773,7 +2773,7 @@ Get-bConnectVariableDefinition [[-Id] <String>] [[-Scope] {Device | MobileDevice
   Aliases : 
   ParameterValue : String
   ```
-* Name &lt;`String`&gt;
+* Name `<String>`
   > Valid variable name.
   ```
   Position : 4
@@ -2788,7 +2788,7 @@ Get-bConnectVariableDefinition [[-Id] <String>] [[-Scope] {Device | MobileDevice
 New-bConnectVariableDefinition [-Scope] {Device | MobileDevice | OrgUnit | Job | Software | HardwareProfile} [-Category] <String> [-Name] <String> [-Type] {Unknown | Number | String | Date | Checkbox | Dropdownbox | DropdownListbox | Filelink | Folder | Password | Certificate} [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 ##### Parameters
-* Scope &lt;`bConnectVariableScope`&gt;
+* Scope `<bConnectVariableScope>`
   > enum bConnectVariableScope.
   ```
   Position : 1
@@ -2797,7 +2797,7 @@ New-bConnectVariableDefinition [-Scope] {Device | MobileDevice | OrgUnit | Job |
   Aliases : 
   ParameterValue : 
   ```
-* Category &lt;`String`&gt;
+* Category `<String>`
   > Valid variable category.
   ```
   Position : 2
@@ -2806,7 +2806,7 @@ New-bConnectVariableDefinition [-Scope] {Device | MobileDevice | OrgUnit | Job |
   Aliases : 
   ParameterValue : String
   ```
-* Name &lt;`String`&gt;
+* Name `<String>`
   > Valid variable name.
   ```
   Position : 3
@@ -2815,7 +2815,7 @@ New-bConnectVariableDefinition [-Scope] {Device | MobileDevice | OrgUnit | Job |
   Aliases : 
   ParameterValue : String
   ```
-* Type &lt;`bConnectVariableType`&gt;
+* Type `<bConnectVariableType>`
   > enum bConnectVariableType.
   ```
   Position : 4
@@ -2824,7 +2824,7 @@ New-bConnectVariableDefinition [-Scope] {Device | MobileDevice | OrgUnit | Job |
   Aliases : 
   ParameterValue : 
   ```
-* Confirm &lt;`SwitchParameter`&gt;
+* Confirm `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2833,7 +2833,7 @@ New-bConnectVariableDefinition [-Scope] {Device | MobileDevice | OrgUnit | Job |
   Aliases : 
   ParameterValue : SwitchParameter
   ```
-* WhatIf &lt;`SwitchParameter`&gt;
+* WhatIf `<SwitchParameter>`
   > 
   ```
   Position : named
@@ -2849,7 +2849,7 @@ New-bConnectVariableDefinition [-Scope] {Device | MobileDevice | OrgUnit | Job |
 Search-bConnectApplication [-Term] <String> [<CommonParameters>]
 ```
 ##### Parameters
-* Term &lt;`String`&gt;
+* Term `<String>`
   > Searchterm for the search. Wildcards allowed.
   ```
   Position : 1
@@ -2864,7 +2864,7 @@ Search-bConnectApplication [-Term] <String> [<CommonParameters>]
 Search-bConnectDynamicGroup [-Term] <String> [<CommonParameters>]
 ```
 ##### Parameters
-* Term &lt;`String`&gt;
+* Term `<String>`
   > Searchterm for the search. Wildcards allowed.
   ```
   Position : 1
@@ -2879,7 +2879,7 @@ Search-bConnectDynamicGroup [-Term] <String> [<CommonParameters>]
 Search-bConnectEndpoint [-Term] <String> [<CommonParameters>]
 ```
 ##### Parameters
-* Term &lt;`String`&gt;
+* Term `<String>`
   > Searchterm for the search. Wildcards allowed.
   ```
   Position : 1
@@ -2894,7 +2894,7 @@ Search-bConnectEndpoint [-Term] <String> [<CommonParameters>]
 Search-bConnectGroup [-Term] <String> [<CommonParameters>]
 ```
 ##### Parameters
-* Term &lt;`String`&gt;
+* Term `<String>`
   > Searchterm for the search. Wildcards allowed.
   ```
   Position : 1
@@ -2909,7 +2909,7 @@ Search-bConnectGroup [-Term] <String> [<CommonParameters>]
 Search-bConnectJob [-Term] <String> [<CommonParameters>]
 ```
 ##### Parameters
-* Term &lt;`String`&gt;
+* Term `<String>`
   > Searchterm for the search. Wildcards allowed.
   ```
   Position : 1
@@ -2924,7 +2924,7 @@ Search-bConnectJob [-Term] <String> [<CommonParameters>]
 Search-bConnectOrgUnit [-Term] <String> [<CommonParameters>]
 ```
 ##### Parameters
-* Term &lt;`String`&gt;
+* Term `<String>`
   > Searchterm for the search. Wildcards allowed.
   ```
   Position : 1
@@ -2939,7 +2939,7 @@ Search-bConnectOrgUnit [-Term] <String> [<CommonParameters>]
 Search-bConnectStaticGroup [-Term] <String> [<CommonParameters>]
 ```
 ##### Parameters
-* Term &lt;`String`&gt;
+* Term `<String>`
   > Searchterm for the search. Wildcards allowed.
   ```
   Position : 1
