@@ -56,7 +56,7 @@ function toc () {
     Sort-Object Noun,Verb|Group-Object Noun
     ) | % {
         ""
-        "### Controller "+($_.Name -replace '^b')
+        "### Controller "+($_.Name -replace '^b(Connect)?')
         $_.Group.Name |% {
             syntax $_
         }
