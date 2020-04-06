@@ -37,6 +37,7 @@ Function Edit-bConnectEndpoint() {
                     "HostName",
                     "Options",
                     "PrimaryMAC",
+		    "PrimaryUser",
                     "Domain",
                     "GuidBootEnvironment",
                     "GuidHardwareProfile",
