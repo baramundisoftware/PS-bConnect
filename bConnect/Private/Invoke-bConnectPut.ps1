@@ -33,7 +33,7 @@ Function Invoke-bConnectPut() {
         If($Data.Count -gt 0) {
             $_body = ConvertTo-Json $Data
 
-            $_rest = Invoke-RestMethod -Uri "$($script:_connectUri)/$($Version)/$($Controller)" -Body $_body -Credential $script:_connectCredentials -Method Put -ContentType "application/json"
+            $_rest = Invoke-RestMethod -Uri "$($script:_connectUri)/$($Version)/$($Controller)" -Body $_body -Credential $script:_connectCredentials -Method Put -ContentType "application/json; charset=utf-8"
             If($_rest) {
                 return $_rest
             } else {
