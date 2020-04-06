@@ -35,9 +35,9 @@ Function Invoke-bConnectPatch() {
             $_body = ConvertTo-Json $Data
 
             If(![string]::IsNullOrEmpty($objectGuid)) {
-                $_rest = Invoke-RestMethod -Uri "$($script:_connectUri)/$($Version)/$($Controller)?id=$($objectGuid)" -Body $_body -Credential $script:_connectCredentials -Method Patch -ContentType "application/json"
+                $_rest = Invoke-RestMethod -Uri "$($script:_connectUri)/$($Version)/$($Controller)?id=$($objectGuid)" -Body $_body -Credential $script:_connectCredentials -Method Patch -ContentType "application/json; charset=utf-8"
             } else {
-                $_rest = Invoke-RestMethod -Uri "$($script:_connectUri)/$($Version)/$($Controller)" -Body $_body -Credential $script:_connectCredentials -Method Patch -ContentType "application/json"
+                $_rest = Invoke-RestMethod -Uri "$($script:_connectUri)/$($Version)/$($Controller)" -Body $_body -Credential $script:_connectCredentials -Method Patch -ContentType "application/json; charset=utf-8"
             }
 
             If($_rest) {
