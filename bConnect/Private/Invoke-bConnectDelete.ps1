@@ -35,7 +35,7 @@ Function Invoke-bConnectDelete() {
             $_params += "$($_key)=$($Data.Get_Item($_key))"
         }
 
-        $_rest = Invoke-RestMethod -Uri "$($script:_connectUri)/$($Version)/$($Controller)?$($_params)" -Credential $script:_connectCredentials -Method Delete -ContentType "application/json"
+        $_rest = Invoke-RestMethod -Uri "$($script:_connectUri)/$($Version)/$($Controller)?$($_params)" -Credential $script:_connectCredentials -Method Delete -ContentType "application/json; charset=utf-8"
         If($_rest) {
             return $_rest
         } else {
