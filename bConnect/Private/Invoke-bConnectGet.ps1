@@ -40,9 +40,9 @@ Function Invoke-bConnectGet() {
 
     try {
         If($Data.Count -gt 0) {
-            $_rest = Invoke-RestMethod -Uri $_uri -Body $Data -Credential $script:_connectCredentials -Method Get -ContentType "application/json" -TimeoutSec $script:_ConnectionTimeout
+            $_rest = Invoke-RestMethod -Uri $_uri -Body $Data -Credential $script:_connectCredentials -Method Get -ContentType "application/json; charset=utf-8" -TimeoutSec $script:_ConnectionTimeout
         } else {
-            $_rest = Invoke-RestMethod -Uri $_uri -Credential $script:_connectCredentials -Method Get -ContentType "application/json" -TimeoutSec $script:_ConnectionTimeout
+            $_rest = Invoke-RestMethod -Uri $_uri -Credential $script:_connectCredentials -Method Get -ContentType "application/json; charset=utf-8" -TimeoutSec $script:_ConnectionTimeout
         }
 
         If($_rest) {

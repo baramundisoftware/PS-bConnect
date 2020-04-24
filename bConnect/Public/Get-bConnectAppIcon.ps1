@@ -12,14 +12,14 @@
 
     Param (
         [string]$AppGuid,
-        [string]$Scope
+        [bConnectIconScope]$Scope
     )
 
     $_connectVersion = Get-bConnectVersion
     If($_connectVersion -ge "1.0") {
         If($Scope) {
             $_body = @{
-                Scope = $Scope
+                Scope = [string]$Scope
             }
         }
 

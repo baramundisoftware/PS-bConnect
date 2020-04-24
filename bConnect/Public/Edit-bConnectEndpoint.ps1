@@ -27,7 +27,8 @@ Function Edit-bConnectEndpoint() {
             $_new_endpoint = @{ Id = $Endpoint.Id }
 			$_propertyList = @(
                 "DisplayName",
-                "GuidOrgUnit"
+                "GuidOrgUnit",
+		"Comments"
             )
             $Endpoint = ConvertTo-Hashtable $Endpoint
 
@@ -42,7 +43,12 @@ Function Edit-bConnectEndpoint() {
                     "GuidHardwareProfile",
                     "PublicKey",
                     "Mode",
-                    "ExtendedInternetMode"
+                    "ExtendedInternetMode",
+		    "PrimaryUser",
+		    "PrimaryIP",
+		    "CustomStateText",
+		    "CustomStateType"
+		    
                 )
 			}
 

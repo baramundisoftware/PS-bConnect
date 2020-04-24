@@ -2,9 +2,14 @@
 Powershell module for **[baramundi Connect](https://www.baramundi.com/en/management-suite/interfaces/) (bConnect)**, the REST-API of the **[baramundi Management Suite](https://www.baramundi.com/en/)**.
 
 ## Installation
-You can install the module from the Powershell Gallery Repository directly by using the Install-Module CMDlet:
+You can install the module from the [Powershell Gallery](https://www.powershellgallery.com/packages/bConnect/) Repository directly by using the Install-Module Cmdlet:
 
     Install-Module -Name bConnect
+
+## Update
+You can update the module from the [Powershell Gallery](https://www.powershellgallery.com/packages/bConnect/) Repository directly by using the Update-Module Cmdlet:
+
+    Update-Module -Name bConnect
 
 ## Usage
 To use the functions of PS-bConnect you need to import the module into your current session and initialize the connection to the REST-API:

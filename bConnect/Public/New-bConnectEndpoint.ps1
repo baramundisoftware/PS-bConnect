@@ -21,12 +21,16 @@ Function New-bConnectEndpoint() {
         [Parameter(Mandatory=$true)][string]$DisplayName,
         [string]$GroupGuid = "C1A25EC3-4207-4538-B372-8D250C5D7908", #guid of "Logical Group" as fallback
 		[string]$PrimaryMac,
+		[string]$PrimaryIp,
 		[string]$HostName,
 		[string]$Domain,
 		[string]$Options,
 		[string]$GuidBootEnvironment,
 		[string]$GuidHardwareProfile,
         [string]$PrimaryUser = "",
+        [string]$Comments,
+        [bConnectEndpointOwner]$Owner,
+        [bConnectEndpointComplianceCheckCategory]$ComplianceCheckCategory,
         [ValidateSet("LAN","Internet","Dynamic")][string]$Mode,
         [switch]$ExtendedInternetMode
     )
@@ -40,9 +44,17 @@ Function New-bConnectEndpoint() {
             PrimaryUser = $primaryUser
         }
 
+        If(![string]::IsNullOrEmpty($Comments)) {
+            $_body += @{ Comments = $Comments }
+        }
+
 		If($Type -eq [bConnectEndpointType]::WindowsEndpoint) {
 			If(![string]::IsNullOrEmpty($PrimaryMac)) {
 				$_body += @{ PrimaryMac = $PrimaryMac }
+			}
+
+            If(![string]::IsNullOrEmpty($PrimaryIp)) {
+				$_body += @{ PrimaryIp = $PrimaryIp }
 			}
 
 			If(![string]::IsNullOrEmpty($HostName)) {
@@ -73,6 +85,16 @@ Function New-bConnectEndpoint() {
 				$_body += @{ ExtendedInternetMode = $ExtendedInternetMode }
 			}
 		}
+
+		If($Type -eq ([bConnectEndpointType]::AndroidEndpoint -or [bConnectEndpointType]::iOSEndpoint -or [bConnectEndpointType]::WindowsPhoneEndpoint)) {
+            If($Owner) {
+                $_body += @{ Owner = $Owner }
+            }
+
+            If($ComplianceCheckCategory) {
+                $_body += @{ ComplianceCheckCategory = $ComplianceCheckCategory }
+            }
+        }
 
         if($PSCmdlet.ShouldProcess($_body.DisplayName, "Create new endpoint.")){
             return Invoke-bConnectPost -Controller "Endpoints" -Version $_connectVersion -Data $_body
