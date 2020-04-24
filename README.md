@@ -1,3 +1,8 @@
+![GitHub](https://img.shields.io/github/license/baramundisoftware/PS-bConnect.svg)
+[![PowerShell Gallery Version](https://img.shields.io/powershellgallery/v/bConnect.svg)](https://www.powershellgallery.com/packages/bConnect/) 
+[![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/bConnect.svg)](https://www.powershellgallery.com/packages/bConnect/)
+[![Minimum Supported PowerShell Version](https://img.shields.io/badge/PowerShell-3.0-blue.svg)](https://github.com/baramundisoftware/PS-bConnect)
+
 # PS-bConnect
 Powershell module for **[baramundi Connect](https://www.baramundi.com/en/management-suite/interfaces/) (bConnect)**, the REST-API of the **[baramundi Management Suite](https://www.baramundi.com/en/)**.
 
