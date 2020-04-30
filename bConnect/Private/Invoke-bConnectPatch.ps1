@@ -36,7 +36,7 @@ Function Invoke-bConnectPatch() {
     try {
         If($Data.Count -gt 0) {
             $_body = ConvertTo-Json $Data
-            $_uri = "$($script:_connectUri)/$($Version)/$($Controller)"
+            $_uri = "$($script:_connectUri)/$($Version)/$($Controller)?"
 
             If(![string]::IsNullOrEmpty($objectGuid)) {
                 $_uri += "id=$($objectGuid)"
