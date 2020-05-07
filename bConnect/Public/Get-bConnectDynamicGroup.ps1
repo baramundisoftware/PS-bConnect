@@ -25,20 +25,16 @@ Function Get-bConnectDynamicGroup() {
 
                 return Invoke-bConnectGet -Controller "DynamicGroups" -Data $_body -Version $_connectVersion
             } else {
-			    # fetching dynamic groups with name is not supported; therefore we need a workaround for getting the specified dyn group...
-			    $_bmsVersion = Get-bConnectInfo
-                If($_bmsVersion.bMSVersion -imatch "16.*") {
-				    # Search available since bMS 2016R1
-				    $_groups = Search-bConnectDynamicGroup -Term $DynamicGroup
-                    $_ret_groups = @()
-                    Foreach($_grp in $_groups) {
-                        $_ret_groups += Get-bConnectDynamicGroup -DynamicGroup $_grp.Id
-                    }
+		# fetching dynamic groups with name is not supported; therefore we need a workaround for getting the specified dyn group...
+		# Search available since bMS 2016R1
+		$_groups = Search-bConnectDynamicGroup -Term $DynamicGroup
+		$_ret_groups = @()
+		Foreach($_grp in $_groups) {
+			$_ret_groups += Get-bConnectDynamicGroup -DynamicGroup $_grp.Id
+		}
 
-				    return $_ret_groups
-	            }
-                return $false
-		    }
+		return $_ret_groups
+		}
         } elseif (![string]::IsNullOrEmpty($OrgUnit)) {
             If(Test-Guid $OrgUnit) {
                 $_body = @{
