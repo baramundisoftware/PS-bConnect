@@ -11,7 +11,7 @@ Function New-bConnectApplication() {
     Param (
         [Parameter(Mandatory=$true)][string]$Name,
         [Parameter(Mandatory=$true)][string]$Vendor,
-        [Parameter(Mandatory=$true)][ValidateSet("NT4","Windows2000","WindowsXP","WindowsServer2003","WindowsVista","WindowsServer2008","Windows7","WindowsServer2008R2","WindowsXP_x64","WindowsServer2003_x64","WindowsVista_x64","WindowsServer2008_x64","Windows7_x64","WindowsServer2008R2_x64","Windows8","WindowsServer2012","Windows8_x64","WindowsServer2012_x64","Windows10","Windows10_x64","WindowsServer2016_x64","WindowsServer2019_x64",ignoreCase=$true)][string[]]$ValidForOS,
+        [Parameter(Mandatory=$true)][ValidateSet("NT4","Windows2000","WindowsXP","WindowsServer2003","WindowsVista","WindowsServer2008","Windows7","WindowsServer2008R2","WindowsXP_x64","WindowsServer2003_x64","WindowsVista_x64","WindowsServer2008_x64","Windows7_x64","WindowsServer2008R2_x64","Windows8","WindowsServer2012","Windows8_x64","WindowsServer2012_x64","Windows10","Windows10_x64","WindowsServer2016_x64",ignoreCase=$true)][string[]]$ValidForOS,
         [string]$Comment,
         [string]$ParentId = "EAD9DFC5-1937-484A-8FCC-0977AA79F963", #guid of "Applications" as fallback
         [string]$Version,
@@ -19,7 +19,8 @@ Function New-bConnectApplication() {
         [PSCustomObject]$InstallationData,
         [PSCustomObject]$UninstallationData,
         [string]$ConsistencyChecks,
-        [PSCustomObject[]]$ApplicationFile,
+        [PSCustomObject[]]$Files,
+        [PSCustomObject[]]$SoftwareDependencies,
         [float]$Cost = 0,
         [ValidateSet("AnyUser","InstallUser","LocalInstallUser","LocalSystem","LoggedOnUser","RegisteredUser","SpecifiedUser",ignoreCase=$true)][string]$SecurityContext,
         [PSCustomObject[]]$Licenses,
@@ -53,6 +54,14 @@ Function New-bConnectApplication() {
 
 		If($InstallationData) {
 			$_body += @{ Installation = $InstallationData }
+		}
+		
+		If($Files) {
+			$_body += @{ Files = $Files }
+		}
+
+		If($SoftwareDependencies) {
+			$_body += @{ SoftwareDependencies = $SoftwareDependencies }
 		}
 
         If($UninstallationData) {
