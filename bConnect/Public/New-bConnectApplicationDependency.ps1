@@ -21,8 +21,6 @@ Function New-bConnectApplicationDependency() {
 		[Parameter(Mandatory=$true)][string]$DependencyAppName,
         [Parameter(Mandatory=$true)][ValidateSet("InstallBeforeIfNotInstalled","AlwaysInstallAfterwards","AlwaysInstallBefore","DeinstallBeforeIfInstalled","ErrorIfNotInstalled","ErrorIfInstalled",ignoreCase=$true)][string]$DependencyType,
         [Parameter(Mandatory=$true)][ValidateSet("NT4","Windows2000","WindowsXP","WindowsServer2003","WindowsVista","WindowsServer2008","Windows7","WindowsServer2008R2","WindowsXP_x64","WindowsServer2003_x64","WindowsVista_x64","WindowsServer2008_x64","Windows7_x64","WindowsServer2008R2_x64","Windows8","WindowsServer2012","Windows8_x64","WindowsServer2012_x64","Windows10","Windows10_x64","WindowsServer2016_x64","WindowsServer2019_x64",ignoreCase=$true)][array]$ValidForOS
-#		[Parameter(Mandatory=$true)][ValidateSet("NT4","Windows2000","WindowsXP","WindowsServer2003","WindowsVista","WindowsServer2008","Windows7","WindowsServer2008R2","WindowsXP_x64","WindowsServer2003_x64","WindowsVista_x64","WindowsServer2008_x64","Windows7_x64","WindowsServer2008R2_x64","Windows8","WindowsServer2012","Windows8_x64","WindowsServer2012_x64","Windows10","Windows10_x64","WindowsServer2016_x64",ignoreCase=$true)][string[]]$ValidForOS
-#		[Parameter(Mandatory=$true)][string]$ValidForOS
     )
 
     $_new_Dependency = @{
