@@ -7,7 +7,7 @@ Function New-bConnectStaticGroup() {
         .Parameter ParentGuid
             Valid GUID of the parent OrgUnit in hierarchy (default: "Static Groups").
         .Parameter Endpoints
-            Array of Endpoints.
+            Array of Endpoints or single Endpoint.
         .Parameter Comment
             Comment for the StaticGroup.
         .Outputs
