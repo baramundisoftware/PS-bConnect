@@ -19,7 +19,7 @@ Function New-bConnectStaticGroup() {
     Param (
         [Parameter(Mandatory=$true)][string]$Name,
         [string]$ParentGuid = "5020494B-04D3-4654-A256-80731E953746", #guid of "Static Groups" as fallback
-        [PSCustomObject[]]$Statement,
+        [PSCustomObject[]]$Endpoints,
 		[string]$Comment
     )
 
@@ -29,10 +29,22 @@ Function New-bConnectStaticGroup() {
             Name = $Name;
             ParentId = $ParentGuid;
         }
-
-		If($Statement -imatch "WHERE") {
-			$_body += @{ Statement = $Statement }
-        }
+        
+        If(![string]::IsNullOrEmpty($Endpoints)) {
+            $_endpointIds = @()
+            Foreach($_ep in $Endpoints) {
+                $_endpointIds += $_ep.Id
+            }
+            $_body += @{
+                EndpointIds  = $_endpointIds
+            }
+        #if $Endpoints is just a single EP Object instead of an Array of EPs
+        }elseif ((($Endpoints -is [array])-and $Endpoints.Count -gt 0)) {
+            $_endpointIds = @($Endpoints.Id)
+            $_body += @{
+                EndpointIds  = $_endpointIds
+            }
+        }      
 
 		If(![string]::IsNullOrEmpty($Comment)) {
 			$_body += @{ Comment = $Comment }
