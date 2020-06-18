@@ -1,4 +1,4 @@
-Function Get-bConnectOrgUnit() {
+Function Get-bConnectServerState() {
     <#
         .Synopsis
             Get baramundi server and sub services state.        
