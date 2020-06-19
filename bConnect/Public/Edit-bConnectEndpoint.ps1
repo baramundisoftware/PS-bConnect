@@ -28,7 +28,7 @@ Function Edit-bConnectEndpoint() {
 			$_propertyList = @(
                 "DisplayName",
                 "GuidOrgUnit",
-		"Comments"
+        		"Comments"
             )
             $Endpoint = ConvertTo-Hashtable $Endpoint
 
@@ -44,15 +44,14 @@ Function Edit-bConnectEndpoint() {
                     "PublicKey",
                     "Mode",
                     "ExtendedInternetMode",
-		    "PrimaryUser",
-		    "PrimaryIP",
-		    "CustomStateText",
-		    "CustomStateType"
-		    
+		            "PrimaryUser",
+		            "PrimaryIP",
+		            "CustomStateText",
+		            "CustomStateType"
                 )
 			}
 
-            # BmsNet = Android, iOS, WP, OSX
+            # BmsNet = Android, iOS, WP (deprecated!), OSX
 			If(($Endpoint.Type -eq [bConnectEndpointType]::AndroidEndpoint) -or
 				($Endpoint.Type -eq [bConnectEndpointType]::iOSEndpoint) -or
 				($Endpoint.Type -eq [bConnectEndpointType]::WindowsPhoneEndpoint) -or
