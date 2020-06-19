@@ -26,12 +26,12 @@ Function New-bConnectApplicationInstallOptions() {
     [OutputType("System.Management.Automations.PSObject")]
     Param(
         [ValidateSet("NoReboot","Reboot","AppReboot","DeferrableReboot",ignoreCase=$true)][string]$RebootBehaviour = "NoReboot",
-        [switch]$AllowReinstall = $true,
-        [switch]$UsebBT,
+        [bool]$AllowReinstall = $true,
+        [bool]$UsebBT,
         [ValidateSet("Silent","NeedsDesktop","VisibleWhenUserLoggedOn",ignoreCase=$true)][string]$VisibleExecution = "Silent",
-        [switch]$CopyLocally,
-        [switch]$DisableInputDevices,
-        [switch]$DontSetAsInstalled,
+        [bool]$CopyLocally,
+        [bool]$DisableInputDevices,
+        [bool]$DontSetAsInstalled,
         [string]$Target
     )
 
