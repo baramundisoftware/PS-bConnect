@@ -6,13 +6,16 @@ Function Invoke-bConnectPatch() {
             Hashtable with parameters
         .Parameter Version
             bConnect version to use
+        .Parameter IgnoreAssignments
+            If true, bConnect will update the specified Job without error, even if it is assigned already.
     #>
 
     Param(
         [Parameter(Mandatory=$true)][string]$Controller,
         [Parameter(Mandatory=$true)][PSCustomObject]$Data,
         [string]$objectGuid,
-        [string]$Version
+        [string]$Version,
+        [boolean]$IgnoreAssignments
     )
 
     If(!$script:_connectInitialized) {
@@ -33,12 +36,17 @@ Function Invoke-bConnectPatch() {
     try {
         If($Data.Count -gt 0) {
             $_body = ConvertTo-Json $Data
+            $_uri = "$($script:_connectUri)/$($Version)/$($Controller)?"
 
             If(![string]::IsNullOrEmpty($objectGuid)) {
-                $_rest = Invoke-RestMethod -Uri "$($script:_connectUri)/$($Version)/$($Controller)?id=$($objectGuid)" -Body $_body -Credential $script:_connectCredentials -Method Patch -ContentType "application/json; charset=utf-8"
-            } else {
-                $_rest = Invoke-RestMethod -Uri "$($script:_connectUri)/$($Version)/$($Controller)" -Body $_body -Credential $script:_connectCredentials -Method Patch -ContentType "application/json; charset=utf-8"
+                $_uri += "id=$($objectGuid)"
             }
+            If($IgnoreAssignments){
+                $_uri += "&ignoreAssignments=true"
+            }
+
+            $_rest = Invoke-RestMethod -Uri $_uri -Body $_body -Credential $script:_connectCredentials -Method Patch -ContentType "application/json; charset=utf-8"
+
 
             If($_rest) {
                 return $_rest
