@@ -1,7 +1,7 @@
 ﻿
 <#PSScriptInfo
 
-.VERSION 19.2.0.6
+.VERSION 20.1.0.1
 .GUID e9baa5c2-3c75-41d7-bce6-2eb898ed1963
 .AUTHOR Alexander Haugk
 .COMPANYNAME baramundi software AG
