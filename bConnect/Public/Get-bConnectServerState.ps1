@@ -1,9 +1,9 @@
-Function Get-bConnectServerState() {
+﻿Function Get-bConnectServerState() {
     <#
         .Synopsis
-            Get baramundi server and sub services state.        
+            Get baramundi server and sub services state.
         .Outputs
-            ServerState object representing the current state of the baramundi server and its sub services 
+            ServerState object representing the current state of the baramundi server and its sub services
     #>
 
     $_connectVersion = Get-bConnectVersion

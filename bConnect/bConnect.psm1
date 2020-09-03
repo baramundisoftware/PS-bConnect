@@ -2,7 +2,7 @@
 #║  baramundi software AG  ║  bConnect Module for Powershell  ║
 #╠═════════════════════════╩══════════════════════════════════╣
 #║ Author  : Alexander Haugk <alexander.haugk@baramundi.de>   ║
-#║ Target  : bMS 2019 R2                                      ║
+#║ Target  : bMS 2020 R1                                      ║
 #╚════════════════════════════════════════════════════════════╝
 # This script is provided "as is" just for educational purpose and without
 # warranty of any kind.

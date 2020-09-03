@@ -1,4 +1,4 @@
-Function New-bConnectStaticGroup() {
+﻿Function New-bConnectStaticGroup() {
     <#
         .Synopsis
             Create a new StaticGroup.
@@ -29,7 +29,7 @@ Function New-bConnectStaticGroup() {
             Name = $Name;
             ParentId = $ParentGuid;
         }
-        
+
         If(![string]::IsNullOrEmpty($Endpoints)) {
             $_endpointIds = @()
             Foreach($_ep in $Endpoints) {
@@ -44,7 +44,7 @@ Function New-bConnectStaticGroup() {
             $_body += @{
                 EndpointIds  = $_endpointIds
             }
-        }      
+        }
 
 		If(![string]::IsNullOrEmpty($Comment)) {
 			$_body += @{ Comment = $Comment }

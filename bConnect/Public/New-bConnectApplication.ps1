@@ -1,4 +1,4 @@
-Function New-bConnectApplication() {
+﻿Function New-bConnectApplication() {
     <#
         .Synopsis
             Create a new application.
@@ -55,7 +55,7 @@ Function New-bConnectApplication() {
 		If($InstallationData) {
 			$_body += @{ Installation = $InstallationData }
 		}
-		
+
 		If($Files) {
 			$_body += @{ Files = $Files }
 		}
