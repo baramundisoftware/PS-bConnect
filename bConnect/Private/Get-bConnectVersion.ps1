@@ -43,6 +43,10 @@ Function Get-bConnectVersion() {
 				Write-Verbose "bConnect 2019R1 or newer"
 			}
 
+			"20.*" {
+				Write-Verbose "bConnect 2020R1 or newer"
+			}
+
             default {
                 Write-Warning "NOT SUPPORTED! Unknown bConnect Version -> Fallback to $($script:_bConnectFallbackVersion)"
                 $_bcVersion = $script:_bConnectFallbackVersion
