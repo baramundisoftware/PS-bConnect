@@ -20,8 +20,8 @@ Function New-bConnectEndpoint() {
         [Parameter(Mandatory=$true)][bConnectEndpointType]$Type,
         [Parameter(Mandatory=$true)][string]$DisplayName,
         [string]$GroupGuid = "C1A25EC3-4207-4538-B372-8D250C5D7908", #guid of "Logical Group" as fallback
-		[string]$PrimaryMac,
-		[string]$PrimaryIp,
+		[string]$PrimaryMAC,
+		[string]$PrimaryIP,
 		[string]$HostName,
 		[string]$Domain,
 		[string]$Options,
@@ -49,12 +49,12 @@ Function New-bConnectEndpoint() {
         }
 
 		If($Type -eq [bConnectEndpointType]::WindowsEndpoint) {
-			If(![string]::IsNullOrEmpty($PrimaryMac)) {
-				$_body += @{ PrimaryMac = $PrimaryMac }
+			If(![string]::IsNullOrEmpty($PrimaryMAC)) {
+				$_body += @{ PrimaryMAC = $PrimaryMAC }
 			}
 
-            If(![string]::IsNullOrEmpty($PrimaryIp)) {
-				$_body += @{ PrimaryIp = $PrimaryIp }
+            If(![string]::IsNullOrEmpty($PrimaryIP)) {
+				$_body += @{ PrimaryIP = $PrimaryIP }
 			}
 
 			If(![string]::IsNullOrEmpty($HostName)) {
