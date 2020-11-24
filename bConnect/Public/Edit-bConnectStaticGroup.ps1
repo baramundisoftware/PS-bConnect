@@ -35,7 +35,7 @@
 
             $_endpointIds = @()
             Foreach($_ep in $StaticGroup.EndpointIds) {
-                $_endpointIds += $_ep.Id
+                $_endpointIds += $_ep
             }
             $StaticGroup.EndpointIds = $_endpointIds
 
