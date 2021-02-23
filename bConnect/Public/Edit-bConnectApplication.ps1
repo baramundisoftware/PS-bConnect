@@ -20,8 +20,12 @@ Function Edit-bConnectApplication() {
 
     $_connectVersion = Get-bConnectVersion
     If($_connectVersion -ge "1.0") {
-        $_Application = ConvertTo-Hashtable $Application
-        return Invoke-bConnectPatch -Controller "Applications" -Version $_connectVersion -objectGuid $_Application.Id -Data $_Application
+        If(Test-Guid $Application.Id) {
+            $_Application = ConvertTo-Hashtable $Application
+            return Invoke-bConnectPatch -Controller "Applications" -Version $_connectVersion -objectGuid $_Application.Id -Data $_Application
+        } else {
+            return $false
+        }
     } else {
         return $false
     }
