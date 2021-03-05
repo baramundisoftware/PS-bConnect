@@ -48,7 +48,7 @@ Function Edit-bConnectEndpoint() {
 		            "PrimaryIP",
 		            "CustomStateText",
 		            "CustomStateType",
-					"UserCategory"
+                    "UserCategory"
                 )
 			}
 
@@ -61,7 +61,7 @@ Function Edit-bConnectEndpoint() {
                     "PrimaryUser",
                     "Owner",
                     "ComplianceCheckCategory",
-					"UserCategory"
+                    "UserCategory"
                 )
 			}
 
