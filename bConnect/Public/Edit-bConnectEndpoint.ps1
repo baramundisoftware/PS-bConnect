@@ -47,7 +47,8 @@ Function Edit-bConnectEndpoint() {
 		            "PrimaryUser",
 		            "PrimaryIP",
 		            "CustomStateText",
-		            "CustomStateType"
+		            "CustomStateType",
+                    "UserCategory"
                 )
 			}
 
@@ -59,7 +60,8 @@ Function Edit-bConnectEndpoint() {
                 $_propertyList += @(
                     "PrimaryUser",
                     "Owner",
-                    "ComplianceCheckCategory"
+                    "ComplianceCheckCategory",
+                    "UserCategory"
                 )
 			}
 
