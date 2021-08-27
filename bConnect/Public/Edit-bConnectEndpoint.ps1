@@ -28,7 +28,7 @@ Function Edit-bConnectEndpoint() {
 			$_propertyList = @(
                 "DisplayName",
                 "GuidOrgUnit",
-        		"Comments"
+                "Comments"
             )
             $Endpoint = ConvertTo-Hashtable $Endpoint
 
@@ -44,11 +44,12 @@ Function Edit-bConnectEndpoint() {
                     "PublicKey",
                     "Mode",
                     "ExtendedInternetMode",
-		            "PrimaryUser",
-		            "PrimaryIP",
-		            "CustomStateText",
-		            "CustomStateType",
-                    "UserCategory"
+                    "PrimaryUser",
+                    "PrimaryIP",
+                    "CustomStateText",
+                    "CustomStateType",
+                    "UserCategory",
+                    "MicrosoftUpdateProfile"
                 )
 			}
 
