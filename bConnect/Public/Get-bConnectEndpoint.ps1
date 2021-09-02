@@ -23,7 +23,7 @@ Function Get-bConnectEndpoint() {
         [string]$OrgUnitGuid,
         [string]$DynamicGroupGuid,
         [string]$StaticGroupGuid,
-        [string]$UniversalDynamicGroup,
+        [string]$UniversalDynamicGroupGuid,
         [string]$Username,
         [switch]$PublicKey,
         [switch]$InstalledSoftware,
@@ -57,9 +57,9 @@ Function Get-bConnectEndpoint() {
             }
         }
         
-        If($UniversalDynamicGroup) {
+        If($UniversalDynamicGroupGuid) {
             $_body = @{
-                UniversalDynamicGroup = $UniversalDynamicGroup
+                UniversalDynamicGroup = $UniversalDynamicGroupGuid
             }
         }
 
