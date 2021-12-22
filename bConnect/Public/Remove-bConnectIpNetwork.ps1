@@ -10,10 +10,12 @@
             Bool
     #>
 
-    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium', DefaultParameterSetName = 'Guid')]
     [OutputType("System.Boolean")]
     Param (
+        [Parameter(Mandatory = $true, ParameterSetName = 'Guid')]
         [string]$IpNetworkGuid,
+        [Parameter(Mandatory = $true, ParameterSetName = 'Object')]
         [PSCustomObject]$IpNetwork
     )
 
