@@ -46,7 +46,7 @@ Function New-bConnectIpNetwork() {
         }
 
         If(![string]::IsNullOrEmpty($DuplicateWolToThisNetwork)){
-            $_body += @{ DuplicateWolToThisNetwork = $DuplicateWolToThisNetwork }
+            $_body += @{ DuplicateWolToThisNetwork = $true }
         }
 
         if($PSCmdlet.ShouldProcess($_body.Name, "Create new Ip Network")){
