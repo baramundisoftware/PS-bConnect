@@ -45,10 +45,8 @@ Function New-bConnectIpNetwork() {
             $_body += @{ MaxBandwidthKbits = $MaxBandwidthKbits }
         }
 
-        If($DuplicateWolToThisNetwork){
-            $_body += @{ DuplicateWolToThisNetwork = $true }
-        } else {
-            $_body += @{ DuplicateWolToThisNetwork = $false }
+        If(![string]::IsNullOrEmpty($DuplicateWolToThisNetwork)){
+            $_body += @{ DuplicateWolToThisNetwork = $DuplicateWolToThisNetwork.IsPresent }
         }
 
         if($PSCmdlet.ShouldProcess($_body.Name, "Create new Ip Network")){
