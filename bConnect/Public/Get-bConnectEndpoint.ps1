@@ -1,4 +1,4 @@
-Function Get-bConnectEndpoint() {
+﻿Function Get-bConnectEndpoint() {
     <#
         .Synopsis
             Get specified endpoint or all endpoints in given OrgUnit
@@ -56,7 +56,7 @@ Function Get-bConnectEndpoint() {
                 StaticGroup = $StaticGroupGuid
             }
         }
-        
+
         If($UniversalDynamicGroupGuid) {
             $_body = @{
                 UniversalDynamicGroup = $UniversalDynamicGroupGuid
