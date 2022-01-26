@@ -1,0 +1,16 @@
+TOPIC
+    about_bConnect
+
+SHORT DESCRIPTION
+    Powershell module for accessing the REST-API of the baramundi Management Suite.
+
+LONG DESCRIPTION
+    Powershell module for accessing the REST-API of the baramundi Management Suite.
+
+    To learn how to use any of the functions, it is recommended you make use of
+    the command: `Get-Help <functionName>`. For example,
+    `Get-Help Initialize-bConnect` will show you how to use the Initialize-bConnect
+    function.
+
+AUTHENTICATION
+    Bevor runing any function of bConnect you have to run `Initialize-bConnect`
