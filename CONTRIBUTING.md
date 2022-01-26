@@ -19,7 +19,7 @@ If you're interested in fixing an issue in this project, firstly, thank you!
 2. Write your code
 3. Update CHANGELOG.md with your changes (preferably using the [ChangeLogManagement](https://www.powershellgallery.com/packages/ChangelogManagement) PowerShell module for formatting consistency) 
 ```powershell 
-Add-ChangelogData -Type Added -Data "Added CONTRIBUTING.md"` )
+Add-ChangelogData -Type Added -Data "Added CONTRIBUTING.md"`
 ```
 4. For good measure, check for any changes to the upstream repo
 5. Make sure you have pushed your commits to your new branch and then create a pull request
