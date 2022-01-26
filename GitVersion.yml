@@ -1,0 +1,8 @@
+mode: Mainline
+no-bump-message: '\+semver:\s?(none|skip)|^Released\s\d\.\d\.\d$'
+branches:
+  hotfix:
+    regex: ^(hot)?fix(es)?[/-]
+ignore:
+  sha: []
+merge-message-formats: {}
