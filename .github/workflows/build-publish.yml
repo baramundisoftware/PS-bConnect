@@ -1,0 +1,84 @@
+name: "Create GitHub release and publish to the PowerShell Gallery"
+
+on: 
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+env:
+  PSProjectName: bConnect
+
+jobs:
+  job-main:
+    name: main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2.3.1
+        with:
+          fetch-depth: 0
+
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v0.9.10
+        with:
+          versionSpec: '5.x'
+
+      - name: Determine Version
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v0.9.10
+        with:
+          useConfigFile: true
+
+      - name: Install codaamok.build and dependent modules, and set environment variables
+        run: |
+          Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
+          Install-Module "InvokeBuild" -Force
+          $Username, $ProjectName = $env:GITHUB_REPOSITORY -split "/"
+          Invoke-Build -ModuleName $env:PSProjectName -Author $Username -Task "InstallDependencies","ImportBuildModule","SetGitHubActionEnvironmentVariables"
+        shell: pwsh
+
+      - name: Build
+        run: Invoke-Build -ModuleName $env:PSProjectName -Author $env:GH_USERNAME -Version $env:GitVersion_SemVer -NewRelease $true
+        shell: pwsh
+
+      - name: Publish to PowerShell Gallery
+        run: Invoke-Build -ModuleName $env:PSProjectName -Task "PublishModule"
+        shell: pwsh
+        env:
+          PSGALLERY_API_KEY: ${{ secrets.PSGALLERY_API_KEY }}
+
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ env.GitVersion_SemVer }}
+          release_name: v${{ env.GitVersion_SemVer }}
+          body_path: release/releasenotes.txt
+          draft: false
+          prerelease: false
+
+      - name: Upload release asset
+        id: upload_release_asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url:  ${{ steps.create_release.outputs.upload_url }}
+          asset_path: release/${{ env.PSProjectName }}_${{ env.GitVersion_SemVer }}.zip
+          asset_name: ${{ env.PSProjectName }}_${{ env.GitVersion_SemVer }}.zip
+          asset_content_type: application/zip
+
+      - name: Commit CHANGELOG.md and module manifest
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add CHANGELOG.md ${{ env.PSProjectName }}/${GH_PROJECTNAME}.psd1 docs
+          git commit -m "Released ${{ env.GitVersion_SemVer }}"
+      
+      - name: Push commit
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
