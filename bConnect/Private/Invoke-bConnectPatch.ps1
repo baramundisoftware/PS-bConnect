@@ -35,7 +35,7 @@ Function Invoke-bConnectPatch() {
 
     try {
         If($Data.Count -gt 0) {
-            $_body = ConvertTo-Json $Data
+			$_body = ConvertTo-Json $Data -Depth 5
             $_uri = "$($script:_connectUri)/$($Version)/$($Controller)?"
 
             If(![string]::IsNullOrEmpty($objectGuid)) {
