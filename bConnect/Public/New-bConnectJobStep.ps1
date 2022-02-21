@@ -21,7 +21,7 @@ Function New-bConnectJobStep() {
 
     $_AppTemp = Get-bConnectApplication -ApplicationGuid $ApplicationGuid
     $_new_application_props = [PSCustomObject]@{Id = $ApplicationGuid; Name = $_AppTemp.Vendor + " " + $_AppTemp.Name + " " + $_AppTemp.Version;}
-	$_new_application_arr = @($_new_application_props)
+    $_new_application_arr = @($_new_application_props)
     $_new_jobstep = [PSCustomObject]@{Applications = $_new_application_arr; Sequence = $Sequence; Type = $JobStepType;}
     return $_new_jobstep
 }
