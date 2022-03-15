@@ -16,10 +16,11 @@ Function Initialize-bConnect() {
         [Parameter(Mandatory=$true)][string]$Server,
         [string]$Port = "443",
         [Parameter(Mandatory=$true)][System.Management.Automation.PSCredential]$Credentials,
-        [switch]$AcceptSelfSignedCertifcate
+        [Alias("AcceptSelfSignedCertifcate")]
+        [switch]$AcceptSelfSignedCertificate
     )
 
-    If($AcceptSelfSignedCertifcate) {
+    If($AcceptSelfSignedCertificate) {
         [System.Net.ServicePointManager]::CertificatePolicy = New-Object ignoreCertificatePolicy
     }
 
