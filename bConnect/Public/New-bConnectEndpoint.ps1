@@ -6,7 +6,7 @@ Function New-bConnectEndpoint() {
             enum bConnectEndpointType.
         .Parameter DisplayName
             DisplayName of the new endpoint. This is also used as hostname for Windows-Endpoints.
-        .Parameter GroupGuid
+        .Parameter GuidOrgUnit
             Valid GUID of the target OU (default: "Logical Group").
         .Parameter PrimaryUser
             Primary user of this endpoint. Mandatory for WindowsPhone-Endpoints.
@@ -19,7 +19,7 @@ Function New-bConnectEndpoint() {
     Param (
         [Parameter(Mandatory=$true)][bConnectEndpointType]$Type,
         [Parameter(Mandatory=$true)][string]$DisplayName,
-        [string]$GroupGuid = "C1A25EC3-4207-4538-B372-8D250C5D7908", #guid of "Logical Group" as fallback
+        [string]$GuidOrgUnit = "C1A25EC3-4207-4538-B372-8D250C5D7908", #guid of "Logical Group" as fallback
 		[string]$PrimaryMAC,
 		[string]$PrimaryIP,
 		[string]$HostName,
@@ -29,6 +29,7 @@ Function New-bConnectEndpoint() {
 		[string]$GuidHardwareProfile,
         [string]$PrimaryUser = "",
         [string]$Comments,
+		[bConnectAndroidEnterpriseProfileType]$AndroidEnterpriseProfileType,																	  
         [bConnectEndpointOwner]$Owner,
         [bConnectEndpointComplianceCheckCategory]$ComplianceCheckCategory,
         [ValidateSet("LAN","Internet","Dynamic")][string]$Mode,
@@ -38,10 +39,10 @@ Function New-bConnectEndpoint() {
     $_connectVersion = Get-bConnectVersion
     If($_connectVersion -ge "1.0") {
         $_body = @{
-            Type = $type;
             DisplayName = $displayname;
-            GuidGroup = $groupGuid;
+            GuidOrgUnit = $GuidOrgUnit;
             PrimaryUser = $primaryUser
+            Type = $type;					
         }
 
         If(![string]::IsNullOrEmpty($Comments)) {
@@ -85,8 +86,14 @@ Function New-bConnectEndpoint() {
 				$_body += @{ ExtendedInternetMode = $ExtendedInternetMode }
 			}
 		}
-
-		If($Type -eq ([bConnectEndpointType]::AndroidEndpoint -or [bConnectEndpointType]::iOSEndpoint -or [bConnectEndpointType]::WindowsPhoneEndpoint)) {
+		
+		If($Type -eq [bConnectEndpointType]::AndroidEndpoint) {
+            If($AndroidEnterpriseProfileType) {
+				$_body += @{ AndroidEnterpriseProfileType = $AndroidEnterpriseProfileType }
+            }
+		}
+		
+		If(([bConnectEndpointType]::AndroidEndpoint, [bConnectEndpointType]::iOSEndpoint, [bConnectEndpointType]::WindowsPhoneEndpoint) -Contains $Type) {											   
             If($Owner) {
                 $_body += @{ Owner = $Owner }
             }

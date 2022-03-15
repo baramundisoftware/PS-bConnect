@@ -6,6 +6,12 @@
             Valid GUID of a endpoint
         .Parameter OrgUnitGuid
             Valid GUID of an Orgunit
+        .Parameter DynamicGroupGuid
+            Valid GUID of a dynamic group
+        .Parameter StaticGroupGuid
+            Valid GUID of a static group
+        .Parameter UniversalDynamicGroupGuid
+            Valid GUID of an universal dynamic group
         .Parameter Username
             Valid Username
         .Parameter PublicKey

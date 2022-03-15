@@ -16,7 +16,8 @@ Function Initialize-bConnect() {
         [Parameter(Mandatory=$true)][string]$Server,
         [string]$Port = "443",
         [Parameter(Mandatory=$true)][System.Management.Automation.PSCredential]$Credentials,
-        [switch]$AcceptSelfSignedCertifcate
+        [Alias("AcceptSelfSignedCertifcate")]
+        [switch]$AcceptSelfSignedCertificate
     )
 
     # fallback bConnect version
@@ -39,7 +40,7 @@ public class ignoreCertificatePolicy : ICertificatePolicy {
     # init the connection (uri and credentials)
     $script:_connectInitialized = $false
 
-    If($AcceptSelfSignedCertifcate) {
+    If($AcceptSelfSignedCertificate) {
         [System.Net.ServicePointManager]::CertificatePolicy = New-Object ignoreCertificatePolicy
     }
 

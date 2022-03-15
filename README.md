@@ -27,6 +27,10 @@ You may also add the switch *-AcceptSelfSignedCertifcate* if you use a self-sign
 
 For more details please visit the [Wiki](https://github.com/baramundisoftware/PS-bConnect/wiki).
 
+## Support & Warranty
+This module is provided "as is" without any warranty or support from the baramundi software AG.
+If you encounter any issues refer to the [issue tracker](https://github.com/baramundisoftware/PS-bConnect/issues).
+
 ## Author
 Alexander Haugk
 
