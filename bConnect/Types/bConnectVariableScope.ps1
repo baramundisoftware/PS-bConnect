@@ -7,6 +7,8 @@ public enum bConnectVariableScope
     OrgUnit,
     Job,
     Software,
-    HardwareProfile
+    HardwareProfile,
+    NetworkDevice,
+    OTDevice
 }
 "@
