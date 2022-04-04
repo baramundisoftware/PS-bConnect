@@ -20,6 +20,12 @@ Update profile is empty
 
 Additional Filter i used:
 Operating system, Variables and Logical Groups (OU) 
+
+After that:
+Usage: Set-Windowsupdateprofile.ps1 -WindowsUpdateProfile "Clients 1. Welle IT" -GuidMicrosoftUpdateProfile "779FCAD3-D552-4E89-9BF8-76544FE4BCEC" -UniversalDynamicGroupGuid "50CDB7B4-3CFE-4A7E-A926-47061CB9EA4C"
+
+For Automatic running, create an Windows Task Scheduler
+Command: powershell.exe -File "C:\PathtoScript\Set-Windowsupdateprofile.ps1" -WindowsUpdateProfile "Clients 1. Welle IT" -GuidMicrosoftUpdateProfile "779FCAD3-D552-4E89-9BF8-76544FE4BCEC" -UniversalDynamicGroupGuid "50CDB7B4-3CFE-4A7E-A926-47061CB9EA4C
 -----------------------------------------------
 #>
 
@@ -35,7 +41,7 @@ $username = "XXXXXXX@domain.local"
 [String] $reportfile = "$date-Baramundi-UpdateProfile-$GuidMicrosoftUpdateProfile.txt"
 [String] $report = $reportdir + "$reportfile"
 
-$bConnectServer = "LOCALHOST" # if you have the Script and Baramundi Management on different Server, than use the FQDN address
+$bConnectServer = "LOCALHOST" # if you have the Script and Baramundi Management on different Server, then use the FQDN address
 
 <#
 ######### Example how do find the GUIDs #########
