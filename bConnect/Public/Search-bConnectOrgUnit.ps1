@@ -8,6 +8,7 @@ Function Search-bConnectOrgUnit() {
             Array of SearchResult (see bConnect documentation for more details)
     #>
 
+    [CmdletBinding()]
     Param (
         [Parameter(Mandatory=$true)][string]$Term
     )

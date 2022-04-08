@@ -12,6 +12,7 @@ Function Get-bConnectUniversalDynamicGroup() {
             Array of Universal DynamicGroup (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param(
         [string]$UniversalDynamicGroup,
         [string]$OrgUnit,

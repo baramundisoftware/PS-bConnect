@@ -8,7 +8,7 @@
             StaticGroup (see bConnect documentation for more details).
     #>
 
-
+    [CmdletBinding()]
     Param (
         [Parameter(Mandatory=$true)][PSCustomObject]$StaticGroup
     )

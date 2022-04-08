@@ -10,6 +10,7 @@ Function Get-bConnectDynamicGroup() {
             Array of DynamicGroup (see bConnect documentation for more details)
     #>
 
+    [CmdletBinding()]
     Param(
         [string]$DynamicGroup,
         [string]$OrgUnit

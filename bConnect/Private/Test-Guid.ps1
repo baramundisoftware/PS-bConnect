@@ -8,6 +8,7 @@
             Bool
     #>
 
+    [CmdletBinding()]
     Param (
         [Parameter(Mandatory=$true)][string]$Guid
     )

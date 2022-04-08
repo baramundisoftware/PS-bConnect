@@ -10,6 +10,7 @@ Function Get-bConnectIpNetwork() {
             Array of IpNetworks (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param (
         [string]$Name,
         [string]$Id

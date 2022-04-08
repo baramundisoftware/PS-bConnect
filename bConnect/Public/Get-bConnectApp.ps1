@@ -11,7 +11,8 @@ Function Get-bConnectApp() {
         .Outputs
             Array of App (see bConnect documentation for more details).
     #>
-
+    
+    [CmdletBinding()]
     Param (
         [string]$AppGuid,
         [string]$OrgUnitGuid,

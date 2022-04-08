@@ -8,6 +8,7 @@
             Array of BootEnvironment (see bConnect documentation for more details)
     #>
 
+    [CmdletBinding()]
     Param (
         [string]$BootEnvironmentGuid
     )

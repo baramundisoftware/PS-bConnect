@@ -31,7 +31,8 @@ Function New-bConnectApplicationAUTFileRule() {
         .Outputs
             AUTFileRule (see bConnect documentation for more details)
     #>
-
+    
+    [CmdletBinding()]
     [OutputType("System.Management.Automations.PSObject")]
     Param(
         [string]$FileName,

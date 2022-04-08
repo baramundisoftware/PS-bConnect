@@ -24,6 +24,7 @@
             Array of Endpoint (see bConnect documentation for more details)
     #>
 
+    [CmdletBinding()]
     Param (
         [string]$EndpointGuid,
         [string]$OrgUnitGuid,

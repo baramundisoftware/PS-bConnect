@@ -12,6 +12,7 @@ Function Initialize-bConnect() {
             Switch to ignore untrusted certificates.
     #>
 
+    [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$true)][string]$Server,
         [string]$Port = "443",

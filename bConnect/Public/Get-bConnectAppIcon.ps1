@@ -10,6 +10,7 @@
             Array of Icon (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param (
         [string]$AppGuid,
         [bConnectIconScope]$Scope

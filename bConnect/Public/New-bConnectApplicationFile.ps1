@@ -10,6 +10,7 @@ Function New-bConnectApplicationFile() {
             ApplicationFile (see bConnect documentation for more details)
     #>
 
+    [CmdletBinding()]
     [OutputType("System.Management.Automations.PSObject")]
     Param(
         [Parameter(Mandatory=$true)][string]$Source,

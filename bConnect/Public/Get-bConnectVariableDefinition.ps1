@@ -14,6 +14,7 @@ Function Get-bConnectVariableDefinition() {
             VariableDefinition (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param (
         [string]$Id,
         [bConnectVariableScope]$Scope,

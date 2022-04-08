@@ -14,6 +14,7 @@ Function Get-bConnectJobInstance() {
             Array of JobInstance (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param (
         [string]$JobInstanceGuid,
         [string]$JobGuid,

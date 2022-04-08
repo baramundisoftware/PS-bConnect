@@ -12,6 +12,7 @@ Function Get-bConnectInventoryDataWmiScan() {
             Inventory (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param (
         [string]$EndpointGuid,
         [string]$TemplateName,

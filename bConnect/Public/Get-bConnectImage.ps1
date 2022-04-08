@@ -8,6 +8,7 @@ Function Get-bConnectImage() {
             Image (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param (
         [Parameter(Mandatory=$true)][string]$Id
     )

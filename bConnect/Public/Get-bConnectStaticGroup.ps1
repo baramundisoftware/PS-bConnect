@@ -9,7 +9,8 @@ Function Get-bConnectStaticGroup() {
         .Outputs
             Array of StaticGroup (see bConnect documentation for more details)
     #>
-
+    
+    [CmdletBinding()]
     Param(
         [string]$StaticGroup,
         [string]$OrgUnit

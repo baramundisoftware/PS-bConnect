@@ -1,4 +1,5 @@
 Function ConvertTo-Hashtable {
+    [CmdletBinding()]
     Param (
         [Parameter(Mandatory,ValueFromPipeline)]
         [PSObject[]] $Object

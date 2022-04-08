@@ -12,6 +12,7 @@ Function Get-bConnectJob() {
             Array of Job (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param (
         [string]$JobGuid,
         [string]$OrgUnitGuid,

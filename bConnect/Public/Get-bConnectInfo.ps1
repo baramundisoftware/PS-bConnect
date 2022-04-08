@@ -5,6 +5,9 @@ Function Get-bConnectInfo() {
             Gets info from bConnect.
     #>
 
+    [CmdletBinding()]
+    Param ()
+
     If(!$script:_bConnectInfo) {
         $script:_bConnectInfo = Invoke-bConnectGet -Controller "info" -noVersion
     }

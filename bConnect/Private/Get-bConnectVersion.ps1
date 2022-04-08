@@ -4,6 +4,7 @@ Function Get-bConnectVersion() {
             Checks for supported bConnect version and returns the version (e.g. "v1.0").
     #>
 
+    [CmdletBinding()]
     Param (
         [switch]$bMSVersion
     )
