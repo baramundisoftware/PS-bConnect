@@ -8,6 +8,7 @@ Function Get-bConnectInventoryOverview() {
             InventoryOverview (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param (
         [string]$EndpointGuid
     )

@@ -8,6 +8,7 @@ Function Invoke-bConnectPut() {
             bConnect version to use
     #>
 
+    [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$true)][string]$Controller,
         [Parameter(Mandatory=$true)][PSCustomObject]$Data,

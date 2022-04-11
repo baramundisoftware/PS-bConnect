@@ -16,6 +16,7 @@
             Bool
     #>
 
+    [CmdletBinding()]
     Param (
         [Parameter(Mandatory=$true)][string]$ObjectGuid,
         [Parameter(Mandatory=$true)][bConnectVariableScope]$Scope,

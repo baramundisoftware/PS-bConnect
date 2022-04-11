@@ -14,6 +14,7 @@ Function Get-bConnectVariable() {
             ObjectVariables (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param (
         [Parameter(Mandatory=$true)][bConnectVariableScope]$Scope,
         [string]$Category,

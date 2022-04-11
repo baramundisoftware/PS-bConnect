@@ -8,6 +8,7 @@
             Array of HardwareProfile (see bConnect documentation for more details)
     #>
 
+    [CmdletBinding()]
     Param (
         [string]$HardwareProfileGuid
     )

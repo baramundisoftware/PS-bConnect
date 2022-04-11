@@ -6,6 +6,9 @@ Function Get-bConnectSoftwareScanRuleCounts() {
             SoftwareScanRuleCount (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
+    Param ()
+
     $_connectVersion = Get-bConnectVersion
     If($_connectVersion -ge "1.0") {
 

@@ -8,6 +8,7 @@ Function Get-bConnectInventoryAppScan() {
             InventoryApp (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param (
         [string]$EndpointGuid
     )

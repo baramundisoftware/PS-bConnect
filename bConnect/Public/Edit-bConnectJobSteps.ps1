@@ -22,7 +22,8 @@ Function Edit-bConnectJobSteps() {
         .Outputs
             Changed Job object (see bConnect documentation for more details)
     #>
-
+    
+    [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$true)][string]$JobGuid,
         [Parameter(Mandatory=$true)][ValidateSet("Add", "Delete", "Exchange", "ChangeType", ignoreCase=$true)][string]$Action,

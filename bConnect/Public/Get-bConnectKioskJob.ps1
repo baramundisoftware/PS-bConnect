@@ -14,6 +14,7 @@ Function Get-bConnectKioskJob() {
             Array of KioskJob (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param (
         [string]$Username,
         [string]$EndpointId,

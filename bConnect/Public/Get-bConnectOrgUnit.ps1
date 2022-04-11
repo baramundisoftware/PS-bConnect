@@ -11,6 +11,7 @@ Function Get-bConnectOrgUnit() {
             Array of OrgUnit (see bConnect documentation for more details)
     #>
 
+    [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$true)][string]$OrgUnit,
         [switch]$SubGroups

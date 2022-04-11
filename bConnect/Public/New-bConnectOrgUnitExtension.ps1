@@ -30,6 +30,7 @@ Function New-bConnectOrgUnitExtension() {
             Array of OrgUnit extension (see bConnect documentation for more details)
     #>
 
+    [CmdletBinding()]
     Param(
         [string]$DIP = "",
         [string]$Domain = "",

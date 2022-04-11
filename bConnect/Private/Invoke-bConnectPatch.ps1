@@ -10,6 +10,7 @@ Function Invoke-bConnectPatch() {
             If true, bConnect will update the specified Job without error, even if it is assigned already.
     #>
 
+    [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$true)][string]$Controller,
         [Parameter(Mandatory=$true)][PSCustomObject]$Data,

@@ -10,6 +10,7 @@ Function Invoke-bConnectGet() {
             Dont use a version in the request. Needed for "info" and "version"
     #>
 
+    [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$true)][string]$Controller,
         [PSCustomObject]$Data,

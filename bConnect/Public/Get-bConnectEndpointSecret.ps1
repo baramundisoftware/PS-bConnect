@@ -8,6 +8,7 @@ Function Get-bConnectEndpointSecret() {
             Array of EndpointSecrets (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param (
         [Parameter(Mandatory=$true)][string]$EndpointGuid
     )

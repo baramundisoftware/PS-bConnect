@@ -12,6 +12,7 @@ Function Get-bConnectApplication() {
             Array of Application (see bConnect documentation for more details).
     #>
 
+    [CmdletBinding()]
     Param (
         [string]$ApplicationGuid,
         [string]$OrgUnitGuid,

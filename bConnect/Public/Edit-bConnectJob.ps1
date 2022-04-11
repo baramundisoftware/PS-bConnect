@@ -8,7 +8,7 @@ Function Edit-bConnectJob() {
             Job (see bConnect documentation for more details).
     #>
 
-
+    [CmdletBinding()]
     Param (
         [Parameter(Mandatory=$true)][PSCustomObject]$Job,
         [boolean]$IgnoreAssignments = $false
