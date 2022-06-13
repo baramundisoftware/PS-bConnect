@@ -7,9 +7,9 @@ Function Get-bConnectVariableDefinition() {
         .Parameter Scope
             enum bConnectVariableScope.
         .Parameter Category
-            Valid variable category.
+            Valid variable category. (Only valid if Scope is present.)
         .Parameter Name
-            Valid variable name.
+            Valid variable name. (Only valid if Scope and Categore are present.)
         .Outputs
             VariableDefinition (see bConnect documentation for more details).
     #>
@@ -30,23 +30,21 @@ Function Get-bConnectVariableDefinition() {
             $_body += @{
                 Id = $Id
             }
-        }
-
-        If($Scope.ToString()) {
+        } Elseif($Scope -ne $null) {
             $_body += @{
                 Scope = $Scope.ToString()
             }
-        }
-
-        If($Category) {
-            $_body += @{
-                Category = $Category
-            }
-        }
-
-        If($Name) {
-            $_body += @{
-                Name = $Name
+            
+            If($Category) {
+                $_body += @{
+                    Category = $Category
+                }
+                
+                If($Name) {
+                    $_body += @{
+                        Name = $Name
+                    }
+                }
             }
         }
 
