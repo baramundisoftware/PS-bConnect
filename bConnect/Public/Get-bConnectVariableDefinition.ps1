@@ -32,7 +32,7 @@ Function Get-bConnectVariableDefinition() {
             }
         }
 
-        If($Scope) {
+        If($Scope.ToString()) {
             $_body += @{
                 Scope = $Scope.ToString()
             }
