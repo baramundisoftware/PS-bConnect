@@ -18,13 +18,27 @@ $script:_ConnectionTimeout = 0
 
 # Only to ignore certificates errors (self-signed)
 Add-Type @"
-using System.Net;
-using System.Security.Cryptography.X509Certificates;
-
-public class ignoreCertificatePolicy : ICertificatePolicy {
-    public ignoreCertificatePolicy() {}
-    public bool CheckValidationResult(ServicePoint sPoint, X509Certificate cert, WebRequest wRequest, int certProb) { return true; }
-}
+        using System;
+        using System.Net;
+        using System.Net.Security;
+        using System.Security.Cryptography.X509Certificates;
+        public class ServerCertificateValidationCallback
+        {
+            public static void Ignore()
+            {
+                ServicePointManager.ServerCertificateValidationCallback += 
+                    delegate
+                    (
+                        Object obj, 
+                        X509Certificate certificate, 
+                        X509Chain chain, 
+                        SslPolicyErrors errors
+                    )
+                    {
+                        return true;
+                    };
+            }
+        }
 "@
 
 # init the connection (uri and credentials)
