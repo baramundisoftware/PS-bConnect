@@ -9,6 +9,8 @@ public enum bConnectVariableScope
     Software,
     HardwareProfile,
     NetworkDevice,
-    OTDevice
+    ICDevice,
+    IOSDevice,
+    WindowsPhoneDevice
 }
 "@

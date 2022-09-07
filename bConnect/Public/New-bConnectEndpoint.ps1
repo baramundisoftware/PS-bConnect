@@ -103,6 +103,16 @@ Function New-bConnectEndpoint() {
             }
         }
 
+        If($Type -eq [bConnectEndpointType]::NetworkEndpoint) {
+			If(![string]::IsNullOrEmpty($PrimaryMAC)) {
+				$_body += @{ PrimaryMAC = $PrimaryMAC }
+			}
+
+            If(![string]::IsNullOrEmpty($PrimaryIP)) {
+				$_body += @{ PrimaryIP = $PrimaryIP }
+			}   
+        }
+
         if($PSCmdlet.ShouldProcess($_body.DisplayName, "Create new endpoint.")){
             return Invoke-bConnectPost -Controller "Endpoints" -Version $_connectVersion -Data $_body
         } else {
