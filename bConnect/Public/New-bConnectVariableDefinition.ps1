@@ -17,7 +17,7 @@ Function New-bConnectVariableDefinition() {
     [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'low')]
     [OutputType("System.Management.Automations.PSObject","System.Boolean")]
     Param (
-        [Parameter(Mandatory=$true)][bConnectVariableScope]$Scope,
+        [Parameter(Mandatory=$true)][bConnectVariableDefinitionScope]$Scope,
         [Parameter(Mandatory=$true)][string]$Category,
         [Parameter(Mandatory=$true)][string]$Name,
         [Parameter(Mandatory=$true)][bConnectVariableType]$Type
