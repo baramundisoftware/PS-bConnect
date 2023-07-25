@@ -73,6 +73,15 @@ Function Edit-bConnectEndpoint() {
                 )
             }
 
+            # Network
+            If($Endpoint.Type -eq [bConnectEndpointType]::NetworkEndpoint) {
+                $_propertyList += @(
+                    "PrimaryMAC",
+                    "PrimaryIP"
+                )    
+            }
+
+
 			Foreach($_property in $_propertyList) {
                 If($Endpoint[$_property] -ine $_old_endpoint[$_property]) {
                     $_new_endpoint += @{ $_property = $Endpoint[$_property] }
