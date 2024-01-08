@@ -23,6 +23,8 @@ To use the functions of PS-bConnect you need to import the module into your curr
     $apiCred = Get-Credential -Message "bConnect" -UserName "user@domain.local"
     Initialize-bConnect -Server "SRV-BARAMUNDI" -Credentials $apiCred
     
+**Security notice: Do not use common credential, which are also used by other tasks! Create a specific user and password for each script and assign only necessary permissions in the bMS.**
+
 You may also add the switch *-AcceptSelfSignedCertifcate* if you use a self-signed certificate at the bConnect port.
 
 For more details please visit the [Wiki](https://github.com/baramundisoftware/PS-bConnect/wiki).
