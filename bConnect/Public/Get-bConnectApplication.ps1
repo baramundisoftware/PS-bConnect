@@ -20,7 +20,7 @@ Function Get-bConnectApplication() {
     )
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
         If($EndpointGuid) {
             $_body = @{
                 EndpointId = $EndpointGuid

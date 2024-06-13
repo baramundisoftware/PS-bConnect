@@ -17,7 +17,7 @@ Function Get-bConnectIpNetwork() {
         )
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
         If($Name) {
             $_body = @{
                 Name = $Name

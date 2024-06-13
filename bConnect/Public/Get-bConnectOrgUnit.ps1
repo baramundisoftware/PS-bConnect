@@ -18,7 +18,7 @@ Function Get-bConnectOrgUnit() {
     )
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
         If(Test-Guid $OrgUnit) {
             If($SubGroups) {
                 $_body = @{

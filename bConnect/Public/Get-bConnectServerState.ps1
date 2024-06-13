@@ -10,7 +10,7 @@
     Param ()
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
         return Invoke-bConnectGet -Controller "ServerState" -Version $_connectVersion
     } else {
         return $false
