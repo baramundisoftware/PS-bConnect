@@ -20,7 +20,7 @@ Function Get-bConnectVersion() {
                 Write-Verbose "DEPRECATED! bConnect 2019 R1 or newer"
             }
 
-	    "20.*" {
+            "20.*" {
                 Write-Verbose "bConnect 2020 R1 or newer"
             }
 
@@ -32,10 +32,12 @@ Function Get-bConnectVersion() {
                 Write-Verbose "bConnect 2022 R1 or newer"
             }
 
-	    "23.*" {
-		Write-Verbose "bConnect 2023 R1 or newer"
+            "23.*" {
+                Write-Verbose "bConnect 2023 R1 or newer"
             }
-
+            "24.*" {
+                Write-Verbose "bConnect 2024 R1 or newer" # 31.05.2024 skoeppen
+			}
             default {
                 Write-Warning "UNSUPPORTED bMS Version $($_bmsVersion)! Unknown bConnect Version -> Fallback to $($script:_bConnectFallbackVersion)"
                 $_bcVersion = $script:_bConnectFallbackVersion

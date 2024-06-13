@@ -14,7 +14,7 @@ Function Search-bConnectOrgUnit() {
     )
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
         $_body = @{
             Type = "orgunit";
             Term = $Term

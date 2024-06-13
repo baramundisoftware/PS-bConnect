@@ -15,7 +15,7 @@ Function Edit-bConnectIpNetwork() {
     )
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
         If(Test-Guid $IpNetwork.Id) {
             $_IpNetwork = ConvertTo-Hashtable $IpNetwork
             return Invoke-bConnectPatch -Controller "IpNetworks" -Version $_connectVersion -objectGuid $_IpNetwork.Id -Data $_IpNetwork

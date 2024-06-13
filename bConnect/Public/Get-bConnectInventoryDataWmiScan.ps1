@@ -20,7 +20,7 @@ Function Get-bConnectInventoryDataWmiScan() {
     )
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
         $_body = @{}
         If($EndpointGuid) {
             $_body += @{ EndpointId = $EndpointGuid }

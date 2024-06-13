@@ -14,7 +14,7 @@
     )
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
         If(Test-Guid $OrgUnit.Id) {
             $_orgUnit = ConvertTo-Hashtable $OrgUnit
             return Invoke-bConnectPatch -Controller "OrgUnits" -Version $_connectVersion -objectGuid $OrgUnit.Id -Data $_orgUnit

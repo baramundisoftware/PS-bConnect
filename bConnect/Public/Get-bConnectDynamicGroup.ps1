@@ -17,7 +17,7 @@ Function Get-bConnectDynamicGroup() {
     )
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
         If(![string]::IsNullOrEmpty($DynamicGroup)) {
             If(Test-Guid $DynamicGroup) {
                 $_body = @{

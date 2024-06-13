@@ -10,7 +10,7 @@ Function Get-bConnectEndpointInvSoftware() {
     Param ()
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
 
         return Invoke-bConnectGet -Controller "EndpointInvSoftware" -Version $_connectVersion -Data $_body
     } else {

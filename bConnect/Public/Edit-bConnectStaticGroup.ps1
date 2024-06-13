@@ -14,7 +14,7 @@
     )
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
         If(Test-Guid $StaticGroup.Id) {
             # bms2016r1
             # We can not send the whole object because of not editable fields.

@@ -17,7 +17,7 @@
     )
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
         If($Scope) {
             $_body = @{
                 Scope = [string]$Scope

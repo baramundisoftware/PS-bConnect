@@ -10,7 +10,7 @@ Function Get-bConnectSoftwareScanRule() {
     Param ()
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
 
         return Invoke-bConnectGet -Controller "SoftwareScanRules" -Version $_connectVersion -Data $_body
     } else {

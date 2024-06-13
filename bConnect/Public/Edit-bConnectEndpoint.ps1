@@ -14,7 +14,7 @@ Function Edit-bConnectEndpoint() {
     )
 
     $_connectVersion = Get-bConnectVersion
-    If($_connectVersion -ge "1.0") {
+    If($_connectVersion -ge "v1.0") {
         If(Test-Guid $Endpoint.Id) {
             # We can not send the whole object because of not editable fields.
             # So we need to create a new one with editable fields only...
