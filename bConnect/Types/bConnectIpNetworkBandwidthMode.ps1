@@ -3,7 +3,7 @@ Add-Type -TypeDefinition @"
 public enum bConnectIpNetworkBandwidthMode
 {
     AllowAll = 0,
-    DenyAll = 1,
-    UseBandwith = 2
+    BlockAll = 1,
+    UseBandwidth = 2
 }
 "@
