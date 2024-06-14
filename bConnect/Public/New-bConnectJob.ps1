@@ -8,6 +8,12 @@
             Display name of a job. Visible in the bMA TrayNotifier and Kiosk.
         .Parameter Type
             Job type: Windows, Mobile, Universal
+        .Parameter Steps
+            The job steps which the job will execute.
+        .Parameter ParentId
+            The GUID of the new jobs parent OU.
+        .Parameter Id
+            The GUID of the new job object, optional.
         .Parameter Category
             The job’s category.
         .Parameter Description
@@ -22,8 +28,7 @@
             If set to true the job aborts after an erroneous job step.			
         .Parameter RemoveInstanceAfterCompletion
             If set to true the job assignment will be deleted after successful execution.
-        .Parameter Steps
-            The job steps which the job will execute.
+
         .Parameter WindowsProperties
             The windows properties of the job. Must not be null if job is for windows endpoints. Must be null if job is for mobile or mac endpoints.
         .Parameter MobileAndMacProperties
@@ -32,18 +37,18 @@
             The properties of a universal job. Must be null if the job is for windows or mobile endpoints.
 			
         .Outputs
-            NewApplication (see bConnect documentation for more details).
+            NewJob (see bConnect documentation for more details).
     #>
 
     [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'low')]
     [OutputType("System.Management.Automations.PSObject","System.Boolean")]
     Param (
-        [Parameter(Mandatory=$true)][string]$Id,
 		[Parameter(Mandatory=$true)][string]$Name,
         [Parameter(Mandatory=$true)][string]$DisplayName,
         [Parameter(Mandatory=$true)][ValidateSet("Windows","Mobile","Universal",ignoreCase=$true)][string]$Type,
 		[Parameter(Mandatory=$true)][PSCustomObject[]]$Steps,
         [string]$ParentId = "C6567FDB-74B4-40C1-846D-12011A163B4A", #guid of "Job Management" as fallback
+		[string]$Id,
         [string]$Category,
         [string]$Description,
         [string]$Comments,
@@ -59,7 +64,7 @@
     $_connectVersion = Get-bConnectVersion
     If($_connectVersion -ge "1.0") {
         $_body = @{
-            Id = $Id;
+            # Id = $Id;
 			Name = $Name;
             DisplayName = $DisplayName;
             Type = $Type;
@@ -69,6 +74,10 @@
 			AbortOnError = $AbortOnError;
 			RemoveInstanceAfterCompletion = $RemoveInstanceAfterCompletion
         }
+
+		If(![string]::IsNullOrEmpty($Id)) {
+			$_body += @{ Id = $Id }
+		}
 
 		If(![string]::IsNullOrEmpty($Category)) {
 			$_body += @{ Category = $Category }
