@@ -39,11 +39,11 @@
             }
             $StaticGroup.EndpointIds = $_endpointIds
 
-			Foreach($_property in $_propertyList) {
-                If($StaticGroup[$_property] -ine $_old_group[$_property]) {
+            Foreach($_property in $_propertyList) {
+                If(($StaticGroup[$_property] -join ', ') -ine ($_old_group[$_property] -join ', ')) {
                     $_new_group += @{ $_property = $StaticGroup[$_property] }
                 }
-			}
+            }
 
             return Invoke-bConnectPatch -Controller "StaticGroups" -Version $_connectVersion -objectGuid $StaticGroup.Id -Data $_new_group
         } else {
