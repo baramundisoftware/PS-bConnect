@@ -40,11 +40,24 @@ Function Invoke-bConnectGet() {
     }
 
     try {
-        If($Data.Count -gt 0) {
-            $_rest = Invoke-RestMethod -Uri $_uri -Body $Data -Credential $script:_connectCredentials -Method Get -ContentType "application/json; charset=utf-8" -TimeoutSec $script:_ConnectionTimeout
-        } else {
-            $_rest = Invoke-RestMethod -Uri $_uri -Credential $script:_connectCredentials -Method Get -ContentType "application/json; charset=utf-8" -TimeoutSec $script:_ConnectionTimeout
+        $invokeParams = @{
+            Uri = $_uri
+            Credential = $script:_connectCredentials
+            Method = 'Get'
+            ContentType = 'application/json; charset=utf-8'
+            TimeoutSec = $script:_ConnectionTimeout
         }
+
+        if ($script:_skipCertificateCheck) {
+            $invokeParams.SkipCertificateCheck = $true
+        }
+
+        If($Data.Count -gt 0) {
+            $invokeParams.Body = $Data
+        }
+        
+        $_rest = Invoke-RestMethod @invokeParams
+        
 
         If($_rest) {
             return $_rest
@@ -54,19 +67,37 @@ Function Invoke-bConnectGet() {
     }
 
     catch {
-        Try {
-            $_response = ConvertFrom-Json $_
-        }
+        $_errMsg = ""
 
+        Try {
+            if ($PSVersionTable.PSEdition -eq 'Core') {
+                # In PowerShell 7+, the actual response is in the stream of the exception's response object
+                $stream = $_.Exception.Response.GetResponseStream()
+                $reader = New-Object System.IO.StreamReader($stream)
+                $responseBody = $reader.ReadToEnd()
+                $reader.Close()
+                $stream.Close()
+                $_response = ConvertFrom-Json $responseBody
+            } else {
+                # In Windows PowerShell 5.1, the error record itself can sometimes be converted
+                $_response = ConvertFrom-Json $_
+            }
+        }
         Catch {
             $_response = $false
         }
 
         If($_response) {
-            Write-Error $_response.Message
+            $_errMsg = $_response.Message
         } else {
-            Write-Error $_
+            $_errMsg =  $_.Exception.Message
         }
+
+        If($Data) {
+            $_errMsg = "$($_errMsg) `nData: $($Data | Out-String)"
+        }
+
+        Write-Error $_errMsg
 
         return $false
     }

@@ -16,7 +16,8 @@ $script:_bConnectFallbackVersion = "v1.0"
 $script:_ConnectionTimeout = 0
 
 # Only to ignore certificates errors (self-signed)
-Add-Type @"
+if ($PSVersionTable.PSEdition -ne 'Core') {
+    Add-Type @"
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 
@@ -25,16 +26,17 @@ public class ignoreCertificatePolicy : ICertificatePolicy {
     public bool CheckValidationResult(ServicePoint sPoint, X509Certificate cert, WebRequest wRequest, int certProb) { return true; }
 }
 "@
+}
 
 # init the connection (uri and credentials)
 $script:_connectInitialized = $false
 
 # Load all scripts of the module
-foreach($modfile in (Get-ChildItem *.ps1 -Path "$PSScriptRoot\Private")){
+foreach ($modfile in (Get-ChildItem *.ps1 -Path "$PSScriptRoot\Private")) {
     . $modfile.FullName
 }
 
-foreach($modfile in (Get-ChildItem *.ps1 -Path "$PSScriptRoot\Public","$PSScriptRoot\Types")){
+foreach ($modfile in (Get-ChildItem *.ps1 -Path "$PSScriptRoot\Public", "$PSScriptRoot\Types")) {
     . $modfile.FullName
     Export-ModuleMember $modfile.BaseName
 }

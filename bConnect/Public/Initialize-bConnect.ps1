@@ -22,7 +22,11 @@ Function Initialize-bConnect() {
     )
 
     If($AcceptSelfSignedCertificate) {
-        [System.Net.ServicePointManager]::CertificatePolicy = New-Object ignoreCertificatePolicy
+        if ($PSVersionTable.PSEdition -eq 'Core') {
+            $script:_skipCertificateCheck = $AcceptSelfSignedCertificate
+        } else {
+            [System.Net.ServicePointManager]::CertificatePolicy = New-Object ignoreCertificatePolicy
+        }
     }
 
     $_uri = "https://$($Server):$($Port)/bConnect"
