@@ -37,7 +37,7 @@ Function Get-bConnectVersion() {
 				Write-Verbose "bConnect 2025 R1 or newer"
 			}
             "26.*" {
-				Write-Verbose "bConnect 2025 R1 or newer"
+				Write-Verbose "bConnect 2026 R1 or newer"
 			}
             default {
                 Write-Warning "UNSUPPORTED bMS Version $($_bmsVersion)! Unknown bConnect Version -> Fallback to $($script:_bConnectFallbackVersion)"
