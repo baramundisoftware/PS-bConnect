@@ -19,15 +19,14 @@ Function New-bConnectApplicationUninstallOptions() {
             InstallApplicationOption (see bConnect documentation for more details)
     #>
 
-    [CmdletBinding()]
     [OutputType("System.Management.Automations.PSObject")]
     Param(
         [ValidateSet("NoReboot","Reboot","AppReboot","DeferrableReboot",ignoreCase=$true)][string]$RebootBehaviour = "NoReboot",
-        [switch]$RemoveUnknownSoftware,
-        [switch]$UsebBT,
+        [bool]$RemoveUnknownSoftware,
+        [bool]$UsebBT,
         [ValidateSet("Silent","NeedsDesktop","VisibleWhenUserLoggedOn",ignoreCase=$true)][string]$VisibleExecution = "Silent",
-        [switch]$CopyLocally,
-        [switch]$DisableInputDevices
+        [bool]$CopyLocally,
+        [bool]$DisableInputDevices
     )
 
     $_new_uninstallationOption = @{
